@@ -1,0 +1,12 @@
+tomcat.manager.url=http://localhost:8080/manager/text
+tomcat.manager.username=
+tomcat.manager.password=
+
+database.username=
+database.password=
+database.url=jdbc:mysql://localhost:3306/diversify
+
+project.name=diversify
+deploy.name=diversify
+
+api.version=1

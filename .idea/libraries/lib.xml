@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.restlet.ext.gson.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-codegen-maven-3.11.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.restlet.ext.apispark.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-checker-3.11.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.restlet.ext.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.restlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-log4j12-1.7.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-meta-extensions-3.11.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-scala_2.12-3.11.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/converter-gson-2.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.restlet.ext.servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-3.11.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/joda-time-2.10.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.8.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-meta-3.11.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.17 .jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-codegen-3.11.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

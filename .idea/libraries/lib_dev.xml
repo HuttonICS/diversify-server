@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="lib-dev">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/lib-dev/tomcat-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib-dev/catalina-ant.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib-dev/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib-dev/jackson-annotations-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib-dev/jackson-databind-2.9.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib-dev/converter-jackson-2.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lib-dev/jackson-core-2.9.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
