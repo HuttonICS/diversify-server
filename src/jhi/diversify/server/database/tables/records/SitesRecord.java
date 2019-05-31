@@ -4,15 +4,18 @@
 package jhi.diversify.server.database.tables.records;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 
-import java.math.*;
-import java.sql.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.tables.Sites;
 
-import jhi.diversify.server.database.tables.*;
+import org.jooq.Field;
+import org.jooq.Record1;
+import org.jooq.Record8;
+import org.jooq.Row8;
+import org.jooq.impl.UpdatableRecordImpl;
 
 
 /**
@@ -38,6 +41,13 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify3.sites.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised SitesRecord
      */
     public SitesRecord(Integer id, String sitename, String othername, Integer partnerId, BigDecimal latitude, BigDecimal longitude, Timestamp createdOn, Timestamp updatedOn) {
@@ -54,38 +64,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify3.sites.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify3.sites.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
      * Getter for <code>diversify3.sites.sitename</code>.
      */
     public String getSitename() {
         return (String) get(1);
-    }
-
-    /**
-     * Setter for <code>diversify3.sites.sitename</code>.
-     */
-    public void setSitename(String value) {
-        set(1, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.sites.othername</code>.
-     */
-    public String getOthername() {
-        return (String) get(2);
     }
 
     /**
@@ -96,10 +78,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify3.sites.partner_id</code>.
+     * Setter for <code>diversify3.sites.id</code>.
      */
-    public Integer getPartnerId() {
-        return (Integer) get(3);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -110,10 +92,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify3.sites.latitude</code>.
+     * Setter for <code>diversify3.sites.sitename</code>.
      */
-    public BigDecimal getLatitude() {
-        return (BigDecimal) get(4);
+    public void setSitename(String value) {
+        set(1, value);
     }
 
     /**
@@ -124,10 +106,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify3.sites.longitude</code>.
+     * Getter for <code>diversify3.sites.othername</code>.
      */
-    public BigDecimal getLongitude() {
-        return (BigDecimal) get(5);
+    public String getOthername() {
+        return (String) get(2);
     }
 
     /**
@@ -138,6 +120,20 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify3.sites.partner_id</code>.
+     */
+    public Integer getPartnerId() {
+        return (Integer) get(3);
+    }
+
+    /**
+     * Getter for <code>diversify3.sites.latitude</code>.
+     */
+    public BigDecimal getLatitude() {
+        return (BigDecimal) get(4);
+    }
+
+    /**
      * Getter for <code>diversify3.sites.created_on</code>.
      */
     public Timestamp getCreatedOn() {
@@ -145,15 +141,11 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify3.sites.created_on</code>.
+     * Getter for <code>diversify3.sites.longitude</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(6, value);
+    public BigDecimal getLongitude() {
+        return (BigDecimal) get(5);
     }
-
-    // -------------------------------------------------------------------------
-    // Primary key information
-    // -------------------------------------------------------------------------
 
     /**
      * Getter for <code>diversify3.sites.updated_on</code>.
@@ -163,15 +155,8 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     // -------------------------------------------------------------------------
-    // Record8 type implementation
+    // Primary key information
     // -------------------------------------------------------------------------
-
-    /**
-     * Setter for <code>diversify3.sites.updated_on</code>.
-     */
-    public void setUpdatedOn(Timestamp value) {
-        set(7, value);
-    }
 
     /**
      * {@inheritDoc}
@@ -180,6 +165,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     public Record1<Integer> key() {
         return (Record1) super.key();
     }
+
+    // -------------------------------------------------------------------------
+    // Record8 type implementation
+    // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
@@ -452,10 +441,6 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
         return this;
     }
 
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
-
     /**
      * {@inheritDoc}
      */
@@ -479,5 +464,23 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
         value7(value7);
         value8(value8);
         return this;
+    }
+
+    // -------------------------------------------------------------------------
+    // Constructors
+    // -------------------------------------------------------------------------
+
+    /**
+     * Setter for <code>diversify3.sites.created_on</code>.
+     */
+    public void setCreatedOn(Timestamp value) {
+        set(6, value);
+    }
+
+    /**
+     * Setter for <code>diversify3.sites.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(7, value);
     }
 }

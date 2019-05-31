@@ -4,14 +4,17 @@
 package jhi.diversify.server.database.tables.records;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.sql.Timestamp;
 
-import java.sql.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.tables.Partners;
 
-import jhi.diversify.server.database.tables.*;
+import org.jooq.Field;
+import org.jooq.Record1;
+import org.jooq.Record4;
+import org.jooq.Row4;
+import org.jooq.impl.UpdatableRecordImpl;
 
 
 /**
@@ -37,6 +40,13 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
+     * Getter for <code>diversify3.partners.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised PartnersRecord
      */
     public PartnersRecord(Integer id, String partnername, Timestamp createdOn, Timestamp updatedOn) {
@@ -49,10 +59,17 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
-     * Getter for <code>diversify3.partners.id</code>.
+     * Getter for <code>diversify3.partners.partnername</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public String getPartnername() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify3.partners.created_on</code>.
+     */
+    public void setCreatedOn(Timestamp value) {
+        set(2, value);
     }
 
     /**
@@ -63,36 +80,11 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
-     * Getter for <code>diversify3.partners.partnername</code>.
-     */
-    public String getPartnername() {
-        return (String) get(1);
-    }
-
-    /**
      * Setter for <code>diversify3.partners.partnername</code>.
      */
     public void setPartnername(String value) {
         set(1, value);
     }
-
-    /**
-     * Getter for <code>diversify3.partners.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.partners.created_on</code>.
-     */
-    public void setCreatedOn(Timestamp value) {
-        set(2, value);
-    }
-
-    // -------------------------------------------------------------------------
-    // Primary key information
-    // -------------------------------------------------------------------------
 
     /**
      * Getter for <code>diversify3.partners.updated_on</code>.
@@ -102,15 +94,8 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     // -------------------------------------------------------------------------
-    // Record4 type implementation
+    // Primary key information
     // -------------------------------------------------------------------------
-
-    /**
-     * Setter for <code>diversify3.partners.updated_on</code>.
-     */
-    public void setUpdatedOn(Timestamp value) {
-        set(3, value);
-    }
 
     /**
      * {@inheritDoc}
@@ -119,6 +104,10 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     public Record1<Integer> key() {
         return (Record1) super.key();
     }
+
+    // -------------------------------------------------------------------------
+    // Record4 type implementation
+    // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
@@ -259,10 +248,6 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
         return this;
     }
 
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
-
     /**
      * {@inheritDoc}
      */
@@ -282,5 +267,23 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
         value3(value3);
         value4(value4);
         return this;
+    }
+
+    // -------------------------------------------------------------------------
+    // Constructors
+    // -------------------------------------------------------------------------
+
+    /**
+     * Getter for <code>diversify3.partners.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify3.partners.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(3, value);
     }
 }

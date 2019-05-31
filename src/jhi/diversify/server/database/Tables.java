@@ -4,9 +4,25 @@
 package jhi.diversify.server.database;
 
 
-import javax.annotation.*;
+import javax.annotation.Generated;
 
-import jhi.diversify.server.database.tables.*;
+import jhi.diversify.server.database.tables.Crops;
+import jhi.diversify.server.database.tables.Datasets;
+import jhi.diversify.server.database.tables.Partners;
+import jhi.diversify.server.database.tables.Plantpartners;
+import jhi.diversify.server.database.tables.Plotdata;
+import jhi.diversify.server.database.tables.Plots;
+import jhi.diversify.server.database.tables.Sites;
+import jhi.diversify.server.database.tables.Speciesdata;
+import jhi.diversify.server.database.tables.Traits;
+import jhi.diversify.server.database.tables.Varieties;
+import jhi.diversify.server.database.tables.Varietyinplot;
+import jhi.diversify.server.database.tables.ViewPlotdata;
+import jhi.diversify.server.database.tables.ViewSiteoverview;
+import jhi.diversify.server.database.tables.ViewSites;
+import jhi.diversify.server.database.tables.ViewSpeciesdata;
+import jhi.diversify.server.database.tables.ViewSpeciesdataTraits;
+import jhi.diversify.server.database.tables.ViewVarieties;
 
 
 /**

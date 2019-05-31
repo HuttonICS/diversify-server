@@ -4,16 +4,29 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.sql.Timestamp;
+import java.util.Arrays;
+import java.util.List;
 
-import java.sql.*;
-import java.util.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Indexes;
+import jhi.diversify.server.database.Keys;
+import jhi.diversify.server.database.tables.records.CropsRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Identity;
+import org.jooq.Index;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -29,31 +42,46 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Crops extends TableImpl<CropsRecord> {
 
+    private static final long serialVersionUID = 1637249301;
+
     /**
      * The reference instance of <code>diversify3.crops</code>
      */
     public static final Crops CROPS = new Crops();
-    private static final long serialVersionUID = 1637249301;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<CropsRecord> getRecordType() {
+        return CropsRecord.class;
+    }
+
     /**
      * The column <code>diversify3.crops.id</code>.
      */
     public final TableField<CropsRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
+
     /**
      * The column <code>diversify3.crops.cropcommonname</code>.
      */
     public final TableField<CropsRecord, String> CROPCOMMONNAME = createField("cropcommonname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.crops.croplatinname</code>.
      */
     public final TableField<CropsRecord, String> CROPLATINNAME = createField("croplatinname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.crops.plantpartner_id</code>.
      */
     public final TableField<CropsRecord, Integer> PLANTPARTNER_ID = createField("plantpartner_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.crops.created_on</code>.
      */
     public final TableField<CropsRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify3.crops.updated_on</code>.
      */
@@ -90,14 +118,6 @@ public class Crops extends TableImpl<CropsRecord> {
 
     public <O extends Record> Crops(Table<O> child, ForeignKey<O, CropsRecord> key) {
         super(child, key, CROPS);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<CropsRecord> getRecordType() {
-        return CropsRecord.class;
     }
 
     /**

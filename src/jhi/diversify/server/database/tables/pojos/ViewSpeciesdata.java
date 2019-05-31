@@ -4,9 +4,9 @@
 package jhi.diversify.server.database.tables.pojos;
 
 
-import java.io.*;
+import java.io.Serializable;
 
-import javax.annotation.*;
+import javax.annotation.Generated;
 
 
 /**
@@ -22,11 +22,15 @@ import javax.annotation.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSpeciesdata implements Serializable {
 
-    private static final long serialVersionUID = -285444291;
+    private static final long serialVersionUID = -1720716688;
 
     private Integer traitid;
     private String  traitname;
     private String  traitcode;
+    private Integer siteid;
+    private String  sitename;
+    private Integer rate;
+    private String  cropname;
     private Integer varietyid;
     private String  varietyname;
     private String  value;
@@ -37,6 +41,10 @@ public class ViewSpeciesdata implements Serializable {
         this.traitid = value.traitid;
         this.traitname = value.traitname;
         this.traitcode = value.traitcode;
+        this.siteid = value.siteid;
+        this.sitename = value.sitename;
+        this.rate = value.rate;
+        this.cropname = value.cropname;
         this.varietyid = value.varietyid;
         this.varietyname = value.varietyname;
         this.value = value.value;
@@ -46,6 +54,10 @@ public class ViewSpeciesdata implements Serializable {
         Integer traitid,
         String  traitname,
         String  traitcode,
+        Integer siteid,
+        String  sitename,
+        Integer rate,
+        String  cropname,
         Integer varietyid,
         String  varietyname,
         String  value
@@ -53,6 +65,10 @@ public class ViewSpeciesdata implements Serializable {
         this.traitid = traitid;
         this.traitname = traitname;
         this.traitcode = traitcode;
+        this.siteid = siteid;
+        this.sitename = sitename;
+        this.rate = rate;
+        this.cropname = cropname;
         this.varietyid = varietyid;
         this.varietyname = varietyname;
         this.value = value;
@@ -80,6 +96,38 @@ public class ViewSpeciesdata implements Serializable {
 
     public void setTraitcode(String traitcode) {
         this.traitcode = traitcode;
+    }
+
+    public Integer getSiteid() {
+        return this.siteid;
+    }
+
+    public void setSiteid(Integer siteid) {
+        this.siteid = siteid;
+    }
+
+    public String getSitename() {
+        return this.sitename;
+    }
+
+    public void setSitename(String sitename) {
+        this.sitename = sitename;
+    }
+
+    public Integer getRate() {
+        return this.rate;
+    }
+
+    public void setRate(Integer rate) {
+        this.rate = rate;
+    }
+
+    public String getCropname() {
+        return this.cropname;
+    }
+
+    public void setCropname(String cropname) {
+        this.cropname = cropname;
     }
 
     public Integer getVarietyid() {
@@ -113,6 +161,10 @@ public class ViewSpeciesdata implements Serializable {
         sb.append(traitid);
         sb.append(", ").append(traitname);
         sb.append(", ").append(traitcode);
+        sb.append(", ").append(siteid);
+        sb.append(", ").append(sitename);
+        sb.append(", ").append(rate);
+        sb.append(", ").append(cropname);
         sb.append(", ").append(varietyid);
         sb.append(", ").append(varietyname);
         sb.append(", ").append(value);

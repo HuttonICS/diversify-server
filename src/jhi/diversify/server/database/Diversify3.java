@@ -4,14 +4,33 @@
 package jhi.diversify.server.database;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import java.util.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.tables.Crops;
+import jhi.diversify.server.database.tables.Datasets;
+import jhi.diversify.server.database.tables.Partners;
+import jhi.diversify.server.database.tables.Plantpartners;
+import jhi.diversify.server.database.tables.Plotdata;
+import jhi.diversify.server.database.tables.Plots;
+import jhi.diversify.server.database.tables.Sites;
+import jhi.diversify.server.database.tables.Speciesdata;
+import jhi.diversify.server.database.tables.Traits;
+import jhi.diversify.server.database.tables.Varieties;
+import jhi.diversify.server.database.tables.Varietyinplot;
+import jhi.diversify.server.database.tables.ViewPlotdata;
+import jhi.diversify.server.database.tables.ViewSiteoverview;
+import jhi.diversify.server.database.tables.ViewSites;
+import jhi.diversify.server.database.tables.ViewSpeciesdata;
+import jhi.diversify.server.database.tables.ViewSpeciesdataTraits;
+import jhi.diversify.server.database.tables.ViewVarieties;
 
-import jhi.diversify.server.database.tables.*;
+import org.jooq.Catalog;
+import org.jooq.Table;
+import org.jooq.impl.SchemaImpl;
 
 
 /**
@@ -27,11 +46,13 @@ import jhi.diversify.server.database.tables.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Diversify3 extends SchemaImpl {
 
+    private static final long serialVersionUID = -1505202373;
+
     /**
      * The reference instance of <code>diversify3</code>
      */
     public static final Diversify3 DIVERSIFY3 = new Diversify3();
-    private static final long serialVersionUID = -1505202373;
+
     /**
      * The table <code>diversify3.crops</code>.
      */

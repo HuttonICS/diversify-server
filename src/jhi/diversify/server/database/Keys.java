@@ -4,13 +4,35 @@
 package jhi.diversify.server.database;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.tables.Crops;
+import jhi.diversify.server.database.tables.Datasets;
+import jhi.diversify.server.database.tables.Partners;
+import jhi.diversify.server.database.tables.Plantpartners;
+import jhi.diversify.server.database.tables.Plotdata;
+import jhi.diversify.server.database.tables.Plots;
+import jhi.diversify.server.database.tables.Sites;
+import jhi.diversify.server.database.tables.Speciesdata;
+import jhi.diversify.server.database.tables.Traits;
+import jhi.diversify.server.database.tables.Varieties;
+import jhi.diversify.server.database.tables.Varietyinplot;
+import jhi.diversify.server.database.tables.records.CropsRecord;
+import jhi.diversify.server.database.tables.records.DatasetsRecord;
+import jhi.diversify.server.database.tables.records.PartnersRecord;
+import jhi.diversify.server.database.tables.records.PlantpartnersRecord;
+import jhi.diversify.server.database.tables.records.PlotdataRecord;
+import jhi.diversify.server.database.tables.records.PlotsRecord;
+import jhi.diversify.server.database.tables.records.SitesRecord;
+import jhi.diversify.server.database.tables.records.SpeciesdataRecord;
+import jhi.diversify.server.database.tables.records.TraitsRecord;
+import jhi.diversify.server.database.tables.records.VarietiesRecord;
+import jhi.diversify.server.database.tables.records.VarietyinplotRecord;
 
-import jhi.diversify.server.database.tables.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.ForeignKey;
+import org.jooq.Identity;
+import org.jooq.UniqueKey;
+import org.jooq.impl.Internal;
 
 
 /**

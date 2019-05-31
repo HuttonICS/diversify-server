@@ -4,15 +4,22 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.math.BigDecimal;
 
-import java.math.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.tables.records.ViewSiteoverviewRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -28,63 +35,86 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSiteoverview extends TableImpl<ViewSiteoverviewRecord> {
 
+    private static final long serialVersionUID = 1237341750;
+
     /**
      * The reference instance of <code>diversify3.view_siteoverview</code>
      */
     public static final ViewSiteoverview VIEW_SITEOVERVIEW = new ViewSiteoverview();
-    private static final long serialVersionUID = 1237341750;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<ViewSiteoverviewRecord> getRecordType() {
+        return ViewSiteoverviewRecord.class;
+    }
+
     /**
      * The column <code>diversify3.view_siteoverview.traitid</code>.
      */
     public final TableField<ViewSiteoverviewRecord, Integer> TRAITID = createField("traitid", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.traitname</code>.
      */
     public final TableField<ViewSiteoverviewRecord, String> TRAITNAME = createField("traitname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.traitcode</code>.
      */
     public final TableField<ViewSiteoverviewRecord, String> TRAITCODE = createField("traitcode", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.unit</code>.
      */
     public final TableField<ViewSiteoverviewRecord, String> UNIT = createField("unit", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.siteid</code>.
      */
     public final TableField<ViewSiteoverviewRecord, Integer> SITEID = createField("siteid", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.sitename</code>.
      */
     public final TableField<ViewSiteoverviewRecord, String> SITENAME = createField("sitename", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.othername</code>.
      */
     public final TableField<ViewSiteoverviewRecord, String> OTHERNAME = createField("othername", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.datasetid</code>.
      */
     public final TableField<ViewSiteoverviewRecord, Integer> DATASETID = createField("datasetid", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.datasetname</code>.
      */
     public final TableField<ViewSiteoverviewRecord, String> DATASETNAME = createField("datasetname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.YEAR</code>.
      */
     public final TableField<ViewSiteoverviewRecord, Integer> YEAR = createField("YEAR", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.avg</code>.
      */
     public final TableField<ViewSiteoverviewRecord, BigDecimal> AVG = createField("avg", org.jooq.impl.SQLDataType.DECIMAL(65, 14), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.min</code>.
      */
     public final TableField<ViewSiteoverviewRecord, BigDecimal> MIN = createField("min", org.jooq.impl.SQLDataType.DECIMAL(64, 10), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.max</code>.
      */
     public final TableField<ViewSiteoverviewRecord, BigDecimal> MAX = createField("max", org.jooq.impl.SQLDataType.DECIMAL(64, 10), this, "");
+
     /**
      * The column <code>diversify3.view_siteoverview.stdv</code>.
      */
@@ -121,14 +151,6 @@ public class ViewSiteoverview extends TableImpl<ViewSiteoverviewRecord> {
 
     public <O extends Record> ViewSiteoverview(Table<O> child, ForeignKey<O, ViewSiteoverviewRecord> key) {
         super(child, key, VIEW_SITEOVERVIEW);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<ViewSiteoverviewRecord> getRecordType() {
-        return ViewSiteoverviewRecord.class;
     }
 
     /**

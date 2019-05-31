@@ -4,12 +4,14 @@
 package jhi.diversify.server.database;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import java.util.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import org.jooq.Schema;
+import org.jooq.impl.CatalogImpl;
 
 
 /**
@@ -25,11 +27,13 @@ import javax.annotation.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DefaultCatalog extends CatalogImpl {
 
+    private static final long serialVersionUID = -1051232878;
+
     /**
      * The reference instance of <code></code>
      */
     public static final DefaultCatalog DEFAULT_CATALOG = new DefaultCatalog();
-    private static final long serialVersionUID = -1051232878;
+
     /**
      * The schema <code>diversify3</code>.
      */

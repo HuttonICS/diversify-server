@@ -4,12 +4,23 @@
 package jhi.diversify.server.database;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.tables.Crops;
+import jhi.diversify.server.database.tables.Datasets;
+import jhi.diversify.server.database.tables.Partners;
+import jhi.diversify.server.database.tables.Plantpartners;
+import jhi.diversify.server.database.tables.Plotdata;
+import jhi.diversify.server.database.tables.Plots;
+import jhi.diversify.server.database.tables.Sites;
+import jhi.diversify.server.database.tables.Speciesdata;
+import jhi.diversify.server.database.tables.Traits;
+import jhi.diversify.server.database.tables.Varieties;
+import jhi.diversify.server.database.tables.Varietyinplot;
 
-import jhi.diversify.server.database.tables.*;
+import org.jooq.Index;
+import org.jooq.OrderField;
+import org.jooq.impl.Internal;
 
 
 /**

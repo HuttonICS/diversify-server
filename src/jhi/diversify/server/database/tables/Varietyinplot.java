@@ -4,16 +4,29 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.sql.Timestamp;
+import java.util.Arrays;
+import java.util.List;
 
-import java.sql.*;
-import java.util.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Indexes;
+import jhi.diversify.server.database.Keys;
+import jhi.diversify.server.database.tables.records.VarietyinplotRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Identity;
+import org.jooq.Index;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -29,31 +42,46 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Varietyinplot extends TableImpl<VarietyinplotRecord> {
 
+    private static final long serialVersionUID = -1843301117;
+
     /**
      * The reference instance of <code>diversify3.varietyinplot</code>
      */
     public static final Varietyinplot VARIETYINPLOT = new Varietyinplot();
-    private static final long serialVersionUID = -1843301117;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<VarietyinplotRecord> getRecordType() {
+        return VarietyinplotRecord.class;
+    }
+
     /**
      * The column <code>diversify3.varietyinplot.id</code>.
      */
     public final TableField<VarietyinplotRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
+
     /**
      * The column <code>diversify3.varietyinplot.plot_id</code>.
      */
     public final TableField<VarietyinplotRecord, Integer> PLOT_ID = createField("plot_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.varietyinplot.variety_id</code>.
      */
     public final TableField<VarietyinplotRecord, Integer> VARIETY_ID = createField("variety_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.varietyinplot.rate</code>.
      */
     public final TableField<VarietyinplotRecord, Integer> RATE = createField("rate", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.varietyinplot.created_on</code>.
      */
     public final TableField<VarietyinplotRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify3.varietyinplot.updated_on</code>.
      */
@@ -90,14 +118,6 @@ public class Varietyinplot extends TableImpl<VarietyinplotRecord> {
 
     public <O extends Record> Varietyinplot(Table<O> child, ForeignKey<O, VarietyinplotRecord> key) {
         super(child, key, VARIETYINPLOT);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<VarietyinplotRecord> getRecordType() {
-        return VarietyinplotRecord.class;
     }
 
     /**

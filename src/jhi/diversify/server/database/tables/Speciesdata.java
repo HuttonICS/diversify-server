@@ -4,16 +4,29 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.sql.Timestamp;
+import java.util.Arrays;
+import java.util.List;
 
-import java.sql.*;
-import java.util.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Indexes;
+import jhi.diversify.server.database.Keys;
+import jhi.diversify.server.database.tables.records.SpeciesdataRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Identity;
+import org.jooq.Index;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -29,39 +42,56 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Speciesdata extends TableImpl<SpeciesdataRecord> {
 
+    private static final long serialVersionUID = 421603063;
+
     /**
      * The reference instance of <code>diversify3.speciesdata</code>
      */
     public static final Speciesdata SPECIESDATA = new Speciesdata();
-    private static final long serialVersionUID = 421603063;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<SpeciesdataRecord> getRecordType() {
+        return SpeciesdataRecord.class;
+    }
+
     /**
      * The column <code>diversify3.speciesdata.id</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
+
     /**
      * The column <code>diversify3.speciesdata.dataset_id</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> DATASET_ID = createField("dataset_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.speciesdata.trait_id</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> TRAIT_ID = createField("trait_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.speciesdata.varietyinplot_id</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> VARIETYINPLOT_ID = createField("varietyinplot_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.speciesdata.rep</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> REP = createField("rep", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.speciesdata.value</code>.
      */
     public final TableField<SpeciesdataRecord, String> VALUE = createField("value", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.speciesdata.created_on</code>.
      */
     public final TableField<SpeciesdataRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify3.speciesdata.updated_on</code>.
      */
@@ -98,14 +128,6 @@ public class Speciesdata extends TableImpl<SpeciesdataRecord> {
 
     public <O extends Record> Speciesdata(Table<O> child, ForeignKey<O, SpeciesdataRecord> key) {
         super(child, key, SPECIESDATA);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<SpeciesdataRecord> getRecordType() {
-        return SpeciesdataRecord.class;
     }
 
     /**

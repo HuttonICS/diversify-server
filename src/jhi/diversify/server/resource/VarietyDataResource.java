@@ -61,7 +61,8 @@ public class VarietyDataResource extends ServerResource
 			if (traitIds != null && traitIds.size() > 0)
 				step.where(VIEW_SPECIESDATA.TRAITID.in(traitIds));
 
-			return step.fetch()
+			return step.where(VIEW_SPECIESDATA.RATE.eq(100))
+					   .fetch()
 					   .into(ViewSpeciesdata.class);
 		}
 		catch (SQLException e)

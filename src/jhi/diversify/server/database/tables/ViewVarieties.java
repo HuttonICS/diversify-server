@@ -4,13 +4,20 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.tables.records.ViewVarietiesRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -26,35 +33,51 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewVarieties extends TableImpl<ViewVarietiesRecord> {
 
+    private static final long serialVersionUID = 1793142329;
+
     /**
      * The reference instance of <code>diversify3.view_varieties</code>
      */
     public static final ViewVarieties VIEW_VARIETIES = new ViewVarieties();
-    private static final long serialVersionUID = 1793142329;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<ViewVarietiesRecord> getRecordType() {
+        return ViewVarietiesRecord.class;
+    }
+
     /**
      * The column <code>diversify3.view_varieties.id</code>.
      */
     public final TableField<ViewVarietiesRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify3.view_varieties.varietyname</code>.
      */
     public final TableField<ViewVarietiesRecord, String> VARIETYNAME = createField("varietyname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.view_varieties.cropcommonname</code>.
      */
     public final TableField<ViewVarietiesRecord, String> CROPCOMMONNAME = createField("cropcommonname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_varieties.croplatinname</code>.
      */
     public final TableField<ViewVarietiesRecord, String> CROPLATINNAME = createField("croplatinname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_varieties.plantpartnername</code>.
      */
     public final TableField<ViewVarietiesRecord, String> PLANTPARTNERNAME = createField("plantpartnername", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_varieties.plots</code>.
      */
     public final TableField<ViewVarietiesRecord, Long> PLOTS = createField("plots", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
+
     /**
      * The column <code>diversify3.view_varieties.datapoints</code>.
      */
@@ -91,14 +114,6 @@ public class ViewVarieties extends TableImpl<ViewVarietiesRecord> {
 
     public <O extends Record> ViewVarieties(Table<O> child, ForeignKey<O, ViewVarietiesRecord> key) {
         super(child, key, VIEW_VARIETIES);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<ViewVarietiesRecord> getRecordType() {
-        return ViewVarietiesRecord.class;
     }
 
     /**

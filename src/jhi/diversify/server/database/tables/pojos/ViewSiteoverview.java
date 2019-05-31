@@ -4,10 +4,10 @@
 package jhi.diversify.server.database.tables.pojos;
 
 
-import java.io.*;
-import java.math.*;
+import java.io.Serializable;
+import java.math.BigDecimal;
 
-import javax.annotation.*;
+import javax.annotation.Generated;
 
 
 /**

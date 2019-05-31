@@ -4,13 +4,20 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.tables.records.ViewSpeciesdataRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -26,31 +33,62 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSpeciesdata extends TableImpl<ViewSpeciesdataRecord> {
 
+    private static final long serialVersionUID = -624375634;
+
     /**
      * The reference instance of <code>diversify3.view_speciesdata</code>
      */
     public static final ViewSpeciesdata VIEW_SPECIESDATA = new ViewSpeciesdata();
-    private static final long serialVersionUID = -1411056557;
+    /**
+     * The column <code>diversify3.view_speciesdata.siteid</code>.
+     */
+    public final TableField<ViewSpeciesdataRecord, Integer> SITEID = createField("siteid", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify3.view_speciesdata.traitid</code>.
      */
     public final TableField<ViewSpeciesdataRecord, Integer> TRAITID = createField("traitid", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify3.view_speciesdata.traitname</code>.
      */
     public final TableField<ViewSpeciesdataRecord, String> TRAITNAME = createField("traitname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_speciesdata.traitcode</code>.
      */
     public final TableField<ViewSpeciesdataRecord, String> TRAITCODE = createField("traitcode", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
     /**
+     * The column <code>diversify3.view_speciesdata.sitename</code>.
+     */
+    public final TableField<ViewSpeciesdataRecord, String> SITENAME = createField("sitename", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+    /**
+     * The column <code>diversify3.view_speciesdata.rate</code>.
+     */
+    public final TableField<ViewSpeciesdataRecord, Integer> RATE = createField("rate", org.jooq.impl.SQLDataType.INTEGER, this, "");
+    /**
+     * The column <code>diversify3.view_speciesdata.cropname</code>.
+     */
+    public final TableField<ViewSpeciesdataRecord, String> CROPNAME = createField("cropname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<ViewSpeciesdataRecord> getRecordType() {
+        return ViewSpeciesdataRecord.class;
+    }
+
+    /**
      * The column <code>diversify3.view_speciesdata.varietyid</code>.
      */
     public final TableField<ViewSpeciesdataRecord, Integer> VARIETYID = createField("varietyid", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify3.view_speciesdata.varietyname</code>.
      */
     public final TableField<ViewSpeciesdataRecord, String> VARIETYNAME = createField("varietyname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_speciesdata.value</code>.
      */
@@ -87,14 +125,6 @@ public class ViewSpeciesdata extends TableImpl<ViewSpeciesdataRecord> {
 
     public <O extends Record> ViewSpeciesdata(Table<O> child, ForeignKey<O, ViewSpeciesdataRecord> key) {
         super(child, key, VIEW_SPECIESDATA);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<ViewSpeciesdataRecord> getRecordType() {
-        return ViewSpeciesdataRecord.class;
     }
 
     /**

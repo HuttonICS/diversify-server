@@ -4,14 +4,17 @@
 package jhi.diversify.server.database.tables.records;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.sql.Timestamp;
 
-import java.sql.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.tables.Varietyinplot;
 
-import jhi.diversify.server.database.tables.*;
+import org.jooq.Field;
+import org.jooq.Record1;
+import org.jooq.Record6;
+import org.jooq.Row6;
+import org.jooq.impl.UpdatableRecordImpl;
 
 
 /**
@@ -37,6 +40,13 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
+     * Getter for <code>diversify3.varietyinplot.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised VarietyinplotRecord
      */
     public VarietyinplotRecord(Integer id, Integer plotId, Integer varietyId, Integer rate, Timestamp createdOn, Timestamp updatedOn) {
@@ -51,38 +61,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Getter for <code>diversify3.varietyinplot.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify3.varietyinplot.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
      * Getter for <code>diversify3.varietyinplot.plot_id</code>.
      */
     public Integer getPlotId() {
         return (Integer) get(1);
-    }
-
-    /**
-     * Setter for <code>diversify3.varietyinplot.plot_id</code>.
-     */
-    public void setPlotId(Integer value) {
-        set(1, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.varietyinplot.variety_id</code>.
-     */
-    public Integer getVarietyId() {
-        return (Integer) get(2);
     }
 
     /**
@@ -93,10 +75,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Getter for <code>diversify3.varietyinplot.rate</code>.
+     * Setter for <code>diversify3.varietyinplot.id</code>.
      */
-    public Integer getRate() {
-        return (Integer) get(3);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -107,10 +89,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Getter for <code>diversify3.varietyinplot.created_on</code>.
+     * Setter for <code>diversify3.varietyinplot.plot_id</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
+    public void setPlotId(Integer value) {
+        set(1, value);
     }
 
     /**
@@ -120,9 +102,19 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
         set(4, value);
     }
 
-    // -------------------------------------------------------------------------
-    // Primary key information
-    // -------------------------------------------------------------------------
+    /**
+     * Getter for <code>diversify3.varietyinplot.variety_id</code>.
+     */
+    public Integer getVarietyId() {
+        return (Integer) get(2);
+    }
+
+    /**
+     * Getter for <code>diversify3.varietyinplot.rate</code>.
+     */
+    public Integer getRate() {
+        return (Integer) get(3);
+    }
 
     /**
      * Getter for <code>diversify3.varietyinplot.updated_on</code>.
@@ -132,15 +124,8 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     // -------------------------------------------------------------------------
-    // Record6 type implementation
+    // Primary key information
     // -------------------------------------------------------------------------
-
-    /**
-     * Setter for <code>diversify3.varietyinplot.updated_on</code>.
-     */
-    public void setUpdatedOn(Timestamp value) {
-        set(5, value);
-    }
 
     /**
      * {@inheritDoc}
@@ -149,6 +134,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     public Record1<Integer> key() {
         return (Record1) super.key();
     }
+
+    // -------------------------------------------------------------------------
+    // Record6 type implementation
+    // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
@@ -355,10 +344,6 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
         return this;
     }
 
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
-
     /**
      * {@inheritDoc}
      */
@@ -380,5 +365,23 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
         value5(value5);
         value6(value6);
         return this;
+    }
+
+    // -------------------------------------------------------------------------
+    // Constructors
+    // -------------------------------------------------------------------------
+
+    /**
+     * Getter for <code>diversify3.varietyinplot.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
+    }
+
+    /**
+     * Setter for <code>diversify3.varietyinplot.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(5, value);
     }
 }

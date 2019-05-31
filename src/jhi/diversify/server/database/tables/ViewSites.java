@@ -4,16 +4,23 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 
-import java.math.*;
-import java.sql.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.tables.records.ViewSitesRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -29,55 +36,76 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSites extends TableImpl<ViewSitesRecord> {
 
+    private static final long serialVersionUID = 724147423;
+
     /**
      * The reference instance of <code>diversify3.view_sites</code>
      */
     public static final ViewSites VIEW_SITES = new ViewSites();
-    private static final long serialVersionUID = 724147423;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<ViewSitesRecord> getRecordType() {
+        return ViewSitesRecord.class;
+    }
+
     /**
      * The column <code>diversify3.view_sites.id</code>.
      */
     public final TableField<ViewSitesRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify3.view_sites.sitename</code>.
      */
     public final TableField<ViewSitesRecord, String> SITENAME = createField("sitename", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.view_sites.othername</code>.
      */
     public final TableField<ViewSitesRecord, String> OTHERNAME = createField("othername", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.view_sites.partner_id</code>.
      */
     public final TableField<ViewSitesRecord, Integer> PARTNER_ID = createField("partner_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.view_sites.latitude</code>.
      */
     public final TableField<ViewSitesRecord, BigDecimal> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DECIMAL(64, 10), this, "");
+
     /**
      * The column <code>diversify3.view_sites.longitude</code>.
      */
     public final TableField<ViewSitesRecord, BigDecimal> LONGITUDE = createField("longitude", org.jooq.impl.SQLDataType.DECIMAL(64, 10), this, "");
+
     /**
      * The column <code>diversify3.view_sites.created_on</code>.
      */
     public final TableField<ViewSitesRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify3.view_sites.updated_on</code>.
      */
     public final TableField<ViewSitesRecord, Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify3.view_sites.plots</code>.
      */
     public final TableField<ViewSitesRecord, Long> PLOTS = createField("plots", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
+
     /**
      * The column <code>diversify3.view_sites.columns</code>.
      */
     public final TableField<ViewSitesRecord, Long> COLUMNS = createField("columns", org.jooq.impl.SQLDataType.BIGINT, this, "");
+
     /**
      * The column <code>diversify3.view_sites.rows</code>.
      */
     public final TableField<ViewSitesRecord, Long> ROWS = createField("rows", org.jooq.impl.SQLDataType.BIGINT, this, "");
+
     /**
      * The column <code>diversify3.view_sites.partnername</code>.
      */
@@ -114,14 +142,6 @@ public class ViewSites extends TableImpl<ViewSitesRecord> {
 
     public <O extends Record> ViewSites(Table<O> child, ForeignKey<O, ViewSitesRecord> key) {
         super(child, key, VIEW_SITES);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<ViewSitesRecord> getRecordType() {
-        return ViewSitesRecord.class;
     }
 
     /**

@@ -4,14 +4,17 @@
 package jhi.diversify.server.database.tables.records;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.sql.Timestamp;
 
-import java.sql.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.tables.Varieties;
 
-import jhi.diversify.server.database.tables.*;
+import org.jooq.Field;
+import org.jooq.Record1;
+import org.jooq.Record5;
+import org.jooq.Row5;
+import org.jooq.impl.UpdatableRecordImpl;
 
 
 /**
@@ -37,6 +40,13 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
+     * Getter for <code>diversify3.varieties.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised VarietiesRecord
      */
     public VarietiesRecord(Integer id, String varietyname, Integer cropId, Timestamp createdOn, Timestamp updatedOn) {
@@ -50,10 +60,17 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Getter for <code>diversify3.varieties.id</code>.
+     * Getter for <code>diversify3.varieties.varietyname</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public String getVarietyname() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify3.varieties.crop_id</code>.
+     */
+    public void setCropId(Integer value) {
+        set(2, value);
     }
 
     /**
@@ -64,10 +81,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Getter for <code>diversify3.varieties.varietyname</code>.
+     * Setter for <code>diversify3.varieties.created_on</code>.
      */
-    public String getVarietyname() {
-        return (String) get(1);
+    public void setCreatedOn(Timestamp value) {
+        set(3, value);
     }
 
     /**
@@ -85,31 +102,6 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Setter for <code>diversify3.varieties.crop_id</code>.
-     */
-    public void setCropId(Integer value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.varieties.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(3);
-    }
-
-    /**
-     * Setter for <code>diversify3.varieties.created_on</code>.
-     */
-    public void setCreatedOn(Timestamp value) {
-        set(3, value);
-    }
-
-    // -------------------------------------------------------------------------
-    // Primary key information
-    // -------------------------------------------------------------------------
-
-    /**
      * Getter for <code>diversify3.varieties.updated_on</code>.
      */
     public Timestamp getUpdatedOn() {
@@ -117,15 +109,8 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     // -------------------------------------------------------------------------
-    // Record5 type implementation
+    // Primary key information
     // -------------------------------------------------------------------------
-
-    /**
-     * Setter for <code>diversify3.varieties.updated_on</code>.
-     */
-    public void setUpdatedOn(Timestamp value) {
-        set(4, value);
-    }
 
     /**
      * {@inheritDoc}
@@ -134,6 +119,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     public Record1<Integer> key() {
         return (Record1) super.key();
     }
+
+    // -------------------------------------------------------------------------
+    // Record5 type implementation
+    // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
@@ -307,10 +296,6 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
         return this;
     }
 
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
-
     /**
      * {@inheritDoc}
      */
@@ -331,5 +316,23 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
         value4(value4);
         value5(value5);
         return this;
+    }
+
+    // -------------------------------------------------------------------------
+    // Constructors
+    // -------------------------------------------------------------------------
+
+    /**
+     * Getter for <code>diversify3.varieties.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify3.varieties.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(4, value);
     }
 }

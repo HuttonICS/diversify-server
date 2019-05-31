@@ -4,17 +4,30 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+import java.util.Arrays;
+import java.util.List;
 
-import java.math.*;
-import java.sql.*;
-import java.util.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Indexes;
+import jhi.diversify.server.database.Keys;
+import jhi.diversify.server.database.tables.records.SitesRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Identity;
+import org.jooq.Index;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -30,39 +43,56 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Sites extends TableImpl<SitesRecord> {
 
+    private static final long serialVersionUID = 32604587;
+
     /**
      * The reference instance of <code>diversify3.sites</code>
      */
     public static final Sites SITES = new Sites();
-    private static final long serialVersionUID = 32604587;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<SitesRecord> getRecordType() {
+        return SitesRecord.class;
+    }
+
     /**
      * The column <code>diversify3.sites.id</code>.
      */
     public final TableField<SitesRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
+
     /**
      * The column <code>diversify3.sites.sitename</code>.
      */
     public final TableField<SitesRecord, String> SITENAME = createField("sitename", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.sites.othername</code>.
      */
     public final TableField<SitesRecord, String> OTHERNAME = createField("othername", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify3.sites.partner_id</code>.
      */
     public final TableField<SitesRecord, Integer> PARTNER_ID = createField("partner_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.sites.latitude</code>.
      */
     public final TableField<SitesRecord, BigDecimal> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DECIMAL(64, 10), this, "");
+
     /**
      * The column <code>diversify3.sites.longitude</code>.
      */
     public final TableField<SitesRecord, BigDecimal> LONGITUDE = createField("longitude", org.jooq.impl.SQLDataType.DECIMAL(64, 10), this, "");
+
     /**
      * The column <code>diversify3.sites.created_on</code>.
      */
     public final TableField<SitesRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify3.sites.updated_on</code>.
      */
@@ -99,14 +129,6 @@ public class Sites extends TableImpl<SitesRecord> {
 
     public <O extends Record> Sites(Table<O> child, ForeignKey<O, SitesRecord> key) {
         super(child, key, SITES);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<SitesRecord> getRecordType() {
-        return SitesRecord.class;
     }
 
     /**

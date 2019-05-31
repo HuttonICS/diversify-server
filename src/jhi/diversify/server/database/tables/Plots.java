@@ -4,17 +4,30 @@
 package jhi.diversify.server.database.tables;
 
 
-import org.jooq.*;
-import org.jooq.impl.*;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+import java.util.Arrays;
+import java.util.List;
 
-import java.math.*;
-import java.sql.*;
-import java.util.*;
+import javax.annotation.Generated;
 
-import javax.annotation.*;
+import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Indexes;
+import jhi.diversify.server.database.Keys;
+import jhi.diversify.server.database.tables.records.PlotsRecord;
 
-import jhi.diversify.server.database.*;
-import jhi.diversify.server.database.tables.records.*;
+import org.jooq.Field;
+import org.jooq.ForeignKey;
+import org.jooq.Identity;
+import org.jooq.Index;
+import org.jooq.Name;
+import org.jooq.Record;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.DSL;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -30,71 +43,96 @@ import jhi.diversify.server.database.tables.records.*;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Plots extends TableImpl<PlotsRecord> {
 
+    private static final long serialVersionUID = -1203363990;
+
     /**
      * The reference instance of <code>diversify3.plots</code>
      */
     public static final Plots PLOTS = new Plots();
-    private static final long serialVersionUID = -1203363990;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<PlotsRecord> getRecordType() {
+        return PlotsRecord.class;
+    }
+
     /**
      * The column <code>diversify3.plots.id</code>.
      */
     public final TableField<PlotsRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
+
     /**
      * The column <code>diversify3.plots.plotcode</code>.
      */
     public final TableField<PlotsRecord, String> PLOTCODE = createField("plotcode", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.owncode</code>.
      */
     public final TableField<PlotsRecord, String> OWNCODE = createField("owncode", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.site_id</code>.
      */
     public final TableField<PlotsRecord, Integer> SITE_ID = createField("site_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.block</code>.
      */
     public final TableField<PlotsRecord, Integer> BLOCK = createField("block", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.plot</code>.
      */
     public final TableField<PlotsRecord, Integer> PLOT = createField("plot", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.subplot</code>.
      */
     public final TableField<PlotsRecord, Integer> SUBPLOT = createField("subplot", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
     /**
      * The column <code>diversify3.plots.row</code>.
      */
     public final TableField<PlotsRecord, Integer> ROW = createField("row", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.col</code>.
      */
     public final TableField<PlotsRecord, Integer> COL = createField("col", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.rep</code>.
      */
     public final TableField<PlotsRecord, Integer> REP = createField("rep", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.subrep</code>.
      */
     public final TableField<PlotsRecord, Integer> SUBREP = createField("subrep", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
     /**
      * The column <code>diversify3.plots.management</code>.
      */
     public final TableField<PlotsRecord, String> MANAGEMENT = createField("management", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify3.plots.latitude</code>.
      */
     public final TableField<PlotsRecord, BigDecimal> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DECIMAL(64, 10), this, "");
+
     /**
      * The column <code>diversify3.plots.longitude</code>.
      */
     public final TableField<PlotsRecord, BigDecimal> LONGITUDE = createField("longitude", org.jooq.impl.SQLDataType.DECIMAL(64, 10), this, "");
+
     /**
      * The column <code>diversify3.plots.created_on</code>.
      */
     public final TableField<PlotsRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify3.plots.updated_on</code>.
      */
@@ -131,14 +169,6 @@ public class Plots extends TableImpl<PlotsRecord> {
 
     public <O extends Record> Plots(Table<O> child, ForeignKey<O, PlotsRecord> key) {
         super(child, key, PLOTS);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<PlotsRecord> getRecordType() {
-        return PlotsRecord.class;
     }
 
     /**
