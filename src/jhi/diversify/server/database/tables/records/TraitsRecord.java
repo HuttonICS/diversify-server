@@ -75,6 +75,13 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
+     * Getter for <code>diversify3.traits.traitcode</code>.
+     */
+    public String getTraitcode() {
+        return (String) get(2);
+    }
+
+    /**
      * Setter for <code>diversify3.traits.id</code>.
      */
     public void setId(Integer value) {
@@ -82,10 +89,10 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Setter for <code>diversify3.traits.unit</code>.
+     * Getter for <code>diversify3.traits.unit</code>.
      */
-    public void setUnit(String value) {
-        set(3, value);
+    public String getUnit() {
+        return (String) get(3);
     }
 
     /**
@@ -96,24 +103,17 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Setter for <code>diversify3.traits.created_on</code>.
+     * Setter for <code>diversify3.traits.unit</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(4, value);
+    public void setUnit(String value) {
+        set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.traits.traitcode</code>.
+     * Getter for <code>diversify3.traits.created_on</code>.
      */
-    public String getTraitcode() {
-        return (String) get(2);
-    }
-
-    /**
-     * Getter for <code>diversify3.traits.unit</code>.
-     */
-    public String getUnit() {
-        return (String) get(3);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
     }
 
     /**
@@ -372,10 +372,10 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.traits.created_on</code>.
+     * Setter for <code>diversify3.traits.created_on</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
+    public void setCreatedOn(Timestamp value) {
+        set(4, value);
     }
 
     /**

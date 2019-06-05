@@ -74,17 +74,17 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
+     * Getter for <code>diversify3.varieties.crop_id</code>.
+     */
+    public Integer getCropId() {
+        return (Integer) get(2);
+    }
+
+    /**
      * Setter for <code>diversify3.varieties.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.varieties.created_on</code>.
-     */
-    public void setCreatedOn(Timestamp value) {
-        set(3, value);
     }
 
     /**
@@ -95,10 +95,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Getter for <code>diversify3.varieties.crop_id</code>.
+     * Getter for <code>diversify3.varieties.created_on</code>.
      */
-    public Integer getCropId() {
-        return (Integer) get(2);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(3);
     }
 
     /**
@@ -323,10 +323,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.varieties.created_on</code>.
+     * Setter for <code>diversify3.varieties.created_on</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(3);
+    public void setCreatedOn(Timestamp value) {
+        set(3, value);
     }
 
     /**

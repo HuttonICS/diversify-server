@@ -39,6 +39,7 @@ public class ViewSpeciesdata extends TableImpl<ViewSpeciesdataRecord> {
      * The reference instance of <code>diversify3.view_speciesdata</code>
      */
     public static final ViewSpeciesdata VIEW_SPECIESDATA = new ViewSpeciesdata();
+
     /**
      * The column <code>diversify3.view_speciesdata.siteid</code>.
      */
@@ -58,18 +59,6 @@ public class ViewSpeciesdata extends TableImpl<ViewSpeciesdataRecord> {
      * The column <code>diversify3.view_speciesdata.traitcode</code>.
      */
     public final TableField<ViewSpeciesdataRecord, String> TRAITCODE = createField("traitcode", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
-    /**
-     * The column <code>diversify3.view_speciesdata.sitename</code>.
-     */
-    public final TableField<ViewSpeciesdataRecord, String> SITENAME = createField("sitename", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
-    /**
-     * The column <code>diversify3.view_speciesdata.rate</code>.
-     */
-    public final TableField<ViewSpeciesdataRecord, Integer> RATE = createField("rate", org.jooq.impl.SQLDataType.INTEGER, this, "");
-    /**
-     * The column <code>diversify3.view_speciesdata.cropname</code>.
-     */
-    public final TableField<ViewSpeciesdataRecord, String> CROPNAME = createField("cropname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The class holding records for this type
@@ -78,6 +67,21 @@ public class ViewSpeciesdata extends TableImpl<ViewSpeciesdataRecord> {
     public Class<ViewSpeciesdataRecord> getRecordType() {
         return ViewSpeciesdataRecord.class;
     }
+
+    /**
+     * The column <code>diversify3.view_speciesdata.sitename</code>.
+     */
+    public final TableField<ViewSpeciesdataRecord, String> SITENAME = createField("sitename", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
+    /**
+     * The column <code>diversify3.view_speciesdata.rate</code>.
+     */
+    public final TableField<ViewSpeciesdataRecord, Integer> RATE = createField("rate", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
+    /**
+     * The column <code>diversify3.view_speciesdata.cropname</code>.
+     */
+    public final TableField<ViewSpeciesdataRecord, String> CROPNAME = createField("cropname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>diversify3.view_speciesdata.varietyid</code>.

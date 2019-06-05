@@ -43,7 +43,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Plots extends TableImpl<PlotsRecord> {
 
-    private static final long serialVersionUID = -1203363990;
+    private static final long serialVersionUID = -1904373164;
 
     /**
      * The reference instance of <code>diversify3.plots</code>
@@ -62,6 +62,11 @@ public class Plots extends TableImpl<PlotsRecord> {
      * The column <code>diversify3.plots.id</code>.
      */
     public final TableField<PlotsRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
+
+    /**
+     * The column <code>diversify3.plots.dataset_id</code>.
+     */
+    public final TableField<PlotsRecord, Integer> DATASET_ID = createField("dataset_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
      * The column <code>diversify3.plots.plotcode</code>.
@@ -86,7 +91,7 @@ public class Plots extends TableImpl<PlotsRecord> {
     /**
      * The column <code>diversify3.plots.plot</code>.
      */
-    public final TableField<PlotsRecord, Integer> PLOT = createField("plot", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<PlotsRecord, String> PLOT = createField("plot", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
      * The column <code>diversify3.plots.subplot</code>.
@@ -184,7 +189,7 @@ public class Plots extends TableImpl<PlotsRecord> {
      */
     @Override
     public List<Index> getIndexes() {
-        return Arrays.<Index>asList(Indexes.PLOTS_PRIMARY, Indexes.PLOTS_SITE_ID);
+        return Arrays.<Index>asList(Indexes.PLOTS_DATASET_ID, Indexes.PLOTS_PRIMARY, Indexes.PLOTS_SITE_ID);
     }
 
     /**
@@ -216,7 +221,11 @@ public class Plots extends TableImpl<PlotsRecord> {
      */
     @Override
     public List<ForeignKey<PlotsRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<PlotsRecord, ?>>asList(Keys.PLOTS_IBFK_1);
+        return Arrays.<ForeignKey<PlotsRecord, ?>>asList(Keys.PLOTS_IBFK_2, Keys.PLOTS_IBFK_1);
+    }
+
+    public Datasets datasets() {
+        return new Datasets(this, Keys.PLOTS_IBFK_2);
     }
 
     public Sites sites() {

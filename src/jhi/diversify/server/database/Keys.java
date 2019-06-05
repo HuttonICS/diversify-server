@@ -89,6 +89,7 @@ public class Keys {
     public static final ForeignKey<PlotdataRecord, DatasetsRecord> PLOTDATA_IBFK_3 = ForeignKeys0.PLOTDATA_IBFK_3;
     public static final ForeignKey<PlotdataRecord, PlotsRecord> PLOTDATA_IBFK_1 = ForeignKeys0.PLOTDATA_IBFK_1;
     public static final ForeignKey<PlotdataRecord, TraitsRecord> PLOTDATA_IBFK_2 = ForeignKeys0.PLOTDATA_IBFK_2;
+    public static final ForeignKey<PlotsRecord, DatasetsRecord> PLOTS_IBFK_2 = ForeignKeys0.PLOTS_IBFK_2;
     public static final ForeignKey<PlotsRecord, SitesRecord> PLOTS_IBFK_1 = ForeignKeys0.PLOTS_IBFK_1;
     public static final ForeignKey<SitesRecord, PartnersRecord> SITES_IBFK_1 = ForeignKeys0.SITES_IBFK_1;
     public static final ForeignKey<SpeciesdataRecord, DatasetsRecord> SPECIESDATA_IBFK_3 = ForeignKeys0.SPECIESDATA_IBFK_3;
@@ -135,6 +136,7 @@ public class Keys {
         public static final ForeignKey<PlotdataRecord, DatasetsRecord> PLOTDATA_IBFK_3 = Internal.createForeignKey(jhi.diversify.server.database.Keys.KEY_DATASETS_PRIMARY, Plotdata.PLOTDATA, "plotdata_ibfk_3", Plotdata.PLOTDATA.DATASET_ID);
         public static final ForeignKey<PlotdataRecord, PlotsRecord> PLOTDATA_IBFK_1 = Internal.createForeignKey(jhi.diversify.server.database.Keys.KEY_PLOTS_PRIMARY, Plotdata.PLOTDATA, "plotdata_ibfk_1", Plotdata.PLOTDATA.PLOT_ID);
         public static final ForeignKey<PlotdataRecord, TraitsRecord> PLOTDATA_IBFK_2 = Internal.createForeignKey(jhi.diversify.server.database.Keys.KEY_TRAITS_PRIMARY, Plotdata.PLOTDATA, "plotdata_ibfk_2", Plotdata.PLOTDATA.TRAIT_ID);
+        public static final ForeignKey<PlotsRecord, DatasetsRecord> PLOTS_IBFK_2 = Internal.createForeignKey(jhi.diversify.server.database.Keys.KEY_DATASETS_PRIMARY, Plots.PLOTS, "plots_ibfk_2", Plots.PLOTS.DATASET_ID);
         public static final ForeignKey<PlotsRecord, SitesRecord> PLOTS_IBFK_1 = Internal.createForeignKey(jhi.diversify.server.database.Keys.KEY_SITES_PRIMARY, Plots.PLOTS, "plots_ibfk_1", Plots.PLOTS.SITE_ID);
         public static final ForeignKey<SitesRecord, PartnersRecord> SITES_IBFK_1 = Internal.createForeignKey(jhi.diversify.server.database.Keys.KEY_PARTNERS_PRIMARY, Sites.SITES, "sites_ibfk_1", Sites.SITES.PARTNER_ID);
         public static final ForeignKey<SpeciesdataRecord, DatasetsRecord> SPECIESDATA_IBFK_3 = Internal.createForeignKey(jhi.diversify.server.database.Keys.KEY_DATASETS_PRIMARY, Speciesdata.SPECIESDATA, "speciesdata_ibfk_3", Speciesdata.SPECIESDATA.DATASET_ID);

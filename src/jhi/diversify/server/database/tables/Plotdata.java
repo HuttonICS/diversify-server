@@ -42,7 +42,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Plotdata extends TableImpl<PlotdataRecord> {
 
-    private static final long serialVersionUID = 796937553;
+    private static final long serialVersionUID = 252366536;
 
     /**
      * The reference instance of <code>diversify3.plotdata</code>
@@ -86,6 +86,11 @@ public class Plotdata extends TableImpl<PlotdataRecord> {
      * The column <code>diversify3.plotdata.value</code>.
      */
     public final TableField<PlotdataRecord, String> VALUE = createField("value", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
+    /**
+     * The column <code>diversify3.plotdata.date_accuracy</code>.
+     */
+    public final TableField<PlotdataRecord, Integer> DATE_ACCURACY = createField("date_accuracy", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
      * The column <code>diversify3.plotdata.created_on</code>.

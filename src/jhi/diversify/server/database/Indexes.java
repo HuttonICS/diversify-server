@@ -49,6 +49,7 @@ public class Indexes {
     public static final Index PLOTDATA_PLOT_ID = Indexes0.PLOTDATA_PLOT_ID;
     public static final Index PLOTDATA_PRIMARY = Indexes0.PLOTDATA_PRIMARY;
     public static final Index PLOTDATA_TRAIT_ID = Indexes0.PLOTDATA_TRAIT_ID;
+    public static final Index PLOTS_DATASET_ID = Indexes0.PLOTS_DATASET_ID;
     public static final Index PLOTS_PRIMARY = Indexes0.PLOTS_PRIMARY;
     public static final Index PLOTS_SITE_ID = Indexes0.PLOTS_SITE_ID;
     public static final Index SITES_PARTNER_ID = Indexes0.SITES_PARTNER_ID;
@@ -78,6 +79,7 @@ public class Indexes {
         public static Index PLOTDATA_PLOT_ID = Internal.createIndex("plot_id", Plotdata.PLOTDATA, new OrderField[] { Plotdata.PLOTDATA.PLOT_ID }, false);
         public static Index PLOTDATA_PRIMARY = Internal.createIndex("PRIMARY", Plotdata.PLOTDATA, new OrderField[] { Plotdata.PLOTDATA.ID }, true);
         public static Index PLOTDATA_TRAIT_ID = Internal.createIndex("trait_id", Plotdata.PLOTDATA, new OrderField[] { Plotdata.PLOTDATA.TRAIT_ID }, false);
+        public static Index PLOTS_DATASET_ID = Internal.createIndex("dataset_id", Plots.PLOTS, new OrderField[] { Plots.PLOTS.DATASET_ID }, false);
         public static Index PLOTS_PRIMARY = Internal.createIndex("PRIMARY", Plots.PLOTS, new OrderField[] { Plots.PLOTS.ID }, true);
         public static Index PLOTS_SITE_ID = Internal.createIndex("site_id", Plots.PLOTS, new OrderField[] { Plots.PLOTS.SITE_ID }, false);
         public static Index SITES_PARTNER_ID = Internal.createIndex("partner_id", Sites.SITES, new OrderField[] { Sites.SITES.PARTNER_ID }, false);

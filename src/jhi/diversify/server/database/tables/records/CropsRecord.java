@@ -75,6 +75,13 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify3.crops.croplatinname</code>.
+     */
+    public String getCroplatinname() {
+        return (String) get(2);
+    }
+
+    /**
      * Setter for <code>diversify3.crops.id</code>.
      */
     public void setId(Integer value) {
@@ -82,10 +89,10 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify3.crops.plantpartner_id</code>.
+     * Getter for <code>diversify3.crops.plantpartner_id</code>.
      */
-    public void setPlantpartnerId(Integer value) {
-        set(3, value);
+    public Integer getPlantpartnerId() {
+        return (Integer) get(3);
     }
 
     /**
@@ -96,24 +103,17 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify3.crops.created_on</code>.
+     * Setter for <code>diversify3.crops.plantpartner_id</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(4, value);
+    public void setPlantpartnerId(Integer value) {
+        set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.crops.croplatinname</code>.
+     * Getter for <code>diversify3.crops.created_on</code>.
      */
-    public String getCroplatinname() {
-        return (String) get(2);
-    }
-
-    /**
-     * Getter for <code>diversify3.crops.plantpartner_id</code>.
-     */
-    public Integer getPlantpartnerId() {
-        return (Integer) get(3);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
     }
 
     /**
@@ -372,10 +372,10 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.crops.created_on</code>.
+     * Setter for <code>diversify3.crops.created_on</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
+    public void setCreatedOn(Timestamp value) {
+        set(4, value);
     }
 
     /**

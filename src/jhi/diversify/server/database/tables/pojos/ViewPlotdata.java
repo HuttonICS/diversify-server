@@ -24,9 +24,10 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewPlotdata implements Serializable {
 
-    private static final long serialVersionUID = 233732844;
+    private static final long serialVersionUID = -968184063;
 
     private String     plotcode;
+    private String     crops;
     private Integer    siteid;
     private String     sitename;
     private Integer    id;
@@ -47,6 +48,7 @@ public class ViewPlotdata implements Serializable {
 
     public ViewPlotdata(ViewPlotdata value) {
         this.plotcode = value.plotcode;
+        this.crops = value.crops;
         this.siteid = value.siteid;
         this.sitename = value.sitename;
         this.id = value.id;
@@ -66,6 +68,7 @@ public class ViewPlotdata implements Serializable {
 
     public ViewPlotdata(
         String     plotcode,
+        String     crops,
         Integer    siteid,
         String     sitename,
         Integer    id,
@@ -83,6 +86,7 @@ public class ViewPlotdata implements Serializable {
         String     unit
     ) {
         this.plotcode = plotcode;
+        this.crops = crops;
         this.siteid = siteid;
         this.sitename = sitename;
         this.id = id;
@@ -106,6 +110,14 @@ public class ViewPlotdata implements Serializable {
 
     public void setPlotcode(String plotcode) {
         this.plotcode = plotcode;
+    }
+
+    public String getCrops() {
+        return this.crops;
+    }
+
+    public void setCrops(String crops) {
+        this.crops = crops;
     }
 
     public Integer getSiteid() {
@@ -233,6 +245,7 @@ public class ViewPlotdata implements Serializable {
         StringBuilder sb = new StringBuilder("ViewPlotdata (");
 
         sb.append(plotcode);
+        sb.append(", ").append(crops);
         sb.append(", ").append(siteid);
         sb.append(", ").append(sitename);
         sb.append(", ").append(id);

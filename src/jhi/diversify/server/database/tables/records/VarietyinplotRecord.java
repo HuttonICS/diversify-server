@@ -75,6 +75,13 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
+     * Getter for <code>diversify3.varietyinplot.variety_id</code>.
+     */
+    public Integer getVarietyId() {
+        return (Integer) get(2);
+    }
+
+    /**
      * Setter for <code>diversify3.varietyinplot.id</code>.
      */
     public void setId(Integer value) {
@@ -82,10 +89,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Setter for <code>diversify3.varietyinplot.rate</code>.
+     * Getter for <code>diversify3.varietyinplot.rate</code>.
      */
-    public void setRate(Integer value) {
-        set(3, value);
+    public Integer getRate() {
+        return (Integer) get(3);
     }
 
     /**
@@ -96,24 +103,17 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Setter for <code>diversify3.varietyinplot.created_on</code>.
+     * Setter for <code>diversify3.varietyinplot.rate</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(4, value);
+    public void setRate(Integer value) {
+        set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.varietyinplot.variety_id</code>.
+     * Getter for <code>diversify3.varietyinplot.created_on</code>.
      */
-    public Integer getVarietyId() {
-        return (Integer) get(2);
-    }
-
-    /**
-     * Getter for <code>diversify3.varietyinplot.rate</code>.
-     */
-    public Integer getRate() {
-        return (Integer) get(3);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
     }
 
     /**
@@ -372,10 +372,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.varietyinplot.created_on</code>.
+     * Setter for <code>diversify3.varietyinplot.created_on</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
+    public void setCreatedOn(Timestamp value) {
+        set(4, value);
     }
 
     /**

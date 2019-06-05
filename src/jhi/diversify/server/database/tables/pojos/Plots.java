@@ -24,14 +24,15 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Plots implements Serializable {
 
-    private static final long serialVersionUID = -69921578;
+    private static final long serialVersionUID = -1901585619;
 
     private Integer    id;
+    private Integer    datasetId;
     private String     plotcode;
     private String     owncode;
     private Integer    siteId;
     private Integer    block;
-    private Integer    plot;
+    private String     plot;
     private Integer    subplot;
     private Integer    row;
     private Integer    col;
@@ -47,6 +48,7 @@ public class Plots implements Serializable {
 
     public Plots(Plots value) {
         this.id = value.id;
+        this.datasetId = value.datasetId;
         this.plotcode = value.plotcode;
         this.owncode = value.owncode;
         this.siteId = value.siteId;
@@ -66,11 +68,12 @@ public class Plots implements Serializable {
 
     public Plots(
         Integer    id,
+        Integer    datasetId,
         String     plotcode,
         String     owncode,
         Integer    siteId,
         Integer    block,
-        Integer    plot,
+        String     plot,
         Integer    subplot,
         Integer    row,
         Integer    col,
@@ -83,6 +86,7 @@ public class Plots implements Serializable {
         Timestamp  updatedOn
     ) {
         this.id = id;
+        this.datasetId = datasetId;
         this.plotcode = plotcode;
         this.owncode = owncode;
         this.siteId = siteId;
@@ -106,6 +110,14 @@ public class Plots implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getDatasetId() {
+        return this.datasetId;
+    }
+
+    public void setDatasetId(Integer datasetId) {
+        this.datasetId = datasetId;
     }
 
     public String getPlotcode() {
@@ -140,11 +152,11 @@ public class Plots implements Serializable {
         this.block = block;
     }
 
-    public Integer getPlot() {
+    public String getPlot() {
         return this.plot;
     }
 
-    public void setPlot(Integer plot) {
+    public void setPlot(String plot) {
         this.plot = plot;
     }
 
@@ -233,6 +245,7 @@ public class Plots implements Serializable {
         StringBuilder sb = new StringBuilder("Plots (");
 
         sb.append(id);
+        sb.append(", ").append(datasetId);
         sb.append(", ").append(plotcode);
         sb.append(", ").append(owncode);
         sb.append(", ").append(siteId);

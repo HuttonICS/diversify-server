@@ -53,6 +53,13 @@ public class ViewSiteoverviewRecord extends TableRecordImpl<ViewSiteoverviewReco
     }
 
     /**
+     * Getter for <code>diversify3.view_siteoverview.traitname</code>.
+     */
+    public String getTraitname() {
+        return (String) get(1);
+    }
+
+    /**
      * Create a detached, initialised ViewSiteoverviewRecord
      */
     public ViewSiteoverviewRecord(Integer traitid, String traitname, String traitcode, String unit, Integer siteid, String sitename, String othername, Integer datasetid, String datasetname, Integer year, BigDecimal avg, BigDecimal min, BigDecimal max, Double stdv) {
@@ -75,52 +82,10 @@ public class ViewSiteoverviewRecord extends TableRecordImpl<ViewSiteoverviewReco
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.traitcode</code>.
-     */
-    public void setTraitcode(String value) {
-        set(2, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.traitid</code>.
-     */
-    public void setTraitid(Integer value) {
-        set(0, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.traitname</code>.
-     */
-    public String getTraitname() {
-        return (String) get(1);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.unit</code>.
-     */
-    public String getUnit() {
-        return (String) get(3);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.siteid</code>.
-     */
-    public void setSiteid(Integer value) {
-        set(4, value);
-    }
-
-    /**
      * Getter for <code>diversify3.view_siteoverview.traitcode</code>.
      */
     public String getTraitcode() {
         return (String) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.sitename</code>.
-     */
-    public void setSitename(String value) {
-        set(5, value);
     }
 
     /**
@@ -131,10 +96,66 @@ public class ViewSiteoverviewRecord extends TableRecordImpl<ViewSiteoverviewReco
     }
 
     /**
+     * Setter for <code>diversify3.view_siteoverview.traitid</code>.
+     */
+    public void setTraitid(Integer value) {
+        set(0, value);
+    }
+
+    /**
+     * Setter for <code>diversify3.view_siteoverview.traitcode</code>.
+     */
+    public void setTraitcode(String value) {
+        set(2, value);
+    }
+
+    /**
      * Getter for <code>diversify3.view_siteoverview.siteid</code>.
      */
     public Integer getSiteid() {
         return (Integer) get(4);
+    }
+
+    /**
+     * Getter for <code>diversify3.view_siteoverview.unit</code>.
+     */
+    public String getUnit() {
+        return (String) get(3);
+    }
+
+    /**
+     * Getter for <code>diversify3.view_siteoverview.sitename</code>.
+     */
+    public String getSitename() {
+        return (String) get(5);
+    }
+
+    /**
+     * Setter for <code>diversify3.view_siteoverview.othername</code>.
+     */
+    public void setOthername(String value) {
+        set(6, value);
+    }
+
+    /**
+     * Setter for <code>diversify3.view_siteoverview.siteid</code>.
+     */
+    public void setSiteid(Integer value) {
+        set(4, value);
+    }
+
+    /**
+     * Setter for <code>diversify3.view_siteoverview.sitename</code>.
+     */
+    public void setSitename(String value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>diversify3.view_siteoverview.datasetid</code>.
+     */
+    public Integer getDatasetid() {
+        return (Integer) get(7);
     }
 
     /**
@@ -152,31 +173,10 @@ public class ViewSiteoverviewRecord extends TableRecordImpl<ViewSiteoverviewReco
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.sitename</code>.
+     * Getter for <code>diversify3.view_siteoverview.datasetname</code>.
      */
-    public String getSitename() {
-        return (String) get(5);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.datasetname</code>.
-     */
-    public void setDatasetname(String value) {
-        set(8, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.othername</code>.
-     */
-    public void setOthername(String value) {
-        set(6, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.datasetid</code>.
-     */
-    public Integer getDatasetid() {
-        return (Integer) get(7);
+    public String getDatasetname() {
+        return (String) get(8);
     }
 
     /**
@@ -194,10 +194,10 @@ public class ViewSiteoverviewRecord extends TableRecordImpl<ViewSiteoverviewReco
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.datasetname</code>.
+     * Setter for <code>diversify3.view_siteoverview.datasetname</code>.
      */
-    public String getDatasetname() {
-        return (String) get(8);
+    public void setDatasetname(String value) {
+        set(8, value);
     }
 
     /**

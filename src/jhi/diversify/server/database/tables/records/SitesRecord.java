@@ -92,38 +92,17 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify3.sites.sitename</code>.
-     */
-    public void setSitename(String value) {
-        set(1, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.sites.latitude</code>.
-     */
-    public void setLatitude(BigDecimal value) {
-        set(4, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.sites.othername</code>.
-     */
-    public String getOthername() {
-        return (String) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.sites.longitude</code>.
-     */
-    public void setLongitude(BigDecimal value) {
-        set(5, value);
-    }
-
-    /**
      * Getter for <code>diversify3.sites.partner_id</code>.
      */
     public Integer getPartnerId() {
         return (Integer) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify3.sites.sitename</code>.
+     */
+    public void setSitename(String value) {
+        set(1, value);
     }
 
     /**
@@ -134,10 +113,17 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify3.sites.created_on</code>.
+     * Getter for <code>diversify3.sites.othername</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(6);
+    public String getOthername() {
+        return (String) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify3.sites.latitude</code>.
+     */
+    public void setLatitude(BigDecimal value) {
+        set(4, value);
     }
 
     /**
@@ -145,6 +131,20 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
      */
     public BigDecimal getLongitude() {
         return (BigDecimal) get(5);
+    }
+
+    /**
+     * Getter for <code>diversify3.sites.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(6);
+    }
+
+    /**
+     * Setter for <code>diversify3.sites.longitude</code>.
+     */
+    public void setLongitude(BigDecimal value) {
+        set(5, value);
     }
 
     /**

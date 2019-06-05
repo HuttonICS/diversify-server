@@ -23,7 +23,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Speciesdata implements Serializable {
 
-    private static final long serialVersionUID = -887191026;
+    private static final long serialVersionUID = -1105046897;
 
     private Integer   id;
     private Integer   datasetId;
@@ -31,6 +31,7 @@ public class Speciesdata implements Serializable {
     private Integer   varietyinplotId;
     private Integer   rep;
     private String    value;
+    private Integer   dateAccuracy;
     private Timestamp createdOn;
     private Timestamp updatedOn;
 
@@ -43,6 +44,7 @@ public class Speciesdata implements Serializable {
         this.varietyinplotId = value.varietyinplotId;
         this.rep = value.rep;
         this.value = value.value;
+        this.dateAccuracy = value.dateAccuracy;
         this.createdOn = value.createdOn;
         this.updatedOn = value.updatedOn;
     }
@@ -54,6 +56,7 @@ public class Speciesdata implements Serializable {
         Integer   varietyinplotId,
         Integer   rep,
         String    value,
+        Integer   dateAccuracy,
         Timestamp createdOn,
         Timestamp updatedOn
     ) {
@@ -63,6 +66,7 @@ public class Speciesdata implements Serializable {
         this.varietyinplotId = varietyinplotId;
         this.rep = rep;
         this.value = value;
+        this.dateAccuracy = dateAccuracy;
         this.createdOn = createdOn;
         this.updatedOn = updatedOn;
     }
@@ -115,6 +119,14 @@ public class Speciesdata implements Serializable {
         this.value = value;
     }
 
+    public Integer getDateAccuracy() {
+        return this.dateAccuracy;
+    }
+
+    public void setDateAccuracy(Integer dateAccuracy) {
+        this.dateAccuracy = dateAccuracy;
+    }
+
     public Timestamp getCreatedOn() {
         return this.createdOn;
     }
@@ -141,6 +153,7 @@ public class Speciesdata implements Serializable {
         sb.append(", ").append(varietyinplotId);
         sb.append(", ").append(rep);
         sb.append(", ").append(value);
+        sb.append(", ").append(dateAccuracy);
         sb.append(", ").append(createdOn);
         sb.append(", ").append(updatedOn);
 
