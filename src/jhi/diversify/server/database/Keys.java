@@ -37,7 +37,7 @@ import org.jooq.impl.Internal;
 
 /**
  * A class modelling foreign key relationships and constraints of tables of 
- * the <code>diversify3</code> schema.
+ * the <code>diversify</code> schema.
  */
 @Generated(
     value = {

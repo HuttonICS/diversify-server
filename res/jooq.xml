@@ -3,7 +3,7 @@
 	<!-- Configure the database connection here -->
 	<jdbc>
 		<driver>com.mysql.cj.jdbc.Driver</driver>
-		<url>jdbc:mysql://localhost/diversify3</url>
+		<url>jdbc:mysql://localhost/diversify</url>
 		<user>root</user>
 		<password></password>
 
@@ -94,7 +94,7 @@
 
 				 If left empty, jOOQ will generate all available schemata. See the
 				 manual's next section to learn how to generate several schemata -->
-			<inputSchema>diversify3</inputSchema>
+			<inputSchema>diversify</inputSchema>
 		</database>
 
 		<generate>

@@ -30,20 +30,13 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implements Record5<Integer, String, Integer, Timestamp, Timestamp> {
 
-    private static final long serialVersionUID = -657390519;
+    private static final long serialVersionUID = -98550883;
 
     /**
      * Create a detached VarietiesRecord
      */
     public VarietiesRecord() {
         super(Varieties.VARIETIES);
-    }
-
-    /**
-     * Getter for <code>diversify3.varieties.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
     }
 
     /**
@@ -60,52 +53,59 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Getter for <code>diversify3.varieties.varietyname</code>.
+     * Getter for <code>diversify.varieties.id</code>.
      */
-    public String getVarietyname() {
-        return (String) get(1);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.varieties.crop_id</code>.
-     */
-    public void setCropId(Integer value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.varieties.crop_id</code>.
-     */
-    public Integer getCropId() {
-        return (Integer) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.varieties.id</code>.
+     * Setter for <code>diversify.varieties.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Setter for <code>diversify3.varieties.varietyname</code>.
+     * Getter for <code>diversify.varieties.varietyname</code>.
+     */
+    public String getVarietyname() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.varieties.varietyname</code>.
      */
     public void setVarietyname(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>diversify3.varieties.created_on</code>.
+     * Getter for <code>diversify.varieties.crop_id</code>.
+     */
+    public Integer getCropId() {
+        return (Integer) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.varieties.crop_id</code>.
+     */
+    public void setCropId(Integer value) {
+        set(2, value);
+    }
+
+    /**
+     * Getter for <code>diversify.varieties.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(3);
     }
 
     /**
-     * Getter for <code>diversify3.varieties.updated_on</code>.
+     * Setter for <code>diversify.varieties.created_on</code>.
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(4);
+    public void setCreatedOn(Timestamp value) {
+        set(3, value);
     }
 
     // -------------------------------------------------------------------------
@@ -323,14 +323,14 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     // -------------------------------------------------------------------------
 
     /**
-     * Setter for <code>diversify3.varieties.created_on</code>.
+     * Getter for <code>diversify.varieties.updated_on</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(3, value);
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(4);
     }
 
     /**
-     * Setter for <code>diversify3.varieties.updated_on</code>.
+     * Setter for <code>diversify.varieties.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(4, value);

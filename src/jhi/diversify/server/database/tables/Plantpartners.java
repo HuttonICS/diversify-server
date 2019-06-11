@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Diversify;
 import jhi.diversify.server.database.Indexes;
 import jhi.diversify.server.database.Keys;
 import jhi.diversify.server.database.tables.records.PlantpartnersRecord;
@@ -42,12 +42,11 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Plantpartners extends TableImpl<PlantpartnersRecord> {
 
-    private static final long serialVersionUID = -879952747;
-
     /**
-     * The reference instance of <code>diversify3.plantpartners</code>
+     * The reference instance of <code>diversify.plantpartners</code>
      */
     public static final Plantpartners PLANTPARTNERS = new Plantpartners();
+    private static final long serialVersionUID = 32983680;
 
     /**
      * The class holding records for this type
@@ -56,43 +55,42 @@ public class Plantpartners extends TableImpl<PlantpartnersRecord> {
     public Class<PlantpartnersRecord> getRecordType() {
         return PlantpartnersRecord.class;
     }
-
     /**
-     * The column <code>diversify3.plantpartners.id</code>.
+     * The column <code>diversify.plantpartners.id</code>.
      */
     public final TableField<PlantpartnersRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>diversify3.plantpartners.plantpartnername</code>.
+     * The column <code>diversify.plantpartners.plantpartnername</code>.
      */
     public final TableField<PlantpartnersRecord, String> PLANTPARTNERNAME = createField("plantpartnername", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.plantpartners.created_on</code>.
+     * The column <code>diversify.plantpartners.created_on</code>.
      */
     public final TableField<PlantpartnersRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>diversify3.plantpartners.updated_on</code>.
+     * The column <code>diversify.plantpartners.updated_on</code>.
      */
     public final TableField<PlantpartnersRecord, Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * Create a <code>diversify3.plantpartners</code> table reference
+     * Create a <code>diversify.plantpartners</code> table reference
      */
     public Plantpartners() {
         this(DSL.name("plantpartners"), null);
     }
 
     /**
-     * Create an aliased <code>diversify3.plantpartners</code> table reference
+     * Create an aliased <code>diversify.plantpartners</code> table reference
      */
     public Plantpartners(String alias) {
         this(DSL.name(alias), PLANTPARTNERS);
     }
 
     /**
-     * Create an aliased <code>diversify3.plantpartners</code> table reference
+     * Create an aliased <code>diversify.plantpartners</code> table reference
      */
     public Plantpartners(Name alias) {
         this(alias, PLANTPARTNERS);
@@ -115,7 +113,7 @@ public class Plantpartners extends TableImpl<PlantpartnersRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Diversify3.DIVERSIFY3;
+        return Diversify.DIVERSIFY;
     }
 
     /**

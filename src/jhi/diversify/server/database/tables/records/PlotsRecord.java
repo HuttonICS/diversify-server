@@ -31,20 +31,13 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Record17<Integer, Integer, String, String, Integer, Integer, String, Integer, Integer, Integer, Integer, Integer, String, BigDecimal, BigDecimal, Timestamp, Timestamp> {
 
-    private static final long serialVersionUID = -1533767924;
+    private static final long serialVersionUID = 609830660;
 
     /**
      * Create a detached PlotsRecord
      */
     public PlotsRecord() {
         super(Plots.PLOTS);
-    }
-
-    /**
-     * Getter for <code>diversify3.plots.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
     }
 
     /**
@@ -73,217 +66,224 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify3.plots.id</code>.
+     * Getter for <code>diversify.plots.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
+     * Setter for <code>diversify.plots.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.dataset_id</code>.
+     * Getter for <code>diversify.plots.dataset_id</code>.
      */
     public Integer getDatasetId() {
         return (Integer) get(1);
     }
 
     /**
-     * Setter for <code>diversify3.plots.dataset_id</code>.
+     * Setter for <code>diversify.plots.dataset_id</code>.
      */
     public void setDatasetId(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.plotcode</code>.
+     * Getter for <code>diversify.plots.plotcode</code>.
      */
     public String getPlotcode() {
         return (String) get(2);
     }
 
     /**
-     * Setter for <code>diversify3.plots.plotcode</code>.
+     * Setter for <code>diversify.plots.plotcode</code>.
      */
     public void setPlotcode(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.owncode</code>.
+     * Getter for <code>diversify.plots.owncode</code>.
      */
     public String getOwncode() {
         return (String) get(3);
     }
 
     /**
-     * Setter for <code>diversify3.plots.owncode</code>.
+     * Setter for <code>diversify.plots.owncode</code>.
      */
     public void setOwncode(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.site_id</code>.
+     * Getter for <code>diversify.plots.site_id</code>.
      */
     public Integer getSiteId() {
         return (Integer) get(4);
     }
 
     /**
-     * Setter for <code>diversify3.plots.site_id</code>.
+     * Setter for <code>diversify.plots.site_id</code>.
      */
     public void setSiteId(Integer value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.block</code>.
+     * Getter for <code>diversify.plots.block</code>.
      */
     public Integer getBlock() {
         return (Integer) get(5);
     }
 
     /**
-     * Setter for <code>diversify3.plots.block</code>.
+     * Setter for <code>diversify.plots.block</code>.
      */
     public void setBlock(Integer value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.plot</code>.
+     * Getter for <code>diversify.plots.plot</code>.
      */
     public String getPlot() {
         return (String) get(6);
     }
 
     /**
-     * Setter for <code>diversify3.plots.plot</code>.
+     * Setter for <code>diversify.plots.plot</code>.
      */
     public void setPlot(String value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.subplot</code>.
+     * Getter for <code>diversify.plots.subplot</code>.
      */
     public Integer getSubplot() {
         return (Integer) get(7);
     }
 
     /**
-     * Setter for <code>diversify3.plots.subplot</code>.
+     * Setter for <code>diversify.plots.subplot</code>.
      */
     public void setSubplot(Integer value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.row</code>.
+     * Getter for <code>diversify.plots.row</code>.
      */
     public Integer getRow() {
         return (Integer) get(8);
     }
 
     /**
-     * Setter for <code>diversify3.plots.row</code>.
+     * Setter for <code>diversify.plots.row</code>.
      */
     public void setRow(Integer value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.col</code>.
+     * Getter for <code>diversify.plots.col</code>.
      */
     public Integer getCol() {
         return (Integer) get(9);
     }
 
     /**
-     * Setter for <code>diversify3.plots.col</code>.
+     * Setter for <code>diversify.plots.col</code>.
      */
     public void setCol(Integer value) {
         set(9, value);
     }
 
     /**
-     * Setter for <code>diversify3.plots.subrep</code>.
-     */
-    public void setSubrep(Integer value) {
-        set(11, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.plots.rep</code>.
+     * Getter for <code>diversify.plots.rep</code>.
      */
     public Integer getRep() {
         return (Integer) get(10);
     }
 
     /**
-     * Setter for <code>diversify3.plots.rep</code>.
+     * Setter for <code>diversify.plots.rep</code>.
      */
     public void setRep(Integer value) {
         set(10, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.subrep</code>.
+     * Getter for <code>diversify.plots.subrep</code>.
      */
     public Integer getSubrep() {
         return (Integer) get(11);
     }
 
     /**
-     * Getter for <code>diversify3.plots.management</code>.
+     * Setter for <code>diversify.plots.subrep</code>.
+     */
+    public void setSubrep(Integer value) {
+        set(11, value);
+    }
+
+    /**
+     * Getter for <code>diversify.plots.management</code>.
      */
     public String getManagement() {
         return (String) get(12);
     }
 
     /**
-     * Setter for <code>diversify3.plots.management</code>.
+     * Setter for <code>diversify.plots.management</code>.
      */
     public void setManagement(String value) {
         set(12, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.latitude</code>.
+     * Getter for <code>diversify.plots.latitude</code>.
      */
     public BigDecimal getLatitude() {
         return (BigDecimal) get(13);
     }
 
     /**
-     * Setter for <code>diversify3.plots.latitude</code>.
+     * Setter for <code>diversify.plots.latitude</code>.
      */
     public void setLatitude(BigDecimal value) {
         set(13, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.longitude</code>.
+     * Getter for <code>diversify.plots.longitude</code>.
      */
     public BigDecimal getLongitude() {
         return (BigDecimal) get(14);
     }
 
     /**
-     * Setter for <code>diversify3.plots.longitude</code>.
+     * Setter for <code>diversify.plots.longitude</code>.
      */
     public void setLongitude(BigDecimal value) {
         set(14, value);
     }
 
     /**
-     * Getter for <code>diversify3.plots.created_on</code>.
+     * Getter for <code>diversify.plots.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(15);
     }
 
     /**
-     * Setter for <code>diversify3.plots.created_on</code>.
+     * Setter for <code>diversify.plots.created_on</code>.
      */
     public void setCreatedOn(Timestamp value) {
         set(15, value);
@@ -306,28 +306,6 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.plots.updated_on</code>.
-     */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(16);
-    }
-
-    /**
-     * Setter for <code>diversify3.plots.updated_on</code>.
-     */
-    public void setUpdatedOn(Timestamp value) {
-        set(16, value);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Field<Integer> field1() {
-        return Plots.PLOTS.ID;
-    }
-
-    /**
      * {@inheritDoc}
      */
     @Override
@@ -341,6 +319,13 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     @Override
     public Row17<Integer, Integer, String, String, Integer, Integer, String, Integer, Integer, Integer, Integer, Integer, String, BigDecimal, BigDecimal, Timestamp, Timestamp> valuesRow() {
         return (Row17) super.valuesRow();
+    }
+
+    /**
+     * Getter for <code>diversify.plots.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(16);
     }
 
     /**
@@ -459,14 +444,6 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
      * {@inheritDoc}
      */
     @Override
-    public Integer component1() {
-        return getId();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public Field<Timestamp> field16() {
         return Plots.PLOTS.CREATED_ON;
     }
@@ -477,6 +454,13 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     @Override
     public Field<Timestamp> field17() {
         return Plots.PLOTS.UPDATED_ON;
+    }
+
+    /**
+     * Setter for <code>diversify.plots.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(16, value);
     }
 
     /**
@@ -595,14 +579,6 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
      * {@inheritDoc}
      */
     @Override
-    public Integer value1() {
-        return getId();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public Timestamp component16() {
         return getCreatedOn();
     }
@@ -613,6 +589,14 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     @Override
     public Timestamp component17() {
         return getUpdatedOn();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field1() {
+        return Plots.PLOTS.ID;
     }
 
     /**
@@ -731,15 +715,6 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
      * {@inheritDoc}
      */
     @Override
-    public PlotsRecord value1(Integer value) {
-        setId(value);
-        return this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public Timestamp value16() {
         return getCreatedOn();
     }
@@ -750,6 +725,14 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     @Override
     public Timestamp value17() {
         return getUpdatedOn();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer component1() {
+        return getId();
     }
 
     /**
@@ -887,10 +870,6 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
         return this;
     }
 
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
-
     /**
      * {@inheritDoc}
      */
@@ -922,6 +901,27 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
         value15(value15);
         value16(value16);
         value17(value17);
+        return this;
+    }
+
+    // -------------------------------------------------------------------------
+    // Constructors
+    // -------------------------------------------------------------------------
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value1() {
+        return getId();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public PlotsRecord value1(Integer value) {
+        setId(value);
         return this;
     }
 }

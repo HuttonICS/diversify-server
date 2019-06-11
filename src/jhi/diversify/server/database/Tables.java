@@ -26,7 +26,7 @@ import jhi.diversify.server.database.tables.ViewVarieties;
 
 
 /**
- * Convenience access to all tables in diversify3
+ * Convenience access to all tables in diversify
  */
 @Generated(
     value = {
@@ -39,57 +39,57 @@ import jhi.diversify.server.database.tables.ViewVarieties;
 public class Tables {
 
     /**
-     * The table <code>diversify3.crops</code>.
+     * The table <code>diversify.crops</code>.
      */
     public static final Crops CROPS = jhi.diversify.server.database.tables.Crops.CROPS;
 
     /**
-     * The table <code>diversify3.datasets</code>.
+     * The table <code>diversify.datasets</code>.
      */
     public static final Datasets DATASETS = jhi.diversify.server.database.tables.Datasets.DATASETS;
 
     /**
-     * The table <code>diversify3.partners</code>.
+     * The table <code>diversify.partners</code>.
      */
     public static final Partners PARTNERS = jhi.diversify.server.database.tables.Partners.PARTNERS;
 
     /**
-     * The table <code>diversify3.plantpartners</code>.
+     * The table <code>diversify.plantpartners</code>.
      */
     public static final Plantpartners PLANTPARTNERS = jhi.diversify.server.database.tables.Plantpartners.PLANTPARTNERS;
 
     /**
-     * The table <code>diversify3.plotdata</code>.
+     * The table <code>diversify.plotdata</code>.
      */
     public static final Plotdata PLOTDATA = jhi.diversify.server.database.tables.Plotdata.PLOTDATA;
 
     /**
-     * The table <code>diversify3.plots</code>.
+     * The table <code>diversify.plots</code>.
      */
     public static final Plots PLOTS = jhi.diversify.server.database.tables.Plots.PLOTS;
 
     /**
-     * The table <code>diversify3.sites</code>.
+     * The table <code>diversify.sites</code>.
      */
     public static final Sites SITES = jhi.diversify.server.database.tables.Sites.SITES;
 
     /**
-     * The table <code>diversify3.speciesdata</code>.
+     * The table <code>diversify.speciesdata</code>.
      */
     public static final Speciesdata SPECIESDATA = jhi.diversify.server.database.tables.Speciesdata.SPECIESDATA;
 
     /**
-     * The table <code>diversify3.traits</code>.
+     * The table <code>diversify.traits</code>.
      */
     public static final Traits TRAITS = jhi.diversify.server.database.tables.Traits.TRAITS;
 
     /**
-     * The table <code>diversify3.varieties</code>.
+     * The table <code>diversify.varieties</code>.
      */
     public static final Varieties VARIETIES = jhi.diversify.server.database.tables.Varieties.VARIETIES;
 
     /**
-     * The table <code>diversify3.varietyinplot</code>.
+     * The table <code>diversify.varietyinplot</code>.
      */
     public static final Varietyinplot VARIETYINPLOT = jhi.diversify.server.database.tables.Varietyinplot.VARIETYINPLOT;
 

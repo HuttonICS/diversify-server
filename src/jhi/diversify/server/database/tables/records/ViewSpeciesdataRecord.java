@@ -27,27 +27,13 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord> implements Record10<Integer, String, String, Integer, String, Integer, String, Integer, String, String> {
 
-    private static final long serialVersionUID = 470700107;
-
-    /**
-     * Setter for <code>diversify3.view_speciesdata.traitid</code>.
-     */
-    public void setTraitid(Integer value) {
-        set(0, value);
-    }
+    private static final long serialVersionUID = -1409843087;
 
     /**
      * Create a detached ViewSpeciesdataRecord
      */
     public ViewSpeciesdataRecord() {
         super(ViewSpeciesdata.VIEW_SPECIESDATA);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_speciesdata.traitname</code>.
-     */
-    public void setTraitname(String value) {
-        set(1, value);
     }
 
     /**
@@ -69,115 +55,129 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata.traitcode</code>.
-     */
-    public void setTraitcode(String value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_speciesdata.traitcode</code>.
-     */
-    public String getTraitcode() {
-        return (String) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_speciesdata.siteid</code>.
-     */
-    public void setSiteid(Integer value) {
-        set(3, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_speciesdata.traitid</code>.
+     * Getter for <code>diversify.view_speciesdata.traitid</code>.
      */
     public Integer getTraitid() {
         return (Integer) get(0);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata.traitname</code>.
+     * Setter for <code>diversify.view_speciesdata.traitid</code>.
+     */
+    public void setTraitid(Integer value) {
+        set(0, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_speciesdata.traitname</code>.
      */
     public String getTraitname() {
         return (String) get(1);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata.sitename</code>.
+     * Setter for <code>diversify.view_speciesdata.traitname</code>.
      */
-    public String getSitename() {
-        return (String) get(4);
+    public void setTraitname(String value) {
+        set(1, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata.siteid</code>.
+     * Getter for <code>diversify.view_speciesdata.traitcode</code>.
+     */
+    public String getTraitcode() {
+        return (String) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.traitcode</code>.
+     */
+    public void setTraitcode(String value) {
+        set(2, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_speciesdata.siteid</code>.
      */
     public Integer getSiteid() {
         return (Integer) get(3);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata.rate</code>.
+     * Setter for <code>diversify.view_speciesdata.siteid</code>.
      */
-    public Integer getRate() {
-        return (Integer) get(5);
+    public void setSiteid(Integer value) {
+        set(3, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata.cropname</code>.
+     * Getter for <code>diversify.view_speciesdata.sitename</code>.
      */
-    public void setCropname(String value) {
-        set(6, value);
+    public String getSitename() {
+        return (String) get(4);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata.sitename</code>.
+     * Setter for <code>diversify.view_speciesdata.sitename</code>.
      */
     public void setSitename(String value) {
         set(4, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata.varietyid</code>.
+     * Getter for <code>diversify.view_speciesdata.rate</code>.
      */
-    public void setVarietyid(Integer value) {
-        set(7, value);
+    public Integer getRate() {
+        return (Integer) get(5);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata.rate</code>.
+     * Setter for <code>diversify.view_speciesdata.rate</code>.
      */
     public void setRate(Integer value) {
         set(5, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata.varietyname</code>.
-     */
-    public void setVarietyname(String value) {
-        set(8, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_speciesdata.cropname</code>.
+     * Getter for <code>diversify.view_speciesdata.cropname</code>.
      */
     public String getCropname() {
         return (String) get(6);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata.value</code>.
+     * Setter for <code>diversify.view_speciesdata.cropname</code>.
      */
-    public void setValue(String value) {
-        set(9, value);
+    public void setCropname(String value) {
+        set(6, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata.varietyid</code>.
+     * Getter for <code>diversify.view_speciesdata.varietyid</code>.
      */
     public Integer getVarietyid() {
         return (Integer) get(7);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.varietyid</code>.
+     */
+    public void setVarietyid(Integer value) {
+        set(7, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_speciesdata.varietyname</code>.
+     */
+    public String getVarietyname() {
+        return (String) get(8);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.varietyname</code>.
+     */
+    public void setVarietyname(String value) {
+        set(8, value);
     }
 
     // -------------------------------------------------------------------------
@@ -185,17 +185,17 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.view_speciesdata.varietyname</code>.
-     */
-    public String getVarietyname() {
-        return (String) get(8);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_speciesdata.value</code>.
+     * Getter for <code>diversify.view_speciesdata.value</code>.
      */
     public String getValue() {
         return (String) get(9);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.value</code>.
+     */
+    public void setValue(String value) {
+        set(9, value);
     }
 
     /**

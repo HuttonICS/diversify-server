@@ -30,20 +30,13 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implements Record4<Integer, String, Timestamp, Timestamp> {
 
-    private static final long serialVersionUID = -235050577;
+    private static final long serialVersionUID = 1788202015;
 
     /**
      * Create a detached DatasetsRecord
      */
     public DatasetsRecord() {
         super(Datasets.DATASETS);
-    }
-
-    /**
-     * Getter for <code>diversify3.datasets.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
     }
 
     /**
@@ -59,38 +52,45 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     }
 
     /**
-     * Getter for <code>diversify3.datasets.name</code>.
+     * Getter for <code>diversify.datasets.id</code>.
      */
-    public String getName() {
-        return (String) get(1);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.datasets.created_on</code>.
-     */
-    public void setCreatedOn(Timestamp value) {
-        set(2, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.datasets.id</code>.
+     * Setter for <code>diversify.datasets.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Setter for <code>diversify3.datasets.name</code>.
+     * Getter for <code>diversify.datasets.name</code>.
+     */
+    public String getName() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.datasets.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>diversify3.datasets.updated_on</code>.
+     * Getter for <code>diversify.datasets.created_on</code>.
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(3);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.datasets.created_on</code>.
+     */
+    public void setCreatedOn(Timestamp value) {
+        set(2, value);
     }
 
     // -------------------------------------------------------------------------
@@ -274,14 +274,14 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.datasets.created_on</code>.
+     * Getter for <code>diversify.datasets.updated_on</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(2);
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(3);
     }
 
     /**
-     * Setter for <code>diversify3.datasets.updated_on</code>.
+     * Setter for <code>diversify.datasets.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(3, value);

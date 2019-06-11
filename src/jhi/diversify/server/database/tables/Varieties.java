@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Diversify;
 import jhi.diversify.server.database.Indexes;
 import jhi.diversify.server.database.Keys;
 import jhi.diversify.server.database.tables.records.VarietiesRecord;
@@ -42,12 +42,11 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Varieties extends TableImpl<VarietiesRecord> {
 
-    private static final long serialVersionUID = -344121786;
-
     /**
-     * The reference instance of <code>diversify3.varieties</code>
+     * The reference instance of <code>diversify.varieties</code>
      */
     public static final Varieties VARIETIES = new Varieties();
+    private static final long serialVersionUID = 821011668;
 
     /**
      * The class holding records for this type
@@ -56,48 +55,47 @@ public class Varieties extends TableImpl<VarietiesRecord> {
     public Class<VarietiesRecord> getRecordType() {
         return VarietiesRecord.class;
     }
-
     /**
-     * The column <code>diversify3.varieties.id</code>.
+     * The column <code>diversify.varieties.id</code>.
      */
     public final TableField<VarietiesRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>diversify3.varieties.varietyname</code>.
+     * The column <code>diversify.varieties.varietyname</code>.
      */
     public final TableField<VarietiesRecord, String> VARIETYNAME = createField("varietyname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.varieties.crop_id</code>.
+     * The column <code>diversify.varieties.crop_id</code>.
      */
     public final TableField<VarietiesRecord, Integer> CROP_ID = createField("crop_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.varieties.created_on</code>.
+     * The column <code>diversify.varieties.created_on</code>.
      */
     public final TableField<VarietiesRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>diversify3.varieties.updated_on</code>.
+     * The column <code>diversify.varieties.updated_on</code>.
      */
     public final TableField<VarietiesRecord, Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * Create a <code>diversify3.varieties</code> table reference
+     * Create a <code>diversify.varieties</code> table reference
      */
     public Varieties() {
         this(DSL.name("varieties"), null);
     }
 
     /**
-     * Create an aliased <code>diversify3.varieties</code> table reference
+     * Create an aliased <code>diversify.varieties</code> table reference
      */
     public Varieties(String alias) {
         this(DSL.name(alias), VARIETIES);
     }
 
     /**
-     * Create an aliased <code>diversify3.varieties</code> table reference
+     * Create an aliased <code>diversify.varieties</code> table reference
      */
     public Varieties(Name alias) {
         this(alias, VARIETIES);
@@ -120,7 +118,7 @@ public class Varieties extends TableImpl<VarietiesRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Diversify3.DIVERSIFY3;
+        return Diversify.DIVERSIFY;
     }
 
     /**

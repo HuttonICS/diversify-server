@@ -30,20 +30,13 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> implements Record9<Integer, Integer, Integer, Integer, Integer, String, Integer, Timestamp, Timestamp> {
 
-    private static final long serialVersionUID = -596902800;
+    private static final long serialVersionUID = 452263896;
 
     /**
      * Create a detached SpeciesdataRecord
      */
     public SpeciesdataRecord() {
         super(Speciesdata.SPECIESDATA);
-    }
-
-    /**
-     * Getter for <code>diversify3.speciesdata.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
     }
 
     /**
@@ -64,105 +57,112 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
     }
 
     /**
-     * Getter for <code>diversify3.speciesdata.dataset_id</code>.
+     * Getter for <code>diversify.speciesdata.id</code>.
      */
-    public Integer getDatasetId() {
-        return (Integer) get(1);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.speciesdata.trait_id</code>.
-     */
-    public void setTraitId(Integer value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.speciesdata.trait_id</code>.
-     */
-    public Integer getTraitId() {
-        return (Integer) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.speciesdata.id</code>.
+     * Setter for <code>diversify.speciesdata.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>diversify3.speciesdata.varietyinplot_id</code>.
+     * Getter for <code>diversify.speciesdata.dataset_id</code>.
      */
-    public Integer getVarietyinplotId() {
-        return (Integer) get(3);
+    public Integer getDatasetId() {
+        return (Integer) get(1);
     }
 
     /**
-     * Setter for <code>diversify3.speciesdata.dataset_id</code>.
+     * Setter for <code>diversify.speciesdata.dataset_id</code>.
      */
     public void setDatasetId(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>diversify3.speciesdata.rep</code>.
+     * Getter for <code>diversify.speciesdata.trait_id</code>.
      */
-    public Integer getRep() {
-        return (Integer) get(4);
+    public Integer getTraitId() {
+        return (Integer) get(2);
     }
 
     /**
-     * Setter for <code>diversify3.speciesdata.varietyinplot_id</code>.
+     * Setter for <code>diversify.speciesdata.trait_id</code>.
+     */
+    public void setTraitId(Integer value) {
+        set(2, value);
+    }
+
+    /**
+     * Getter for <code>diversify.speciesdata.varietyinplot_id</code>.
+     */
+    public Integer getVarietyinplotId() {
+        return (Integer) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify.speciesdata.varietyinplot_id</code>.
      */
     public void setVarietyinplotId(Integer value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.speciesdata.value</code>.
+     * Getter for <code>diversify.speciesdata.rep</code>.
      */
-    public String getValue() {
-        return (String) get(5);
+    public Integer getRep() {
+        return (Integer) get(4);
     }
 
     /**
-     * Setter for <code>diversify3.speciesdata.rep</code>.
+     * Setter for <code>diversify.speciesdata.rep</code>.
      */
     public void setRep(Integer value) {
         set(4, value);
     }
 
     /**
-     * Setter for <code>diversify3.speciesdata.value</code>.
+     * Getter for <code>diversify.speciesdata.value</code>.
+     */
+    public String getValue() {
+        return (String) get(5);
+    }
+
+    /**
+     * Setter for <code>diversify.speciesdata.value</code>.
      */
     public void setValue(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>diversify3.speciesdata.date_accuracy</code>.
+     * Getter for <code>diversify.speciesdata.date_accuracy</code>.
      */
     public Integer getDateAccuracy() {
         return (Integer) get(6);
     }
 
     /**
-     * Setter for <code>diversify3.speciesdata.date_accuracy</code>.
+     * Setter for <code>diversify.speciesdata.date_accuracy</code>.
      */
     public void setDateAccuracy(Integer value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>diversify3.speciesdata.created_on</code>.
+     * Getter for <code>diversify.speciesdata.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(7);
     }
 
     /**
-     * Setter for <code>diversify3.speciesdata.created_on</code>.
+     * Setter for <code>diversify.speciesdata.created_on</code>.
      */
     public void setCreatedOn(Timestamp value) {
         set(7, value);
@@ -185,14 +185,14 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.speciesdata.updated_on</code>.
+     * Getter for <code>diversify.speciesdata.updated_on</code>.
      */
     public Timestamp getUpdatedOn() {
         return (Timestamp) get(8);
     }
 
     /**
-     * Setter for <code>diversify3.speciesdata.updated_on</code>.
+     * Setter for <code>diversify.speciesdata.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(8, value);
@@ -472,22 +472,6 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
      * {@inheritDoc}
      */
     @Override
-    public Timestamp value8() {
-        return getCreatedOn();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Timestamp value9() {
-        return getUpdatedOn();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public SpeciesdataRecord value7(Integer value) {
         setDateAccuracy(value);
         return this;
@@ -501,10 +485,6 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
         setCreatedOn(value);
         return this;
     }
-
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
@@ -530,5 +510,25 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
         value8(value8);
         value9(value9);
         return this;
+    }
+
+    // -------------------------------------------------------------------------
+    // Constructors
+    // -------------------------------------------------------------------------
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value8() {
+        return getCreatedOn();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value9() {
+        return getUpdatedOn();
     }
 }

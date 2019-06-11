@@ -30,34 +30,13 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements Record12<Integer, String, String, Integer, BigDecimal, BigDecimal, Timestamp, Timestamp, Long, Long, Long, String> {
 
-    private static final long serialVersionUID = -1780395197;
+    private static final long serialVersionUID = -919510455;
 
     /**
      * Create a detached ViewSitesRecord
      */
     public ViewSitesRecord() {
         super(ViewSites.VIEW_SITES);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_sites.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_sites.sitename</code>.
-     */
-    public void setSitename(String value) {
-        set(1, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_sites.sitename</code>.
-     */
-    public String getSitename() {
-        return (String) get(1);
     }
 
     /**
@@ -81,136 +60,157 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Setter for <code>diversify3.view_sites.id</code>.
+     * Getter for <code>diversify.view_sites.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
+     * Setter for <code>diversify.view_sites.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_sites.othername</code>.
+     * Getter for <code>diversify.view_sites.sitename</code>.
+     */
+    public String getSitename() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.view_sites.sitename</code>.
+     */
+    public void setSitename(String value) {
+        set(1, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_sites.othername</code>.
      */
     public String getOthername() {
         return (String) get(2);
     }
 
     /**
-     * Getter for <code>diversify3.view_sites.partner_id</code>.
-     */
-    public Integer getPartnerId() {
-        return (Integer) get(3);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_sites.latitude</code>.
-     */
-    public void setLatitude(BigDecimal value) {
-        set(4, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_sites.latitude</code>.
-     */
-    public BigDecimal getLatitude() {
-        return (BigDecimal) get(4);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_sites.longitude</code>.
-     */
-    public void setLongitude(BigDecimal value) {
-        set(5, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_sites.othername</code>.
+     * Setter for <code>diversify.view_sites.othername</code>.
      */
     public void setOthername(String value) {
         set(2, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_sites.partner_id</code>.
+     * Getter for <code>diversify.view_sites.partner_id</code>.
+     */
+    public Integer getPartnerId() {
+        return (Integer) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify.view_sites.partner_id</code>.
      */
     public void setPartnerId(Integer value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_sites.created_on</code>.
+     * Getter for <code>diversify.view_sites.latitude</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(6);
+    public BigDecimal getLatitude() {
+        return (BigDecimal) get(4);
     }
 
     /**
-     * Getter for <code>diversify3.view_sites.longitude</code>.
+     * Setter for <code>diversify.view_sites.latitude</code>.
+     */
+    public void setLatitude(BigDecimal value) {
+        set(4, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_sites.longitude</code>.
      */
     public BigDecimal getLongitude() {
         return (BigDecimal) get(5);
     }
 
     /**
-     * Setter for <code>diversify3.view_sites.created_on</code>.
+     * Setter for <code>diversify.view_sites.longitude</code>.
+     */
+    public void setLongitude(BigDecimal value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_sites.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(6);
+    }
+
+    /**
+     * Setter for <code>diversify.view_sites.created_on</code>.
      */
     public void setCreatedOn(Timestamp value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_sites.updated_on</code>.
+     * Getter for <code>diversify.view_sites.updated_on</code>.
      */
     public Timestamp getUpdatedOn() {
         return (Timestamp) get(7);
     }
 
     /**
-     * Getter for <code>diversify3.view_sites.plots</code>.
-     */
-    public Long getPlots() {
-        return (Long) get(8);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_sites.columns</code>.
-     */
-    public void setColumns(Long value) {
-        set(9, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_sites.updated_on</code>.
+     * Setter for <code>diversify.view_sites.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(7, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_sites.plots</code>.
+     * Getter for <code>diversify.view_sites.plots</code>.
+     */
+    public Long getPlots() {
+        return (Long) get(8);
+    }
+
+    /**
+     * Setter for <code>diversify.view_sites.plots</code>.
      */
     public void setPlots(Long value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_sites.rows</code>.
+     * Getter for <code>diversify.view_sites.columns</code>.
+     */
+    public Long getColumns() {
+        return (Long) get(9);
+    }
+
+    /**
+     * Setter for <code>diversify.view_sites.columns</code>.
+     */
+    public void setColumns(Long value) {
+        set(9, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_sites.rows</code>.
      */
     public Long getRows() {
         return (Long) get(10);
     }
 
     /**
-     * Setter for <code>diversify3.view_sites.partnername</code>.
+     * Setter for <code>diversify.view_sites.rows</code>.
      */
-    public void setPartnername(String value) {
-        set(11, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_sites.columns</code>.
-     */
-    public Long getColumns() {
-        return (Long) get(9);
+    public void setRows(Long value) {
+        set(10, value);
     }
 
     // -------------------------------------------------------------------------
@@ -654,16 +654,16 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     // -------------------------------------------------------------------------
 
     /**
-     * Setter for <code>diversify3.view_sites.rows</code>.
-     */
-    public void setRows(Long value) {
-        set(10, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_sites.partnername</code>.
+     * Getter for <code>diversify.view_sites.partnername</code>.
      */
     public String getPartnername() {
         return (String) get(11);
+    }
+
+    /**
+     * Setter for <code>diversify.view_sites.partnername</code>.
+     */
+    public void setPartnername(String value) {
+        set(11, value);
     }
 }

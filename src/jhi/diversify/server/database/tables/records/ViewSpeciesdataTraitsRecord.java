@@ -29,34 +29,13 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSpeciesdataTraitsRecord extends TableRecordImpl<ViewSpeciesdataTraitsRecord> implements Record8<Integer, String, String, String, Timestamp, Timestamp, Long, Long> {
 
-    private static final long serialVersionUID = 475983382;
-
-    /**
-     * Setter for <code>diversify3.view_speciesdata_traits.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_speciesdata_traits.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
-    }
+    private static final long serialVersionUID = -1997596422;
 
     /**
      * Create a detached ViewSpeciesdataTraitsRecord
      */
     public ViewSpeciesdataTraitsRecord() {
         super(ViewSpeciesdataTraits.VIEW_SPECIESDATA_TRAITS);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_speciesdata_traits.traitname</code>.
-     */
-    public String getTraitname() {
-        return (String) get(1);
     }
 
     /**
@@ -76,80 +55,101 @@ public class ViewSpeciesdataTraitsRecord extends TableRecordImpl<ViewSpeciesdata
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata_traits.traitcode</code>.
+     * Getter for <code>diversify.view_speciesdata_traits.id</code>.
      */
-    public String getTraitcode() {
-        return (String) get(2);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata_traits.traitname</code>.
+     * Setter for <code>diversify.view_speciesdata_traits.id</code>.
+     */
+    public void setId(Integer value) {
+        set(0, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_speciesdata_traits.traitname</code>.
+     */
+    public String getTraitname() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata_traits.traitname</code>.
      */
     public void setTraitname(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata_traits.unit</code>.
+     * Getter for <code>diversify.view_speciesdata_traits.traitcode</code>.
      */
-    public String getUnit() {
-        return (String) get(3);
+    public String getTraitcode() {
+        return (String) get(2);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata_traits.traitcode</code>.
+     * Setter for <code>diversify.view_speciesdata_traits.traitcode</code>.
      */
     public void setTraitcode(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata_traits.created_on</code>.
+     * Getter for <code>diversify.view_speciesdata_traits.unit</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
+    public String getUnit() {
+        return (String) get(3);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata_traits.unit</code>.
+     * Setter for <code>diversify.view_speciesdata_traits.unit</code>.
      */
     public void setUnit(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata_traits.updated_on</code>.
+     * Getter for <code>diversify.view_speciesdata_traits.created_on</code>.
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(5);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata_traits.created_on</code>.
+     * Setter for <code>diversify.view_speciesdata_traits.created_on</code>.
      */
     public void setCreatedOn(Timestamp value) {
         set(4, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata_traits.updated_on</code>.
+     * Getter for <code>diversify.view_speciesdata_traits.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(5);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata_traits.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata_traits.datapoints</code>.
+     * Getter for <code>diversify.view_speciesdata_traits.datapoints</code>.
      */
     public Long getDatapoints() {
         return (Long) get(6);
     }
 
     /**
-     * Getter for <code>diversify3.view_speciesdata_traits.plots</code>.
+     * Setter for <code>diversify.view_speciesdata_traits.datapoints</code>.
      */
-    public Long getPlots() {
-        return (Long) get(7);
+    public void setDatapoints(Long value) {
+        set(6, value);
     }
 
     // -------------------------------------------------------------------------
@@ -457,14 +457,14 @@ public class ViewSpeciesdataTraitsRecord extends TableRecordImpl<ViewSpeciesdata
     // -------------------------------------------------------------------------
 
     /**
-     * Setter for <code>diversify3.view_speciesdata_traits.datapoints</code>.
+     * Getter for <code>diversify.view_speciesdata_traits.plots</code>.
      */
-    public void setDatapoints(Long value) {
-        set(6, value);
+    public Long getPlots() {
+        return (Long) get(7);
     }
 
     /**
-     * Setter for <code>diversify3.view_speciesdata_traits.plots</code>.
+     * Setter for <code>diversify.view_speciesdata_traits.plots</code>.
      */
     public void setPlots(Long value) {
         set(7, value);

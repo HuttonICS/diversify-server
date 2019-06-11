@@ -6,7 +6,7 @@ package jhi.diversify.server.database.tables;
 
 import javax.annotation.Generated;
 
-import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Diversify;
 import jhi.diversify.server.database.tables.records.ViewVarietiesRecord;
 
 import org.jooq.Field;
@@ -33,12 +33,11 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewVarieties extends TableImpl<ViewVarietiesRecord> {
 
-    private static final long serialVersionUID = 1793142329;
-
     /**
-     * The reference instance of <code>diversify3.view_varieties</code>
+     * The reference instance of <code>diversify.view_varieties</code>
      */
     public static final ViewVarieties VIEW_VARIETIES = new ViewVarieties();
+    private static final long serialVersionUID = -18589917;
 
     /**
      * The class holding records for this type
@@ -47,58 +46,57 @@ public class ViewVarieties extends TableImpl<ViewVarietiesRecord> {
     public Class<ViewVarietiesRecord> getRecordType() {
         return ViewVarietiesRecord.class;
     }
-
     /**
-     * The column <code>diversify3.view_varieties.id</code>.
+     * The column <code>diversify.view_varieties.id</code>.
      */
     public final TableField<ViewVarietiesRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>diversify3.view_varieties.varietyname</code>.
+     * The column <code>diversify.view_varieties.varietyname</code>.
      */
     public final TableField<ViewVarietiesRecord, String> VARIETYNAME = createField("varietyname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.view_varieties.cropcommonname</code>.
+     * The column <code>diversify.view_varieties.cropcommonname</code>.
      */
     public final TableField<ViewVarietiesRecord, String> CROPCOMMONNAME = createField("cropcommonname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
-     * The column <code>diversify3.view_varieties.croplatinname</code>.
+     * The column <code>diversify.view_varieties.croplatinname</code>.
      */
     public final TableField<ViewVarietiesRecord, String> CROPLATINNAME = createField("croplatinname", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
-     * The column <code>diversify3.view_varieties.plantpartnername</code>.
+     * The column <code>diversify.view_varieties.plantpartnername</code>.
      */
     public final TableField<ViewVarietiesRecord, String> PLANTPARTNERNAME = createField("plantpartnername", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
-     * The column <code>diversify3.view_varieties.plots</code>.
+     * The column <code>diversify.view_varieties.plots</code>.
      */
     public final TableField<ViewVarietiesRecord, Long> PLOTS = createField("plots", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
 
     /**
-     * The column <code>diversify3.view_varieties.datapoints</code>.
+     * The column <code>diversify.view_varieties.datapoints</code>.
      */
     public final TableField<ViewVarietiesRecord, Long> DATAPOINTS = createField("datapoints", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
 
     /**
-     * Create a <code>diversify3.view_varieties</code> table reference
+     * Create a <code>diversify.view_varieties</code> table reference
      */
     public ViewVarieties() {
         this(DSL.name("view_varieties"), null);
     }
 
     /**
-     * Create an aliased <code>diversify3.view_varieties</code> table reference
+     * Create an aliased <code>diversify.view_varieties</code> table reference
      */
     public ViewVarieties(String alias) {
         this(DSL.name(alias), VIEW_VARIETIES);
     }
 
     /**
-     * Create an aliased <code>diversify3.view_varieties</code> table reference
+     * Create an aliased <code>diversify.view_varieties</code> table reference
      */
     public ViewVarieties(Name alias) {
         this(alias, VIEW_VARIETIES);
@@ -121,7 +119,7 @@ public class ViewVarieties extends TableImpl<ViewVarietiesRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Diversify3.DIVERSIFY3;
+        return Diversify.DIVERSIFY;
     }
 
     /**

@@ -30,20 +30,13 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Record6<Integer, String, String, Integer, Timestamp, Timestamp> {
 
-    private static final long serialVersionUID = -558495730;
+    private static final long serialVersionUID = 61184292;
 
     /**
      * Create a detached CropsRecord
      */
     public CropsRecord() {
         super(Crops.CROPS);
-    }
-
-    /**
-     * Getter for <code>diversify3.crops.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
     }
 
     /**
@@ -61,66 +54,73 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify3.crops.cropcommonname</code>.
+     * Getter for <code>diversify.crops.id</code>.
      */
-    public String getCropcommonname() {
-        return (String) get(1);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.crops.croplatinname</code>.
-     */
-    public void setCroplatinname(String value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.crops.croplatinname</code>.
-     */
-    public String getCroplatinname() {
-        return (String) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.crops.id</code>.
+     * Setter for <code>diversify.crops.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>diversify3.crops.plantpartner_id</code>.
+     * Getter for <code>diversify.crops.cropcommonname</code>.
      */
-    public Integer getPlantpartnerId() {
-        return (Integer) get(3);
+    public String getCropcommonname() {
+        return (String) get(1);
     }
 
     /**
-     * Setter for <code>diversify3.crops.cropcommonname</code>.
+     * Setter for <code>diversify.crops.cropcommonname</code>.
      */
     public void setCropcommonname(String value) {
         set(1, value);
     }
 
     /**
-     * Setter for <code>diversify3.crops.plantpartner_id</code>.
+     * Getter for <code>diversify.crops.croplatinname</code>.
+     */
+    public String getCroplatinname() {
+        return (String) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.crops.croplatinname</code>.
+     */
+    public void setCroplatinname(String value) {
+        set(2, value);
+    }
+
+    /**
+     * Getter for <code>diversify.crops.plantpartner_id</code>.
+     */
+    public Integer getPlantpartnerId() {
+        return (Integer) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify.crops.plantpartner_id</code>.
      */
     public void setPlantpartnerId(Integer value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.crops.created_on</code>.
+     * Getter for <code>diversify.crops.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(4);
     }
 
     /**
-     * Getter for <code>diversify3.crops.updated_on</code>.
+     * Setter for <code>diversify.crops.created_on</code>.
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(5);
+    public void setCreatedOn(Timestamp value) {
+        set(4, value);
     }
 
     // -------------------------------------------------------------------------
@@ -372,14 +372,14 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     // -------------------------------------------------------------------------
 
     /**
-     * Setter for <code>diversify3.crops.created_on</code>.
+     * Getter for <code>diversify.crops.updated_on</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(4, value);
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(5);
     }
 
     /**
-     * Setter for <code>diversify3.crops.updated_on</code>.
+     * Setter for <code>diversify.crops.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(5, value);

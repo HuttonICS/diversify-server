@@ -30,20 +30,13 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord> implements Record6<Integer, Integer, Integer, Integer, Timestamp, Timestamp> {
 
-    private static final long serialVersionUID = 852143175;
+    private static final long serialVersionUID = 1086193013;
 
     /**
      * Create a detached VarietyinplotRecord
      */
     public VarietyinplotRecord() {
         super(Varietyinplot.VARIETYINPLOT);
-    }
-
-    /**
-     * Getter for <code>diversify3.varietyinplot.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
     }
 
     /**
@@ -61,66 +54,73 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Getter for <code>diversify3.varietyinplot.plot_id</code>.
+     * Getter for <code>diversify.varietyinplot.id</code>.
      */
-    public Integer getPlotId() {
-        return (Integer) get(1);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.varietyinplot.variety_id</code>.
-     */
-    public void setVarietyId(Integer value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.varietyinplot.variety_id</code>.
-     */
-    public Integer getVarietyId() {
-        return (Integer) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.varietyinplot.id</code>.
+     * Setter for <code>diversify.varietyinplot.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>diversify3.varietyinplot.rate</code>.
+     * Getter for <code>diversify.varietyinplot.plot_id</code>.
      */
-    public Integer getRate() {
-        return (Integer) get(3);
+    public Integer getPlotId() {
+        return (Integer) get(1);
     }
 
     /**
-     * Setter for <code>diversify3.varietyinplot.plot_id</code>.
+     * Setter for <code>diversify.varietyinplot.plot_id</code>.
      */
     public void setPlotId(Integer value) {
         set(1, value);
     }
 
     /**
-     * Setter for <code>diversify3.varietyinplot.rate</code>.
+     * Getter for <code>diversify.varietyinplot.variety_id</code>.
+     */
+    public Integer getVarietyId() {
+        return (Integer) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.varietyinplot.variety_id</code>.
+     */
+    public void setVarietyId(Integer value) {
+        set(2, value);
+    }
+
+    /**
+     * Getter for <code>diversify.varietyinplot.rate</code>.
+     */
+    public Integer getRate() {
+        return (Integer) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify.varietyinplot.rate</code>.
      */
     public void setRate(Integer value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.varietyinplot.created_on</code>.
+     * Getter for <code>diversify.varietyinplot.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(4);
     }
 
     /**
-     * Getter for <code>diversify3.varietyinplot.updated_on</code>.
+     * Setter for <code>diversify.varietyinplot.created_on</code>.
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(5);
+    public void setCreatedOn(Timestamp value) {
+        set(4, value);
     }
 
     // -------------------------------------------------------------------------
@@ -372,14 +372,14 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     // -------------------------------------------------------------------------
 
     /**
-     * Setter for <code>diversify3.varietyinplot.created_on</code>.
+     * Getter for <code>diversify.varietyinplot.updated_on</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(4, value);
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(5);
     }
 
     /**
-     * Setter for <code>diversify3.varietyinplot.updated_on</code>.
+     * Setter for <code>diversify.varietyinplot.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(5, value);

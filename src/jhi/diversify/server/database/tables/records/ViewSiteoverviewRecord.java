@@ -29,34 +29,13 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSiteoverviewRecord extends TableRecordImpl<ViewSiteoverviewRecord> implements Record14<Integer, String, String, String, Integer, String, String, Integer, String, Integer, BigDecimal, BigDecimal, BigDecimal, Double> {
 
-    private static final long serialVersionUID = -1620158276;
+    private static final long serialVersionUID = 1133276426;
 
     /**
      * Create a detached ViewSiteoverviewRecord
      */
     public ViewSiteoverviewRecord() {
         super(ViewSiteoverview.VIEW_SITEOVERVIEW);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.traitid</code>.
-     */
-    public Integer getTraitid() {
-        return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.traitname</code>.
-     */
-    public void setTraitname(String value) {
-        set(1, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.traitname</code>.
-     */
-    public String getTraitname() {
-        return (String) get(1);
     }
 
     /**
@@ -82,164 +61,185 @@ public class ViewSiteoverviewRecord extends TableRecordImpl<ViewSiteoverviewReco
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.traitcode</code>.
+     * Getter for <code>diversify.view_siteoverview.traitid</code>.
      */
-    public String getTraitcode() {
-        return (String) get(2);
+    public Integer getTraitid() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.unit</code>.
-     */
-    public void setUnit(String value) {
-        set(3, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.traitid</code>.
+     * Setter for <code>diversify.view_siteoverview.traitid</code>.
      */
     public void setTraitid(Integer value) {
         set(0, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.traitcode</code>.
+     * Getter for <code>diversify.view_siteoverview.traitname</code>.
+     */
+    public String getTraitname() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.view_siteoverview.traitname</code>.
+     */
+    public void setTraitname(String value) {
+        set(1, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_siteoverview.traitcode</code>.
+     */
+    public String getTraitcode() {
+        return (String) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.view_siteoverview.traitcode</code>.
      */
     public void setTraitcode(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.siteid</code>.
-     */
-    public Integer getSiteid() {
-        return (Integer) get(4);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.unit</code>.
+     * Getter for <code>diversify.view_siteoverview.unit</code>.
      */
     public String getUnit() {
         return (String) get(3);
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.sitename</code>.
+     * Setter for <code>diversify.view_siteoverview.unit</code>.
      */
-    public String getSitename() {
-        return (String) get(5);
+    public void setUnit(String value) {
+        set(3, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.othername</code>.
+     * Getter for <code>diversify.view_siteoverview.siteid</code>.
      */
-    public void setOthername(String value) {
-        set(6, value);
+    public Integer getSiteid() {
+        return (Integer) get(4);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.siteid</code>.
+     * Setter for <code>diversify.view_siteoverview.siteid</code>.
      */
     public void setSiteid(Integer value) {
         set(4, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.sitename</code>.
+     * Getter for <code>diversify.view_siteoverview.sitename</code>.
+     */
+    public String getSitename() {
+        return (String) get(5);
+    }
+
+    /**
+     * Setter for <code>diversify.view_siteoverview.sitename</code>.
      */
     public void setSitename(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.datasetid</code>.
-     */
-    public Integer getDatasetid() {
-        return (Integer) get(7);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.othername</code>.
+     * Getter for <code>diversify.view_siteoverview.othername</code>.
      */
     public String getOthername() {
         return (String) get(6);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.datasetid</code>.
+     * Setter for <code>diversify.view_siteoverview.othername</code>.
+     */
+    public void setOthername(String value) {
+        set(6, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_siteoverview.datasetid</code>.
+     */
+    public Integer getDatasetid() {
+        return (Integer) get(7);
+    }
+
+    /**
+     * Setter for <code>diversify.view_siteoverview.datasetid</code>.
      */
     public void setDatasetid(Integer value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.datasetname</code>.
+     * Getter for <code>diversify.view_siteoverview.datasetname</code>.
      */
     public String getDatasetname() {
         return (String) get(8);
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.YEAR</code>.
-     */
-    public Integer getYear() {
-        return (Integer) get(9);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.avg</code>.
-     */
-    public void setAvg(BigDecimal value) {
-        set(10, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.view_siteoverview.datasetname</code>.
+     * Setter for <code>diversify.view_siteoverview.datasetname</code>.
      */
     public void setDatasetname(String value) {
         set(8, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.min</code>.
+     * Getter for <code>diversify.view_siteoverview.YEAR</code>.
      */
-    public void setMin(BigDecimal value) {
-        set(11, value);
+    public Integer getYear() {
+        return (Integer) get(9);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.YEAR</code>.
+     * Setter for <code>diversify.view_siteoverview.YEAR</code>.
      */
     public void setYear(Integer value) {
         set(9, value);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.max</code>.
-     */
-    public void setMax(BigDecimal value) {
-        set(12, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.avg</code>.
+     * Getter for <code>diversify.view_siteoverview.avg</code>.
      */
     public BigDecimal getAvg() {
         return (BigDecimal) get(10);
     }
 
     /**
-     * Setter for <code>diversify3.view_siteoverview.stdv</code>.
+     * Setter for <code>diversify.view_siteoverview.avg</code>.
      */
-    public void setStdv(Double value) {
-        set(13, value);
+    public void setAvg(BigDecimal value) {
+        set(10, value);
     }
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.min</code>.
+     * Getter for <code>diversify.view_siteoverview.min</code>.
      */
     public BigDecimal getMin() {
         return (BigDecimal) get(11);
+    }
+
+    /**
+     * Setter for <code>diversify.view_siteoverview.min</code>.
+     */
+    public void setMin(BigDecimal value) {
+        set(11, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_siteoverview.max</code>.
+     */
+    public BigDecimal getMax() {
+        return (BigDecimal) get(12);
+    }
+
+    /**
+     * Setter for <code>diversify.view_siteoverview.max</code>.
+     */
+    public void setMax(BigDecimal value) {
+        set(12, value);
     }
 
     // -------------------------------------------------------------------------
@@ -751,16 +751,16 @@ public class ViewSiteoverviewRecord extends TableRecordImpl<ViewSiteoverviewReco
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.view_siteoverview.max</code>.
-     */
-    public BigDecimal getMax() {
-        return (BigDecimal) get(12);
-    }
-
-    /**
-     * Getter for <code>diversify3.view_siteoverview.stdv</code>.
+     * Getter for <code>diversify.view_siteoverview.stdv</code>.
      */
     public Double getStdv() {
         return (Double) get(13);
+    }
+
+    /**
+     * Setter for <code>diversify.view_siteoverview.stdv</code>.
+     */
+    public void setStdv(Double value) {
+        set(13, value);
     }
 }

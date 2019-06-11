@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Diversify;
 import jhi.diversify.server.database.Indexes;
 import jhi.diversify.server.database.Keys;
 import jhi.diversify.server.database.tables.records.CropsRecord;
@@ -42,12 +42,11 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Crops extends TableImpl<CropsRecord> {
 
-    private static final long serialVersionUID = 1637249301;
-
     /**
-     * The reference instance of <code>diversify3.crops</code>
+     * The reference instance of <code>diversify.crops</code>
      */
     public static final Crops CROPS = new Crops();
+    private static final long serialVersionUID = -841865458;
 
     /**
      * The class holding records for this type
@@ -56,53 +55,52 @@ public class Crops extends TableImpl<CropsRecord> {
     public Class<CropsRecord> getRecordType() {
         return CropsRecord.class;
     }
-
     /**
-     * The column <code>diversify3.crops.id</code>.
+     * The column <code>diversify.crops.id</code>.
      */
     public final TableField<CropsRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>diversify3.crops.cropcommonname</code>.
+     * The column <code>diversify.crops.cropcommonname</code>.
      */
     public final TableField<CropsRecord, String> CROPCOMMONNAME = createField("cropcommonname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.crops.croplatinname</code>.
+     * The column <code>diversify.crops.croplatinname</code>.
      */
     public final TableField<CropsRecord, String> CROPLATINNAME = createField("croplatinname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.crops.plantpartner_id</code>.
+     * The column <code>diversify.crops.plantpartner_id</code>.
      */
     public final TableField<CropsRecord, Integer> PLANTPARTNER_ID = createField("plantpartner_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.crops.created_on</code>.
+     * The column <code>diversify.crops.created_on</code>.
      */
     public final TableField<CropsRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>diversify3.crops.updated_on</code>.
+     * The column <code>diversify.crops.updated_on</code>.
      */
     public final TableField<CropsRecord, Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * Create a <code>diversify3.crops</code> table reference
+     * Create a <code>diversify.crops</code> table reference
      */
     public Crops() {
         this(DSL.name("crops"), null);
     }
 
     /**
-     * Create an aliased <code>diversify3.crops</code> table reference
+     * Create an aliased <code>diversify.crops</code> table reference
      */
     public Crops(String alias) {
         this(DSL.name(alias), CROPS);
     }
 
     /**
-     * Create an aliased <code>diversify3.crops</code> table reference
+     * Create an aliased <code>diversify.crops</code> table reference
      */
     public Crops(Name alias) {
         this(alias, CROPS);
@@ -125,7 +123,7 @@ public class Crops extends TableImpl<CropsRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Diversify3.DIVERSIFY3;
+        return Diversify.DIVERSIFY;
     }
 
     /**

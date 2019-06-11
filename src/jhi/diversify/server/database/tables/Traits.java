@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Diversify;
 import jhi.diversify.server.database.Indexes;
 import jhi.diversify.server.database.Keys;
 import jhi.diversify.server.database.tables.records.TraitsRecord;
@@ -42,12 +42,11 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Traits extends TableImpl<TraitsRecord> {
 
-    private static final long serialVersionUID = -2078115347;
-
     /**
-     * The reference instance of <code>diversify3.traits</code>
+     * The reference instance of <code>diversify.traits</code>
      */
     public static final Traits TRAITS = new Traits();
+    private static final long serialVersionUID = -1433430140;
 
     /**
      * The class holding records for this type
@@ -56,53 +55,52 @@ public class Traits extends TableImpl<TraitsRecord> {
     public Class<TraitsRecord> getRecordType() {
         return TraitsRecord.class;
     }
-
     /**
-     * The column <code>diversify3.traits.id</code>.
+     * The column <code>diversify.traits.id</code>.
      */
     public final TableField<TraitsRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>diversify3.traits.traitname</code>.
+     * The column <code>diversify.traits.traitname</code>.
      */
     public final TableField<TraitsRecord, String> TRAITNAME = createField("traitname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.traits.traitcode</code>.
+     * The column <code>diversify.traits.traitcode</code>.
      */
     public final TableField<TraitsRecord, String> TRAITCODE = createField("traitcode", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.traits.unit</code>.
+     * The column <code>diversify.traits.unit</code>.
      */
     public final TableField<TraitsRecord, String> UNIT = createField("unit", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
-     * The column <code>diversify3.traits.created_on</code>.
+     * The column <code>diversify.traits.created_on</code>.
      */
     public final TableField<TraitsRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>diversify3.traits.updated_on</code>.
+     * The column <code>diversify.traits.updated_on</code>.
      */
     public final TableField<TraitsRecord, Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * Create a <code>diversify3.traits</code> table reference
+     * Create a <code>diversify.traits</code> table reference
      */
     public Traits() {
         this(DSL.name("traits"), null);
     }
 
     /**
-     * Create an aliased <code>diversify3.traits</code> table reference
+     * Create an aliased <code>diversify.traits</code> table reference
      */
     public Traits(String alias) {
         this(DSL.name(alias), TRAITS);
     }
 
     /**
-     * Create an aliased <code>diversify3.traits</code> table reference
+     * Create an aliased <code>diversify.traits</code> table reference
      */
     public Traits(Name alias) {
         this(alias, TRAITS);
@@ -125,7 +123,7 @@ public class Traits extends TableImpl<TraitsRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Diversify3.DIVERSIFY3;
+        return Diversify.DIVERSIFY;
     }
 
     /**

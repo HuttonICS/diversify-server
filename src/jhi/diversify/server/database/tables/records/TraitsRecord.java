@@ -30,20 +30,13 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements Record6<Integer, String, String, String, Timestamp, Timestamp> {
 
-    private static final long serialVersionUID = -1522302529;
+    private static final long serialVersionUID = -216815571;
 
     /**
      * Create a detached TraitsRecord
      */
     public TraitsRecord() {
         super(Traits.TRAITS);
-    }
-
-    /**
-     * Getter for <code>diversify3.traits.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
     }
 
     /**
@@ -61,66 +54,73 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Getter for <code>diversify3.traits.traitname</code>.
+     * Getter for <code>diversify.traits.id</code>.
      */
-    public String getTraitname() {
-        return (String) get(1);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.traits.traitcode</code>.
-     */
-    public void setTraitcode(String value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify3.traits.traitcode</code>.
-     */
-    public String getTraitcode() {
-        return (String) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify3.traits.id</code>.
+     * Setter for <code>diversify.traits.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>diversify3.traits.unit</code>.
+     * Getter for <code>diversify.traits.traitname</code>.
      */
-    public String getUnit() {
-        return (String) get(3);
+    public String getTraitname() {
+        return (String) get(1);
     }
 
     /**
-     * Setter for <code>diversify3.traits.traitname</code>.
+     * Setter for <code>diversify.traits.traitname</code>.
      */
     public void setTraitname(String value) {
         set(1, value);
     }
 
     /**
-     * Setter for <code>diversify3.traits.unit</code>.
+     * Getter for <code>diversify.traits.traitcode</code>.
+     */
+    public String getTraitcode() {
+        return (String) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.traits.traitcode</code>.
+     */
+    public void setTraitcode(String value) {
+        set(2, value);
+    }
+
+    /**
+     * Getter for <code>diversify.traits.unit</code>.
+     */
+    public String getUnit() {
+        return (String) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify.traits.unit</code>.
      */
     public void setUnit(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>diversify3.traits.created_on</code>.
+     * Getter for <code>diversify.traits.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(4);
     }
 
     /**
-     * Getter for <code>diversify3.traits.updated_on</code>.
+     * Setter for <code>diversify.traits.created_on</code>.
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(5);
+    public void setCreatedOn(Timestamp value) {
+        set(4, value);
     }
 
     // -------------------------------------------------------------------------
@@ -372,14 +372,14 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     // -------------------------------------------------------------------------
 
     /**
-     * Setter for <code>diversify3.traits.created_on</code>.
+     * Getter for <code>diversify.traits.updated_on</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(4, value);
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(5);
     }
 
     /**
-     * Setter for <code>diversify3.traits.updated_on</code>.
+     * Setter for <code>diversify.traits.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(5, value);

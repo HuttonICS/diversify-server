@@ -12,6 +12,8 @@ public class ApplicationListener implements ServletContextListener
 		String username = ctx.getInitParameter("username");
 		String password = ctx.getInitParameter("password");
 		Database.init(database, username, password);
+
+		Database.createViews();
 	}
 
 	@Override

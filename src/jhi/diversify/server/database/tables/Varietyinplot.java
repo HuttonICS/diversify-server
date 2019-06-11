@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Diversify;
 import jhi.diversify.server.database.Indexes;
 import jhi.diversify.server.database.Keys;
 import jhi.diversify.server.database.tables.records.VarietyinplotRecord;
@@ -42,12 +42,11 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Varietyinplot extends TableImpl<VarietyinplotRecord> {
 
-    private static final long serialVersionUID = -1843301117;
-
     /**
-     * The reference instance of <code>diversify3.varietyinplot</code>
+     * The reference instance of <code>diversify.varietyinplot</code>
      */
     public static final Varietyinplot VARIETYINPLOT = new Varietyinplot();
+    private static final long serialVersionUID = -744460042;
 
     /**
      * The class holding records for this type
@@ -56,53 +55,52 @@ public class Varietyinplot extends TableImpl<VarietyinplotRecord> {
     public Class<VarietyinplotRecord> getRecordType() {
         return VarietyinplotRecord.class;
     }
-
     /**
-     * The column <code>diversify3.varietyinplot.id</code>.
+     * The column <code>diversify.varietyinplot.id</code>.
      */
     public final TableField<VarietyinplotRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>diversify3.varietyinplot.plot_id</code>.
+     * The column <code>diversify.varietyinplot.plot_id</code>.
      */
     public final TableField<VarietyinplotRecord, Integer> PLOT_ID = createField("plot_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.varietyinplot.variety_id</code>.
+     * The column <code>diversify.varietyinplot.variety_id</code>.
      */
     public final TableField<VarietyinplotRecord, Integer> VARIETY_ID = createField("variety_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.varietyinplot.rate</code>.
+     * The column <code>diversify.varietyinplot.rate</code>.
      */
     public final TableField<VarietyinplotRecord, Integer> RATE = createField("rate", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.varietyinplot.created_on</code>.
+     * The column <code>diversify.varietyinplot.created_on</code>.
      */
     public final TableField<VarietyinplotRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>diversify3.varietyinplot.updated_on</code>.
+     * The column <code>diversify.varietyinplot.updated_on</code>.
      */
     public final TableField<VarietyinplotRecord, Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * Create a <code>diversify3.varietyinplot</code> table reference
+     * Create a <code>diversify.varietyinplot</code> table reference
      */
     public Varietyinplot() {
         this(DSL.name("varietyinplot"), null);
     }
 
     /**
-     * Create an aliased <code>diversify3.varietyinplot</code> table reference
+     * Create an aliased <code>diversify.varietyinplot</code> table reference
      */
     public Varietyinplot(String alias) {
         this(DSL.name(alias), VARIETYINPLOT);
     }
 
     /**
-     * Create an aliased <code>diversify3.varietyinplot</code> table reference
+     * Create an aliased <code>diversify.varietyinplot</code> table reference
      */
     public Varietyinplot(Name alias) {
         this(alias, VARIETYINPLOT);
@@ -125,7 +123,7 @@ public class Varietyinplot extends TableImpl<VarietyinplotRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Diversify3.DIVERSIFY3;
+        return Diversify.DIVERSIFY;
     }
 
     /**

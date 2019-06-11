@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jhi.diversify.server.database.Diversify3;
+import jhi.diversify.server.database.Diversify;
 import jhi.diversify.server.database.Indexes;
 import jhi.diversify.server.database.Keys;
 import jhi.diversify.server.database.tables.records.SpeciesdataRecord;
@@ -42,12 +42,11 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Speciesdata extends TableImpl<SpeciesdataRecord> {
 
-    private static final long serialVersionUID = -1606751898;
-
     /**
-     * The reference instance of <code>diversify3.speciesdata</code>
+     * The reference instance of <code>diversify.speciesdata</code>
      */
     public static final Speciesdata SPECIESDATA = new Speciesdata();
+    private static final long serialVersionUID = 777004890;
 
     /**
      * The class holding records for this type
@@ -56,68 +55,67 @@ public class Speciesdata extends TableImpl<SpeciesdataRecord> {
     public Class<SpeciesdataRecord> getRecordType() {
         return SpeciesdataRecord.class;
     }
-
     /**
-     * The column <code>diversify3.speciesdata.id</code>.
+     * The column <code>diversify.speciesdata.id</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>diversify3.speciesdata.dataset_id</code>.
+     * The column <code>diversify.speciesdata.dataset_id</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> DATASET_ID = createField("dataset_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.speciesdata.trait_id</code>.
+     * The column <code>diversify.speciesdata.trait_id</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> TRAIT_ID = createField("trait_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.speciesdata.varietyinplot_id</code>.
+     * The column <code>diversify.speciesdata.varietyinplot_id</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> VARIETYINPLOT_ID = createField("varietyinplot_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.speciesdata.rep</code>.
+     * The column <code>diversify.speciesdata.rep</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> REP = createField("rep", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.speciesdata.value</code>.
+     * The column <code>diversify.speciesdata.value</code>.
      */
     public final TableField<SpeciesdataRecord, String> VALUE = createField("value", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
 
     /**
-     * The column <code>diversify3.speciesdata.date_accuracy</code>.
+     * The column <code>diversify.speciesdata.date_accuracy</code>.
      */
     public final TableField<SpeciesdataRecord, Integer> DATE_ACCURACY = createField("date_accuracy", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>diversify3.speciesdata.created_on</code>.
+     * The column <code>diversify.speciesdata.created_on</code>.
      */
     public final TableField<SpeciesdataRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>diversify3.speciesdata.updated_on</code>.
+     * The column <code>diversify.speciesdata.updated_on</code>.
      */
     public final TableField<SpeciesdataRecord, Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * Create a <code>diversify3.speciesdata</code> table reference
+     * Create a <code>diversify.speciesdata</code> table reference
      */
     public Speciesdata() {
         this(DSL.name("speciesdata"), null);
     }
 
     /**
-     * Create an aliased <code>diversify3.speciesdata</code> table reference
+     * Create an aliased <code>diversify.speciesdata</code> table reference
      */
     public Speciesdata(String alias) {
         this(DSL.name(alias), SPECIESDATA);
     }
 
     /**
-     * Create an aliased <code>diversify3.speciesdata</code> table reference
+     * Create an aliased <code>diversify.speciesdata</code> table reference
      */
     public Speciesdata(Name alias) {
         this(alias, SPECIESDATA);
@@ -140,7 +138,7 @@ public class Speciesdata extends TableImpl<SpeciesdataRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Diversify3.DIVERSIFY3;
+        return Diversify.DIVERSIFY;
     }
 
     /**

@@ -20,12 +20,15 @@ public class Database
 		Database.username = username;
 		Database.password = password;
 
-		try {
+		try
+		{
 			// The newInstance() call is a work around for some
 			// broken Java implementations
 
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-		} catch (Exception ex) {
+		}
+		catch (Exception ex)
+		{
 			// handle the error
 		}
 
@@ -44,5 +47,34 @@ public class Database
 		throws SQLException
 	{
 		return DriverManager.getConnection(database, username, password);
+	}
+
+	public static void createViews()
+	{
+		try (Connection conn = Database.getConnection();
+			 DSLContext context = DSL.using(conn, SQLDialect.MYSQL))
+		{
+			context.dropViewIfExists("view_plotdata").execute();
+			context.execute("CREATE VIEW view_plotdata AS SELECT `plots`.`plotcode` AS `plotcode`, group_concat( DISTINCT concat( `crops`.`cropcommonname`, ' (', `varietyinplot`.`rate`, ')' ) ORDER BY `crops`.`cropcommonname` ASC SEPARATOR ' + ' ) AS `crops`, `sites`.`id` AS `siteId`, `sites`.`sitename` AS `sitename`, `plotdata`.`id` AS `id`, `plotdata`.`plot_id` AS `plot_id`, `plotdata`.`trait_id` AS `trait_id`, `plotdata`.`rep` AS `rep`, cast( `plotdata`.`value` AS DECIMAL ( 64, 10 )) AS `value`, `plotdata`.`created_on` AS `created_on`, `plotdata`.`updated_on` AS `updated_on`, `datasets`.`id` AS `datasetid`, `datasets`.`name` AS `datasetname`, YEAR ( `plotdata`.`created_on` ) AS `year`, `traits`.`traitname` AS `traitname`, `traits`.`traitcode` AS `traitcode`, `traits`.`unit` AS `unit` FROM `plotdata` LEFT JOIN `plots` ON `plots`.`id` = `plotdata`.`plot_id` LEFT JOIN `sites` ON `sites`.`id` = `plots`.`site_id` LEFT JOIN `traits` ON `traits`.`id` = `plotdata`.`trait_id` LEFT JOIN `datasets` ON `datasets`.`id` = `plotdata`.`dataset_id` LEFT JOIN `varietyinplot` ON `varietyinplot`.`plot_id` = `plots`.`id` LEFT JOIN `varieties` ON `varieties`.`id` = `varietyinplot`.`variety_id` LEFT JOIN `crops` ON `crops`.`id` = `varieties`.`crop_id` GROUP BY `plots`.`id`, `plotdata`.`id` ORDER BY `crops`");
+
+			context.dropViewIfExists("view_siteoverview").execute();
+			context.execute("CREATE VIEW view_siteoverview AS SELECT `traits`.`id` AS `traitid`, `traits`.`traitname` AS `traitname`, `traits`.`traitcode` AS `traitcode`, `traits`.`unit` AS `unit`, `sites`.`id` AS `siteid`, `sites`.`sitename` AS `sitename`, `sites`.`othername` AS `othername`, `datasets`.`id` AS `datasetid`, `datasets`.`name` AS `datasetname`, YEAR ( `plotdata`.`created_on` ) AS `YEAR`, avg( cast( `plotdata`.`value` AS DECIMAL ( 64, 10 ))) AS `avg`, min( cast( `plotdata`.`value` AS DECIMAL ( 64, 10 ))) AS `min`, max( cast( `plotdata`.`value` AS DECIMAL ( 64, 10 ))) AS `max`, std( cast( `plotdata`.`value` AS DECIMAL ( 64, 10 ))) AS `stdv` FROM (((( `plotdata` LEFT JOIN `traits` ON (( `traits`.`id` = `plotdata`.`trait_id` ))) LEFT JOIN `plots` ON (( `plots`.`id` = `plotdata`.`plot_id` ))) LEFT JOIN `sites` ON (( `sites`.`id` = `plots`.`site_id` ))) LEFT JOIN `datasets` ON (( `datasets`.`id` = `plotdata`.`dataset_id` ))) GROUP BY `traits`.`id`, `datasets`.`id`, `sites`.`id`, `YEAR`");
+
+			context.dropViewIfExists("view_sites").execute();
+			context.execute("CREATE VIEW view_sites AS select `sites`.`id` AS `id`,`sites`.`sitename` AS `sitename`,`sites`.`othername` AS `othername`,`sites`.`partner_id` AS `partner_id`,`sites`.`latitude` AS `latitude`,`sites`.`longitude` AS `longitude`,`sites`.`created_on` AS `created_on`,`sites`.`updated_on` AS `updated_on`,count(distinct `plots`.`plotcode`) AS `plots`,max(cast(`plots`.`col` as signed)) AS `columns`,max(cast(`plots`.`row` as signed)) AS `rows`,`partners`.`partnername` AS `partnername` from ((`sites` left join `partners` on((`partners`.`id` = `sites`.`partner_id`))) left join `plots` on((`plots`.`site_id` = `sites`.`id`))) group by `sites`.`id`");
+
+			context.dropViewIfExists("view_speciesdata").execute();
+			context.execute("CREATE VIEW view_speciesdata AS select `traits`.`id` AS `traitid`,`traits`.`traitname` AS `traitname`,`traits`.`traitcode` AS `traitcode`,`sites`.`id` AS `siteid`,`sites`.`sitename` AS `sitename`,`varietyinplot`.`rate` AS `rate`,`crops`.`cropcommonname` AS `cropname`,`varieties`.`id` AS `varietyid`,`varieties`.`varietyname` AS `varietyname`,`speciesdata`.`value` AS `value` from (((((((`speciesdata` left join `datasets` on((`datasets`.`id` = `speciesdata`.`dataset_id`))) left join `traits` on((`traits`.`id` = `speciesdata`.`trait_id`))) left join `varietyinplot` on((`speciesdata`.`varietyinplot_id` = `varietyinplot`.`id`))) left join `varieties` on((`varieties`.`id` = `varietyinplot`.`variety_id`))) left join `plots` on((`plots`.`id` = `varietyinplot`.`plot_id`))) left join `sites` on((`sites`.`id` = `plots`.`site_id`))) left join `crops` on((`crops`.`id` = `varieties`.`crop_id`)))");
+
+			context.dropViewIfExists("view_speciesdata_traits").execute();
+			context.execute("CREATE VIEW view_speciesdata_traits AS select `traits`.`id` AS `id`,`traits`.`traitname` AS `traitname`,`traits`.`traitcode` AS `traitcode`,`traits`.`unit` AS `unit`,`traits`.`created_on` AS `created_on`,`traits`.`updated_on` AS `updated_on`,count(`speciesdata`.`id`) AS `datapoints`,count(distinct `plots`.`id`) AS `plots` from (((`traits` left join `speciesdata` on((`speciesdata`.`trait_id` = `traits`.`id`))) left join `varietyinplot` on((`varietyinplot`.`id` = `speciesdata`.`varietyinplot_id`))) left join `plots` on((`plots`.`id` = `varietyinplot`.`plot_id`))) group by `traits`.`id` having (`datapoints` > 0)");
+
+			context.dropViewIfExists("view_varieties").execute();
+			context.execute("CREATE VIEW view_varieties AS select `varieties`.`id` AS `id`,`varieties`.`varietyname` AS `varietyname`,`crops`.`cropcommonname` AS `cropcommonname`,`crops`.`croplatinname` AS `croplatinname`,`plantpartners`.`plantpartnername` AS `plantpartnername`,count(distinct `varietyinplot`.`plot_id`) AS `plots`,count(distinct `speciesdata`.`id`) AS `datapoints` from ((((`varieties` left join `crops` on((`crops`.`id` = `varieties`.`crop_id`))) left join `plantpartners` on((`plantpartners`.`id` = `crops`.`plantpartner_id`))) left join `varietyinplot` on((`varietyinplot`.`variety_id` = `varieties`.`id`))) left join `speciesdata` on((`speciesdata`.`varietyinplot_id` = `varietyinplot`.`id`))) group by `varieties`.`id`");
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
 	}
 }

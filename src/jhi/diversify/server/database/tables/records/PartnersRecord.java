@@ -30,20 +30,13 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implements Record4<Integer, String, Timestamp, Timestamp> {
 
-    private static final long serialVersionUID = 64759281;
+    private static final long serialVersionUID = 1478983997;
 
     /**
      * Create a detached PartnersRecord
      */
     public PartnersRecord() {
         super(Partners.PARTNERS);
-    }
-
-    /**
-     * Getter for <code>diversify3.partners.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
     }
 
     /**
@@ -59,38 +52,45 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
-     * Getter for <code>diversify3.partners.partnername</code>.
+     * Getter for <code>diversify.partners.id</code>.
      */
-    public String getPartnername() {
-        return (String) get(1);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>diversify3.partners.created_on</code>.
-     */
-    public void setCreatedOn(Timestamp value) {
-        set(2, value);
-    }
-
-    /**
-     * Setter for <code>diversify3.partners.id</code>.
+     * Setter for <code>diversify.partners.id</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Setter for <code>diversify3.partners.partnername</code>.
+     * Getter for <code>diversify.partners.partnername</code>.
+     */
+    public String getPartnername() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.partners.partnername</code>.
      */
     public void setPartnername(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>diversify3.partners.updated_on</code>.
+     * Getter for <code>diversify.partners.created_on</code>.
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(3);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.partners.created_on</code>.
+     */
+    public void setCreatedOn(Timestamp value) {
+        set(2, value);
     }
 
     // -------------------------------------------------------------------------
@@ -274,14 +274,14 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify3.partners.created_on</code>.
+     * Getter for <code>diversify.partners.updated_on</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(2);
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(3);
     }
 
     /**
-     * Setter for <code>diversify3.partners.updated_on</code>.
+     * Setter for <code>diversify.partners.updated_on</code>.
      */
     public void setUpdatedOn(Timestamp value) {
         set(3, value);
