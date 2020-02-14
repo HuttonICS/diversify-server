@@ -39,7 +39,8 @@ public class SiteSummaryResource extends ServerResource
 	public List<ViewSiteoverview> getJson()
 	{
 		try (Connection conn = Database.getConnection();
-			 SelectSelectStep<Record> select = DSL.using(conn, SQLDialect.MYSQL).select())
+			 DSLContext context = Database.getContext(conn);
+			 SelectSelectStep<Record> select = context.select())
 		{
 			SelectJoinStep<Record> step = select.from(VIEW_SITEOVERVIEW);
 

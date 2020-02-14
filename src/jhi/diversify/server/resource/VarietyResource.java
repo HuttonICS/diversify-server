@@ -22,7 +22,8 @@ public class VarietyResource extends ServerResource
 	public List<ViewVarieties> getJson()
 	{
 		try (Connection conn = Database.getConnection();
-			 SelectSelectStep<Record> select = DSL.using(conn, SQLDialect.MYSQL).select())
+			 DSLContext context = Database.getContext(conn);
+			 SelectSelectStep<Record> select = context.select())
 		{
 			return select.from(VIEW_VARIETIES)
 						 .fetch()

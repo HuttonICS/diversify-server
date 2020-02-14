@@ -65,7 +65,8 @@ public class SiteDataResource extends ServerResource
 		else
 		{
 			try (Connection conn = Database.getConnection();
-				 SelectSelectStep<Record> select = DSL.using(conn, SQLDialect.MYSQL).select())
+				 DSLContext context = Database.getContext(conn);
+				 SelectSelectStep<Record> select = context.select())
 			{
 				SelectConditionStep<Record> step = select.from(VIEW_PLOTDATA)
 														 .where(VIEW_PLOTDATA.SITEID.eq(siteId));

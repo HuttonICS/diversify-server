@@ -1,22 +1,32 @@
 package jhi.diversify.server;
 
 import org.jooq.*;
-import org.jooq.impl.*;
+import org.jooq.conf.*;
+import org.jooq.impl.DSL;
 
 import java.sql.*;
+import java.util.TimeZone;
+
+import jhi.diversify.server.database.Diversify;
 
 /**
  * @author Sebastian Raubach
  */
 public class Database
 {
+	private static String server;
 	private static String database;
+	private static String port;
 	private static String username;
 	private static String password;
 
-	public static void init(String database, String username, String password)
+	private static String utc = TimeZone.getDefault().getID();
+
+	public static void init(String server, String database, String port, String username, String password)
 	{
+		Database.server = server;
 		Database.database = database;
+		Database.port = port;
 		Database.username = username;
 		Database.password = password;
 
@@ -46,13 +56,29 @@ public class Database
 	public static Connection getConnection()
 		throws SQLException
 	{
-		return DriverManager.getConnection(database, username, password);
+		return DriverManager.getConnection(getDatabaseUrl(), username, password);
+	}
+
+	private static String getDatabaseUrl()
+	{
+		return "jdbc:mysql://" + server + ":" + (port != null ? port : "3306") + "/" + database + "?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=" + utc;
+	}
+
+	public static DSLContext getContext(Connection connection)
+	{
+		Settings settings = new Settings()
+			.withRenderMapping(new RenderMapping()
+				.withSchemata(
+					new MappedSchema().withInput(Diversify.DIVERSIFY.getQualifiedName().first())
+									  .withOutput(database)));
+
+		return DSL.using(connection, SQLDialect.MYSQL, settings);
 	}
 
 	public static void createViews()
 	{
 		try (Connection conn = Database.getConnection();
-			 DSLContext context = DSL.using(conn, SQLDialect.MYSQL))
+			 DSLContext context = Database.getContext(conn))
 		{
 			context.dropViewIfExists("view_plotdata").execute();
 			context.execute("CREATE VIEW view_plotdata AS SELECT `plots`.`plotcode` AS `plotcode`, group_concat( DISTINCT concat( `crops`.`cropcommonname`, ' (', `varietyinplot`.`rate`, ')' ) ORDER BY `crops`.`cropcommonname` ASC SEPARATOR ' + ' ) AS `crops`, `sites`.`id` AS `siteId`, `sites`.`sitename` AS `sitename`, `plotdata`.`id` AS `id`, `plotdata`.`plot_id` AS `plot_id`, `plotdata`.`trait_id` AS `trait_id`, `plotdata`.`rep` AS `rep`, cast( `plotdata`.`value` AS DECIMAL ( 64, 10 )) AS `value`, `plotdata`.`created_on` AS `created_on`, `plotdata`.`updated_on` AS `updated_on`, `datasets`.`id` AS `datasetid`, `datasets`.`name` AS `datasetname`, YEAR ( `plotdata`.`created_on` ) AS `year`, `traits`.`traitname` AS `traitname`, `traits`.`traitcode` AS `traitcode`, `traits`.`unit` AS `unit` FROM `plotdata` LEFT JOIN `plots` ON `plots`.`id` = `plotdata`.`plot_id` LEFT JOIN `sites` ON `sites`.`id` = `plots`.`site_id` LEFT JOIN `traits` ON `traits`.`id` = `plotdata`.`trait_id` LEFT JOIN `datasets` ON `datasets`.`id` = `plotdata`.`dataset_id` LEFT JOIN `varietyinplot` ON `varietyinplot`.`plot_id` = `plots`.`id` LEFT JOIN `varieties` ON `varieties`.`id` = `varietyinplot`.`variety_id` LEFT JOIN `crops` ON `crops`.`id` = `varieties`.`crop_id` GROUP BY `plots`.`id`, `plotdata`.`id` ORDER BY `crops`");

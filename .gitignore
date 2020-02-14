@@ -18,6 +18,7 @@
 hs_err_pid*
 
 # Custom ignores
+/config.properties
 /build.properties
 /web/context.xml
 /*.jar

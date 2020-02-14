@@ -21,7 +21,7 @@ public class Diversify extends Application
 	{
 		// Set information about API
 		setName("Diversify Server");
-		setDescription("This is the server implementation of Frickl");
+		setDescription("This is the server implementation of Diversify");
 		setOwner("Information & Computational Sciences, The James Hutton Institute");
 		setAuthor("Sebastian Raubach <sebastian.raubach@hutton.ac.uk>");
 	}

@@ -2,16 +2,14 @@ package jhi.diversify.server;
 
 import javax.servlet.*;
 
+import jhi.diversify.server.util.PropertyWatcher;
+
 public class ApplicationListener implements ServletContextListener
 {
 	@Override
 	public void contextInitialized(ServletContextEvent sce)
 	{
-		ServletContext ctx = sce.getServletContext();
-		String database = ctx.getInitParameter("database");
-		String username = ctx.getInitParameter("username");
-		String password = ctx.getInitParameter("password");
-		Database.init(database, username, password);
+		PropertyWatcher.initialize();
 
 		Database.createViews();
 	}
