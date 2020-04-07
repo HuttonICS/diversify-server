@@ -40,6 +40,13 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
+     * Getter for <code>diversify.view_sites.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised ViewSitesRecord
      */
     public ViewSitesRecord(Integer id, String sitename, String othername, Integer partnerId, BigDecimal latitude, BigDecimal longitude, Timestamp createdOn, Timestamp updatedOn, Long plots, Long columns, Long rows, String partnername) {
@@ -60,10 +67,10 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Getter for <code>diversify.view_sites.id</code>.
+     * Getter for <code>diversify.view_sites.sitename</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public String getSitename() {
+        return (String) get(1);
     }
 
     /**
@@ -74,38 +81,10 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Getter for <code>diversify.view_sites.sitename</code>.
-     */
-    public String getSitename() {
-        return (String) get(1);
-    }
-
-    /**
-     * Setter for <code>diversify.view_sites.sitename</code>.
-     */
-    public void setSitename(String value) {
-        set(1, value);
-    }
-
-    /**
      * Getter for <code>diversify.view_sites.othername</code>.
      */
     public String getOthername() {
         return (String) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify.view_sites.othername</code>.
-     */
-    public void setOthername(String value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify.view_sites.partner_id</code>.
-     */
-    public Integer getPartnerId() {
-        return (Integer) get(3);
     }
 
     /**
@@ -116,10 +95,10 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Getter for <code>diversify.view_sites.latitude</code>.
+     * Setter for <code>diversify.view_sites.sitename</code>.
      */
-    public BigDecimal getLatitude() {
-        return (BigDecimal) get(4);
+    public void setSitename(String value) {
+        set(1, value);
     }
 
     /**
@@ -130,10 +109,10 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Getter for <code>diversify.view_sites.longitude</code>.
+     * Setter for <code>diversify.view_sites.othername</code>.
      */
-    public BigDecimal getLongitude() {
-        return (BigDecimal) get(5);
+    public void setOthername(String value) {
+        set(2, value);
     }
 
     /**
@@ -144,10 +123,10 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Getter for <code>diversify.view_sites.created_on</code>.
+     * Getter for <code>diversify.view_sites.partner_id</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(6);
+    public Integer getPartnerId() {
+        return (Integer) get(3);
     }
 
     /**
@@ -158,6 +137,20 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
+     * Getter for <code>diversify.view_sites.latitude</code>.
+     */
+    public BigDecimal getLatitude() {
+        return (BigDecimal) get(4);
+    }
+
+    /**
+     * Getter for <code>diversify.view_sites.longitude</code>.
+     */
+    public BigDecimal getLongitude() {
+        return (BigDecimal) get(5);
+    }
+
+    /**
      * Getter for <code>diversify.view_sites.updated_on</code>.
      */
     public Timestamp getUpdatedOn() {
@@ -165,10 +158,10 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Setter for <code>diversify.view_sites.updated_on</code>.
+     * Getter for <code>diversify.view_sites.created_on</code>.
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(7, value);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(6);
     }
 
     /**
@@ -179,10 +172,10 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Setter for <code>diversify.view_sites.plots</code>.
+     * Setter for <code>diversify.view_sites.updated_on</code>.
      */
-    public void setPlots(Long value) {
-        set(8, value);
+    public void setUpdatedOn(Timestamp value) {
+        set(7, value);
     }
 
     /**
@@ -193,10 +186,10 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
     }
 
     /**
-     * Setter for <code>diversify.view_sites.columns</code>.
+     * Setter for <code>diversify.view_sites.plots</code>.
      */
-    public void setColumns(Long value) {
-        set(9, value);
+    public void setPlots(Long value) {
+        set(8, value);
     }
 
     /**
@@ -204,6 +197,13 @@ public class ViewSitesRecord extends TableRecordImpl<ViewSitesRecord> implements
      */
     public Long getRows() {
         return (Long) get(10);
+    }
+
+    /**
+     * Setter for <code>diversify.view_sites.columns</code>.
+     */
+    public void setColumns(Long value) {
+        set(9, value);
     }
 
     /**

@@ -40,6 +40,20 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
+     * Getter for <code>diversify.partners.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
+     * Setter for <code>diversify.partners.partnername</code>.
+     */
+    public void setPartnername(String value) {
+        set(1, value);
+    }
+
+    /**
      * Create a detached, initialised PartnersRecord
      */
     public PartnersRecord(Integer id, String partnername, Timestamp createdOn, Timestamp updatedOn) {
@@ -52,10 +66,10 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
-     * Getter for <code>diversify.partners.id</code>.
+     * Setter for <code>diversify.partners.created_on</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public void setCreatedOn(Timestamp value) {
+        set(2, value);
     }
 
     /**
@@ -73,24 +87,10 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.partners.partnername</code>.
-     */
-    public void setPartnername(String value) {
-        set(1, value);
-    }
-
-    /**
      * Getter for <code>diversify.partners.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify.partners.created_on</code>.
-     */
-    public void setCreatedOn(Timestamp value) {
-        set(2, value);
     }
 
     // -------------------------------------------------------------------------

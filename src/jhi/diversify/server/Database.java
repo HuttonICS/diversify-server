@@ -97,6 +97,9 @@ public class Database
 
 			context.dropViewIfExists("view_varieties").execute();
 			context.execute("CREATE VIEW view_varieties AS select `varieties`.`id` AS `id`,`varieties`.`varietyname` AS `varietyname`,`crops`.`cropcommonname` AS `cropcommonname`,`crops`.`croplatinname` AS `croplatinname`,`plantpartners`.`plantpartnername` AS `plantpartnername`,count(distinct `varietyinplot`.`plot_id`) AS `plots`,count(distinct `speciesdata`.`id`) AS `datapoints` from ((((`varieties` left join `crops` on((`crops`.`id` = `varieties`.`crop_id`))) left join `plantpartners` on((`plantpartners`.`id` = `crops`.`plantpartner_id`))) left join `varietyinplot` on((`varietyinplot`.`variety_id` = `varieties`.`id`))) left join `speciesdata` on((`speciesdata`.`varietyinplot_id` = `varietyinplot`.`id`))) group by `varieties`.`id`");
+
+			context.dropViewIfExists("view_traits").execute();
+			context.execute("CREATE VIEW view_traits AS SELECT *, (SELECT COUNT(1) FROM speciesdata WHERE speciesdata.trait_id = traits.id) AS species_data_points, (SELECT COUNT(1) FROM plotdata WHERE plotdata.trait_id = traits.id) AS plot_data_points FROM traits");
 		}
 		catch (SQLException e)
 		{

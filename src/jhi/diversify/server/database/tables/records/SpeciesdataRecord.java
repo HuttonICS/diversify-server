@@ -33,10 +33,24 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
     private static final long serialVersionUID = 452263896;
 
     /**
+     * Setter for <code>diversify.speciesdata.id</code>.
+     */
+    public void setId(Integer value) {
+        set(0, value);
+    }
+
+    /**
      * Create a detached SpeciesdataRecord
      */
     public SpeciesdataRecord() {
         super(Speciesdata.SPECIESDATA);
+    }
+
+    /**
+     * Setter for <code>diversify.speciesdata.dataset_id</code>.
+     */
+    public void setDatasetId(Integer value) {
+        set(1, value);
     }
 
     /**
@@ -57,17 +71,17 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
     }
 
     /**
+     * Setter for <code>diversify.speciesdata.trait_id</code>.
+     */
+    public void setTraitId(Integer value) {
+        set(2, value);
+    }
+
+    /**
      * Getter for <code>diversify.speciesdata.id</code>.
      */
     public Integer getId() {
         return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify.speciesdata.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
     }
 
     /**
@@ -78,10 +92,17 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
     }
 
     /**
-     * Setter for <code>diversify.speciesdata.dataset_id</code>.
+     * Getter for <code>diversify.speciesdata.varietyinplot_id</code>.
      */
-    public void setDatasetId(Integer value) {
-        set(1, value);
+    public Integer getVarietyinplotId() {
+        return (Integer) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify.speciesdata.rep</code>.
+     */
+    public void setRep(Integer value) {
+        set(4, value);
     }
 
     /**
@@ -92,17 +113,10 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
     }
 
     /**
-     * Setter for <code>diversify.speciesdata.trait_id</code>.
+     * Setter for <code>diversify.speciesdata.value</code>.
      */
-    public void setTraitId(Integer value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify.speciesdata.varietyinplot_id</code>.
-     */
-    public Integer getVarietyinplotId() {
-        return (Integer) get(3);
+    public void setValue(String value) {
+        set(5, value);
     }
 
     /**
@@ -120,10 +134,10 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
     }
 
     /**
-     * Setter for <code>diversify.speciesdata.rep</code>.
+     * Getter for <code>diversify.speciesdata.date_accuracy</code>.
      */
-    public void setRep(Integer value) {
-        set(4, value);
+    public Integer getDateAccuracy() {
+        return (Integer) get(6);
     }
 
     /**
@@ -134,17 +148,10 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
     }
 
     /**
-     * Setter for <code>diversify.speciesdata.value</code>.
+     * Getter for <code>diversify.speciesdata.created_on</code>.
      */
-    public void setValue(String value) {
-        set(5, value);
-    }
-
-    /**
-     * Getter for <code>diversify.speciesdata.date_accuracy</code>.
-     */
-    public Integer getDateAccuracy() {
-        return (Integer) get(6);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(7);
     }
 
     /**
@@ -152,13 +159,6 @@ public class SpeciesdataRecord extends UpdatableRecordImpl<SpeciesdataRecord> im
      */
     public void setDateAccuracy(Integer value) {
         set(6, value);
-    }
-
-    /**
-     * Getter for <code>diversify.speciesdata.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(7);
     }
 
     /**

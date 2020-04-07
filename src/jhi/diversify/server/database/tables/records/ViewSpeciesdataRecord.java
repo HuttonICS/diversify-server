@@ -30,6 +30,13 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     private static final long serialVersionUID = -1409843087;
 
     /**
+     * Setter for <code>diversify.view_speciesdata.traitid</code>.
+     */
+    public void setTraitid(Integer value) {
+        set(0, value);
+    }
+
+    /**
      * Create a detached ViewSpeciesdataRecord
      */
     public ViewSpeciesdataRecord() {
@@ -55,20 +62,6 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Getter for <code>diversify.view_speciesdata.traitid</code>.
-     */
-    public Integer getTraitid() {
-        return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify.view_speciesdata.traitid</code>.
-     */
-    public void setTraitid(Integer value) {
-        set(0, value);
-    }
-
-    /**
      * Getter for <code>diversify.view_speciesdata.traitname</code>.
      */
     public String getTraitname() {
@@ -76,10 +69,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify.view_speciesdata.traitname</code>.
+     * Getter for <code>diversify.view_speciesdata.traitid</code>.
      */
-    public void setTraitname(String value) {
-        set(1, value);
+    public Integer getTraitid() {
+        return (Integer) get(0);
     }
 
     /**
@@ -90,10 +83,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify.view_speciesdata.traitcode</code>.
+     * Setter for <code>diversify.view_speciesdata.traitname</code>.
      */
-    public void setTraitcode(String value) {
-        set(2, value);
+    public void setTraitname(String value) {
+        set(1, value);
     }
 
     /**
@@ -104,10 +97,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify.view_speciesdata.siteid</code>.
+     * Setter for <code>diversify.view_speciesdata.traitcode</code>.
      */
-    public void setSiteid(Integer value) {
-        set(3, value);
+    public void setTraitcode(String value) {
+        set(2, value);
     }
 
     /**
@@ -118,10 +111,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify.view_speciesdata.sitename</code>.
+     * Setter for <code>diversify.view_speciesdata.siteid</code>.
      */
-    public void setSitename(String value) {
-        set(4, value);
+    public void setSiteid(Integer value) {
+        set(3, value);
     }
 
     /**
@@ -132,10 +125,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify.view_speciesdata.rate</code>.
+     * Setter for <code>diversify.view_speciesdata.sitename</code>.
      */
-    public void setRate(Integer value) {
-        set(5, value);
+    public void setSitename(String value) {
+        set(4, value);
     }
 
     /**
@@ -143,6 +136,27 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
      */
     public String getCropname() {
         return (String) get(6);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.varietyid</code>.
+     */
+    public void setVarietyid(Integer value) {
+        set(7, value);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.rate</code>.
+     */
+    public void setRate(Integer value) {
+        set(5, value);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.varietyname</code>.
+     */
+    public void setVarietyname(String value) {
+        set(8, value);
     }
 
     /**
@@ -160,24 +174,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify.view_speciesdata.varietyid</code>.
-     */
-    public void setVarietyid(Integer value) {
-        set(7, value);
-    }
-
-    /**
      * Getter for <code>diversify.view_speciesdata.varietyname</code>.
      */
     public String getVarietyname() {
         return (String) get(8);
-    }
-
-    /**
-     * Setter for <code>diversify.view_speciesdata.varietyname</code>.
-     */
-    public void setVarietyname(String value) {
-        set(8, value);
     }
 
     // -------------------------------------------------------------------------

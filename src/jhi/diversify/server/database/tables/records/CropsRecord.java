@@ -40,6 +40,13 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify.crops.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised CropsRecord
      */
     public CropsRecord(Integer id, String cropcommonname, String croplatinname, Integer plantpartnerId, Timestamp createdOn, Timestamp updatedOn) {
@@ -54,10 +61,17 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.crops.id</code>.
+     * Getter for <code>diversify.crops.cropcommonname</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public String getCropcommonname() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.crops.croplatinname</code>.
+     */
+    public void setCroplatinname(String value) {
+        set(2, value);
     }
 
     /**
@@ -68,10 +82,10 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.crops.cropcommonname</code>.
+     * Setter for <code>diversify.crops.plantpartner_id</code>.
      */
-    public String getCropcommonname() {
-        return (String) get(1);
+    public void setPlantpartnerId(Integer value) {
+        set(3, value);
     }
 
     /**
@@ -89,10 +103,10 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.crops.croplatinname</code>.
+     * Getter for <code>diversify.crops.created_on</code>.
      */
-    public void setCroplatinname(String value) {
-        set(2, value);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
     }
 
     /**
@@ -100,20 +114,6 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
      */
     public Integer getPlantpartnerId() {
         return (Integer) get(3);
-    }
-
-    /**
-     * Setter for <code>diversify.crops.plantpartner_id</code>.
-     */
-    public void setPlantpartnerId(Integer value) {
-        set(3, value);
-    }
-
-    /**
-     * Getter for <code>diversify.crops.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
     }
 
     /**

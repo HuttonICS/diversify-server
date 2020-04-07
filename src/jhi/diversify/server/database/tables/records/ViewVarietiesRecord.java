@@ -37,6 +37,13 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
+     * Getter for <code>diversify.view_varieties.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised ViewVarietiesRecord
      */
     public ViewVarietiesRecord(Integer id, String varietyname, String cropcommonname, String croplatinname, String plantpartnername, Long plots, Long datapoints) {
@@ -52,38 +59,10 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
-     * Getter for <code>diversify.view_varieties.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify.view_varieties.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
      * Getter for <code>diversify.view_varieties.varietyname</code>.
      */
     public String getVarietyname() {
         return (String) get(1);
-    }
-
-    /**
-     * Setter for <code>diversify.view_varieties.varietyname</code>.
-     */
-    public void setVarietyname(String value) {
-        set(1, value);
-    }
-
-    /**
-     * Getter for <code>diversify.view_varieties.cropcommonname</code>.
-     */
-    public String getCropcommonname() {
-        return (String) get(2);
     }
 
     /**
@@ -94,10 +73,10 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
-     * Getter for <code>diversify.view_varieties.croplatinname</code>.
+     * Setter for <code>diversify.view_varieties.id</code>.
      */
-    public String getCroplatinname() {
-        return (String) get(3);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -108,10 +87,10 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
-     * Getter for <code>diversify.view_varieties.plantpartnername</code>.
+     * Setter for <code>diversify.view_varieties.varietyname</code>.
      */
-    public String getPlantpartnername() {
-        return (String) get(4);
+    public void setVarietyname(String value) {
+        set(1, value);
     }
 
     /**
@@ -122,10 +101,31 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
+     * Getter for <code>diversify.view_varieties.cropcommonname</code>.
+     */
+    public String getCropcommonname() {
+        return (String) get(2);
+    }
+
+    /**
+     * Getter for <code>diversify.view_varieties.croplatinname</code>.
+     */
+    public String getCroplatinname() {
+        return (String) get(3);
+    }
+
+    /**
      * Getter for <code>diversify.view_varieties.plots</code>.
      */
     public Long getPlots() {
         return (Long) get(5);
+    }
+
+    /**
+     * Getter for <code>diversify.view_varieties.plantpartnername</code>.
+     */
+    public String getPlantpartnername() {
+        return (String) get(4);
     }
 
     /**

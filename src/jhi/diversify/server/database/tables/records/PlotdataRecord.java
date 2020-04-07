@@ -33,10 +33,24 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     private static final long serialVersionUID = -141715259;
 
     /**
+     * Setter for <code>diversify.plotdata.id</code>.
+     */
+    public void setId(Integer value) {
+        set(0, value);
+    }
+
+    /**
      * Create a detached PlotdataRecord
      */
     public PlotdataRecord() {
         super(Plotdata.PLOTDATA);
+    }
+
+    /**
+     * Setter for <code>diversify.plotdata.dataset_id</code>.
+     */
+    public void setDatasetId(Integer value) {
+        set(1, value);
     }
 
     /**
@@ -57,17 +71,17 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
+     * Setter for <code>diversify.plotdata.plot_id</code>.
+     */
+    public void setPlotId(Integer value) {
+        set(2, value);
+    }
+
+    /**
      * Getter for <code>diversify.plotdata.id</code>.
      */
     public Integer getId() {
         return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify.plotdata.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
     }
 
     /**
@@ -78,10 +92,17 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.plotdata.dataset_id</code>.
+     * Getter for <code>diversify.plotdata.trait_id</code>.
      */
-    public void setDatasetId(Integer value) {
-        set(1, value);
+    public Integer getTraitId() {
+        return (Integer) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify.plotdata.rep</code>.
+     */
+    public void setRep(Integer value) {
+        set(4, value);
     }
 
     /**
@@ -92,17 +113,10 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.plotdata.plot_id</code>.
+     * Setter for <code>diversify.plotdata.value</code>.
      */
-    public void setPlotId(Integer value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify.plotdata.trait_id</code>.
-     */
-    public Integer getTraitId() {
-        return (Integer) get(3);
+    public void setValue(String value) {
+        set(5, value);
     }
 
     /**
@@ -120,10 +134,10 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.plotdata.rep</code>.
+     * Getter for <code>diversify.plotdata.date_accuracy</code>.
      */
-    public void setRep(Integer value) {
-        set(4, value);
+    public Integer getDateAccuracy() {
+        return (Integer) get(6);
     }
 
     /**
@@ -134,17 +148,10 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.plotdata.value</code>.
+     * Getter for <code>diversify.plotdata.created_on</code>.
      */
-    public void setValue(String value) {
-        set(5, value);
-    }
-
-    /**
-     * Getter for <code>diversify.plotdata.date_accuracy</code>.
-     */
-    public Integer getDateAccuracy() {
-        return (Integer) get(6);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(7);
     }
 
     /**
@@ -152,13 +159,6 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
      */
     public void setDateAccuracy(Integer value) {
         set(6, value);
-    }
-
-    /**
-     * Getter for <code>diversify.plotdata.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(7);
     }
 
     /**

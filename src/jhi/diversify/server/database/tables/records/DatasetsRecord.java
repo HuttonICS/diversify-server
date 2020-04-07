@@ -40,6 +40,20 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     }
 
     /**
+     * Getter for <code>diversify.datasets.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
+     * Setter for <code>diversify.datasets.name</code>.
+     */
+    public void setName(String value) {
+        set(1, value);
+    }
+
+    /**
      * Create a detached, initialised DatasetsRecord
      */
     public DatasetsRecord(Integer id, String name, Timestamp createdOn, Timestamp updatedOn) {
@@ -52,10 +66,10 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     }
 
     /**
-     * Getter for <code>diversify.datasets.id</code>.
+     * Setter for <code>diversify.datasets.created_on</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public void setCreatedOn(Timestamp value) {
+        set(2, value);
     }
 
     /**
@@ -73,24 +87,10 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.datasets.name</code>.
-     */
-    public void setName(String value) {
-        set(1, value);
-    }
-
-    /**
      * Getter for <code>diversify.datasets.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify.datasets.created_on</code>.
-     */
-    public void setCreatedOn(Timestamp value) {
-        set(2, value);
     }
 
     // -------------------------------------------------------------------------

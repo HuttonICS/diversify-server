@@ -41,6 +41,20 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify.plots.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
+     * Setter for <code>diversify.plots.dataset_id</code>.
+     */
+    public void setDatasetId(Integer value) {
+        set(1, value);
+    }
+
+    /**
      * Create a detached, initialised PlotsRecord
      */
     public PlotsRecord(Integer id, Integer datasetId, String plotcode, String owncode, Integer siteId, Integer block, String plot, Integer subplot, Integer row, Integer col, Integer rep, Integer subrep, String management, BigDecimal latitude, BigDecimal longitude, Timestamp createdOn, Timestamp updatedOn) {
@@ -66,10 +80,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.id</code>.
+     * Setter for <code>diversify.plots.plotcode</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public void setPlotcode(String value) {
+        set(2, value);
     }
 
     /**
@@ -80,41 +94,6 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.dataset_id</code>.
-     */
-    public Integer getDatasetId() {
-        return (Integer) get(1);
-    }
-
-    /**
-     * Setter for <code>diversify.plots.dataset_id</code>.
-     */
-    public void setDatasetId(Integer value) {
-        set(1, value);
-    }
-
-    /**
-     * Getter for <code>diversify.plots.plotcode</code>.
-     */
-    public String getPlotcode() {
-        return (String) get(2);
-    }
-
-    /**
-     * Setter for <code>diversify.plots.plotcode</code>.
-     */
-    public void setPlotcode(String value) {
-        set(2, value);
-    }
-
-    /**
-     * Getter for <code>diversify.plots.owncode</code>.
-     */
-    public String getOwncode() {
-        return (String) get(3);
-    }
-
-    /**
      * Setter for <code>diversify.plots.owncode</code>.
      */
     public void setOwncode(String value) {
@@ -122,10 +101,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.site_id</code>.
+     * Getter for <code>diversify.plots.dataset_id</code>.
      */
-    public Integer getSiteId() {
-        return (Integer) get(4);
+    public Integer getDatasetId() {
+        return (Integer) get(1);
     }
 
     /**
@@ -136,6 +115,20 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify.plots.plotcode</code>.
+     */
+    public String getPlotcode() {
+        return (String) get(2);
+    }
+
+    /**
+     * Getter for <code>diversify.plots.owncode</code>.
+     */
+    public String getOwncode() {
+        return (String) get(3);
+    }
+
+    /**
      * Getter for <code>diversify.plots.block</code>.
      */
     public Integer getBlock() {
@@ -143,10 +136,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.block</code>.
+     * Getter for <code>diversify.plots.site_id</code>.
      */
-    public void setBlock(Integer value) {
-        set(5, value);
+    public Integer getSiteId() {
+        return (Integer) get(4);
     }
 
     /**
@@ -157,10 +150,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.plot</code>.
+     * Setter for <code>diversify.plots.block</code>.
      */
-    public void setPlot(String value) {
-        set(6, value);
+    public void setBlock(Integer value) {
+        set(5, value);
     }
 
     /**
@@ -171,20 +164,6 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.subplot</code>.
-     */
-    public void setSubplot(Integer value) {
-        set(7, value);
-    }
-
-    /**
-     * Getter for <code>diversify.plots.row</code>.
-     */
-    public Integer getRow() {
-        return (Integer) get(8);
-    }
-
-    /**
      * Setter for <code>diversify.plots.row</code>.
      */
     public void setRow(Integer value) {
@@ -192,10 +171,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.col</code>.
+     * Setter for <code>diversify.plots.plot</code>.
      */
-    public Integer getCol() {
-        return (Integer) get(9);
+    public void setPlot(String value) {
+        set(6, value);
     }
 
     /**
@@ -206,10 +185,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.rep</code>.
+     * Setter for <code>diversify.plots.subplot</code>.
      */
-    public Integer getRep() {
-        return (Integer) get(10);
+    public void setSubplot(Integer value) {
+        set(7, value);
     }
 
     /**
@@ -220,10 +199,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.subrep</code>.
+     * Getter for <code>diversify.plots.row</code>.
      */
-    public Integer getSubrep() {
-        return (Integer) get(11);
+    public Integer getRow() {
+        return (Integer) get(8);
     }
 
     /**
@@ -234,6 +213,20 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify.plots.col</code>.
+     */
+    public Integer getCol() {
+        return (Integer) get(9);
+    }
+
+    /**
+     * Getter for <code>diversify.plots.rep</code>.
+     */
+    public Integer getRep() {
+        return (Integer) get(10);
+    }
+
+    /**
      * Getter for <code>diversify.plots.management</code>.
      */
     public String getManagement() {
@@ -241,10 +234,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.management</code>.
+     * Getter for <code>diversify.plots.subrep</code>.
      */
-    public void setManagement(String value) {
-        set(12, value);
+    public Integer getSubrep() {
+        return (Integer) get(11);
     }
 
     /**
@@ -255,10 +248,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.latitude</code>.
+     * Setter for <code>diversify.plots.management</code>.
      */
-    public void setLatitude(BigDecimal value) {
-        set(13, value);
+    public void setManagement(String value) {
+        set(12, value);
     }
 
     /**
@@ -269,10 +262,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.longitude</code>.
+     * Setter for <code>diversify.plots.latitude</code>.
      */
-    public void setLongitude(BigDecimal value) {
-        set(14, value);
+    public void setLatitude(BigDecimal value) {
+        set(13, value);
     }
 
     /**
@@ -280,6 +273,13 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(15);
+    }
+
+    /**
+     * Setter for <code>diversify.plots.longitude</code>.
+     */
+    public void setLongitude(BigDecimal value) {
+        set(14, value);
     }
 
     /**

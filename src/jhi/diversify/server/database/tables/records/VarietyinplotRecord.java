@@ -40,6 +40,13 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
+     * Getter for <code>diversify.varietyinplot.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised VarietyinplotRecord
      */
     public VarietyinplotRecord(Integer id, Integer plotId, Integer varietyId, Integer rate, Timestamp createdOn, Timestamp updatedOn) {
@@ -54,10 +61,17 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Getter for <code>diversify.varietyinplot.id</code>.
+     * Getter for <code>diversify.varietyinplot.plot_id</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public Integer getPlotId() {
+        return (Integer) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.varietyinplot.variety_id</code>.
+     */
+    public void setVarietyId(Integer value) {
+        set(2, value);
     }
 
     /**
@@ -68,10 +82,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Getter for <code>diversify.varietyinplot.plot_id</code>.
+     * Setter for <code>diversify.varietyinplot.rate</code>.
      */
-    public Integer getPlotId() {
-        return (Integer) get(1);
+    public void setRate(Integer value) {
+        set(3, value);
     }
 
     /**
@@ -89,10 +103,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Setter for <code>diversify.varietyinplot.variety_id</code>.
+     * Getter for <code>diversify.varietyinplot.created_on</code>.
      */
-    public void setVarietyId(Integer value) {
-        set(2, value);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
     }
 
     /**
@@ -100,20 +114,6 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
      */
     public Integer getRate() {
         return (Integer) get(3);
-    }
-
-    /**
-     * Setter for <code>diversify.varietyinplot.rate</code>.
-     */
-    public void setRate(Integer value) {
-        set(3, value);
-    }
-
-    /**
-     * Getter for <code>diversify.varietyinplot.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
     }
 
     /**

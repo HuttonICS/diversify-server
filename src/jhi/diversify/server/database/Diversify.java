@@ -26,6 +26,7 @@ import jhi.diversify.server.database.tables.ViewSiteoverview;
 import jhi.diversify.server.database.tables.ViewSites;
 import jhi.diversify.server.database.tables.ViewSpeciesdata;
 import jhi.diversify.server.database.tables.ViewSpeciesdataTraits;
+import jhi.diversify.server.database.tables.ViewTraits;
 import jhi.diversify.server.database.tables.ViewVarieties;
 
 import org.jooq.Catalog;
@@ -46,11 +47,13 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Diversify extends SchemaImpl {
 
+    private static final long serialVersionUID = -1220570334;
+
     /**
      * The reference instance of <code>diversify</code>
      */
     public static final Diversify DIVERSIFY = new Diversify();
-    private static final long serialVersionUID = 1933980277;
+
     /**
      * The table <code>diversify.crops</code>.
      */
@@ -134,6 +137,11 @@ public class Diversify extends SchemaImpl {
     /**
      * VIEW
      */
+    public final ViewTraits VIEW_TRAITS = jhi.diversify.server.database.tables.ViewTraits.VIEW_TRAITS;
+
+    /**
+     * VIEW
+     */
     public final ViewVarieties VIEW_VARIETIES = jhi.diversify.server.database.tables.ViewVarieties.VIEW_VARIETIES;
 
     /**
@@ -177,6 +185,7 @@ public class Diversify extends SchemaImpl {
             ViewSites.VIEW_SITES,
             ViewSpeciesdata.VIEW_SPECIESDATA,
             ViewSpeciesdataTraits.VIEW_SPECIESDATA_TRAITS,
+            ViewTraits.VIEW_TRAITS,
             ViewVarieties.VIEW_VARIETIES);
     }
 }

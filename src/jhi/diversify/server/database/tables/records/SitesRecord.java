@@ -41,6 +41,13 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify.sites.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised SitesRecord
      */
     public SitesRecord(Integer id, String sitename, String othername, Integer partnerId, BigDecimal latitude, BigDecimal longitude, Timestamp createdOn, Timestamp updatedOn) {
@@ -57,38 +64,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.sites.id</code>.
-     */
-    public Integer getId() {
-        return (Integer) get(0);
-    }
-
-    /**
-     * Setter for <code>diversify.sites.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
      * Getter for <code>diversify.sites.sitename</code>.
      */
     public String getSitename() {
         return (String) get(1);
-    }
-
-    /**
-     * Setter for <code>diversify.sites.sitename</code>.
-     */
-    public void setSitename(String value) {
-        set(1, value);
-    }
-
-    /**
-     * Getter for <code>diversify.sites.othername</code>.
-     */
-    public String getOthername() {
-        return (String) get(2);
     }
 
     /**
@@ -99,10 +78,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.sites.partner_id</code>.
+     * Setter for <code>diversify.sites.id</code>.
      */
-    public Integer getPartnerId() {
-        return (Integer) get(3);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -113,10 +92,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.sites.latitude</code>.
+     * Setter for <code>diversify.sites.sitename</code>.
      */
-    public BigDecimal getLatitude() {
-        return (BigDecimal) get(4);
+    public void setSitename(String value) {
+        set(1, value);
     }
 
     /**
@@ -127,6 +106,20 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify.sites.othername</code>.
+     */
+    public String getOthername() {
+        return (String) get(2);
+    }
+
+    /**
+     * Getter for <code>diversify.sites.partner_id</code>.
+     */
+    public Integer getPartnerId() {
+        return (Integer) get(3);
+    }
+
+    /**
      * Getter for <code>diversify.sites.longitude</code>.
      */
     public BigDecimal getLongitude() {
@@ -134,10 +127,10 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.sites.longitude</code>.
+     * Getter for <code>diversify.sites.latitude</code>.
      */
-    public void setLongitude(BigDecimal value) {
-        set(5, value);
+    public BigDecimal getLatitude() {
+        return (BigDecimal) get(4);
     }
 
     /**
@@ -145,6 +138,13 @@ public class SitesRecord extends UpdatableRecordImpl<SitesRecord> implements Rec
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(6);
+    }
+
+    /**
+     * Setter for <code>diversify.sites.longitude</code>.
+     */
+    public void setLongitude(BigDecimal value) {
+        set(5, value);
     }
 
     /**

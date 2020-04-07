@@ -40,6 +40,13 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
+     * Getter for <code>diversify.traits.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised TraitsRecord
      */
     public TraitsRecord(Integer id, String traitname, String traitcode, String unit, Timestamp createdOn, Timestamp updatedOn) {
@@ -54,10 +61,17 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Getter for <code>diversify.traits.id</code>.
+     * Getter for <code>diversify.traits.traitname</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public String getTraitname() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.traits.traitcode</code>.
+     */
+    public void setTraitcode(String value) {
+        set(2, value);
     }
 
     /**
@@ -68,10 +82,10 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Getter for <code>diversify.traits.traitname</code>.
+     * Setter for <code>diversify.traits.unit</code>.
      */
-    public String getTraitname() {
-        return (String) get(1);
+    public void setUnit(String value) {
+        set(3, value);
     }
 
     /**
@@ -89,10 +103,10 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Setter for <code>diversify.traits.traitcode</code>.
+     * Getter for <code>diversify.traits.created_on</code>.
      */
-    public void setTraitcode(String value) {
-        set(2, value);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
     }
 
     /**
@@ -100,20 +114,6 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
      */
     public String getUnit() {
         return (String) get(3);
-    }
-
-    /**
-     * Setter for <code>diversify.traits.unit</code>.
-     */
-    public void setUnit(String value) {
-        set(3, value);
-    }
-
-    /**
-     * Getter for <code>diversify.traits.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
     }
 
     /**

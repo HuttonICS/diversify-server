@@ -42,11 +42,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Partners extends TableImpl<PartnersRecord> {
 
+    private static final long serialVersionUID = 1151645584;
+
     /**
      * The reference instance of <code>diversify.partners</code>
      */
     public static final Partners PARTNERS = new Partners();
-    private static final long serialVersionUID = 1151645584;
 
     /**
      * The class holding records for this type
@@ -55,6 +56,7 @@ public class Partners extends TableImpl<PartnersRecord> {
     public Class<PartnersRecord> getRecordType() {
         return PartnersRecord.class;
     }
+
     /**
      * The column <code>diversify.partners.id</code>.
      */

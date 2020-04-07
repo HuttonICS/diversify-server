@@ -40,6 +40,13 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
+     * Getter for <code>diversify.varieties.id</code>.
+     */
+    public Integer getId() {
+        return (Integer) get(0);
+    }
+
+    /**
      * Create a detached, initialised VarietiesRecord
      */
     public VarietiesRecord(Integer id, String varietyname, Integer cropId, Timestamp createdOn, Timestamp updatedOn) {
@@ -53,10 +60,17 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Getter for <code>diversify.varieties.id</code>.
+     * Getter for <code>diversify.varieties.varietyname</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public String getVarietyname() {
+        return (String) get(1);
+    }
+
+    /**
+     * Setter for <code>diversify.varieties.crop_id</code>.
+     */
+    public void setCropId(Integer value) {
+        set(2, value);
     }
 
     /**
@@ -67,10 +81,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Getter for <code>diversify.varieties.varietyname</code>.
+     * Setter for <code>diversify.varieties.created_on</code>.
      */
-    public String getVarietyname() {
-        return (String) get(1);
+    public void setCreatedOn(Timestamp value) {
+        set(3, value);
     }
 
     /**
@@ -88,24 +102,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Setter for <code>diversify.varieties.crop_id</code>.
-     */
-    public void setCropId(Integer value) {
-        set(2, value);
-    }
-
-    /**
      * Getter for <code>diversify.varieties.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(3);
-    }
-
-    /**
-     * Setter for <code>diversify.varieties.created_on</code>.
-     */
-    public void setCreatedOn(Timestamp value) {
-        set(3, value);
     }
 
     // -------------------------------------------------------------------------

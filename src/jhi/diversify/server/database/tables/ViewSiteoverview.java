@@ -35,11 +35,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSiteoverview extends TableImpl<ViewSiteoverviewRecord> {
 
+    private static final long serialVersionUID = 1855210665;
+
     /**
      * The reference instance of <code>diversify.view_siteoverview</code>
      */
     public static final ViewSiteoverview VIEW_SITEOVERVIEW = new ViewSiteoverview();
-    private static final long serialVersionUID = 1855210665;
 
     /**
      * The class holding records for this type
@@ -48,6 +49,7 @@ public class ViewSiteoverview extends TableImpl<ViewSiteoverviewRecord> {
     public Class<ViewSiteoverviewRecord> getRecordType() {
         return ViewSiteoverviewRecord.class;
     }
+
     /**
      * The column <code>diversify.view_siteoverview.traitid</code>.
      */

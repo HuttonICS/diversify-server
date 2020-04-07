@@ -42,11 +42,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Varietyinplot extends TableImpl<VarietyinplotRecord> {
 
+    private static final long serialVersionUID = -744460042;
+
     /**
      * The reference instance of <code>diversify.varietyinplot</code>
      */
     public static final Varietyinplot VARIETYINPLOT = new Varietyinplot();
-    private static final long serialVersionUID = -744460042;
 
     /**
      * The class holding records for this type
@@ -55,6 +56,7 @@ public class Varietyinplot extends TableImpl<VarietyinplotRecord> {
     public Class<VarietyinplotRecord> getRecordType() {
         return VarietyinplotRecord.class;
     }
+
     /**
      * The column <code>diversify.varietyinplot.id</code>.
      */

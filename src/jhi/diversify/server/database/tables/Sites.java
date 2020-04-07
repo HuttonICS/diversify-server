@@ -43,11 +43,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Sites extends TableImpl<SitesRecord> {
 
+    private static final long serialVersionUID = -797766198;
+
     /**
      * The reference instance of <code>diversify.sites</code>
      */
     public static final Sites SITES = new Sites();
-    private static final long serialVersionUID = -797766198;
 
     /**
      * The class holding records for this type
@@ -56,6 +57,7 @@ public class Sites extends TableImpl<SitesRecord> {
     public Class<SitesRecord> getRecordType() {
         return SitesRecord.class;
     }
+
     /**
      * The column <code>diversify.sites.id</code>.
      */

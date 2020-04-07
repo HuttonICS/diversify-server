@@ -42,11 +42,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Datasets extends TableImpl<DatasetsRecord> {
 
+    private static final long serialVersionUID = -173956748;
+
     /**
      * The reference instance of <code>diversify.datasets</code>
      */
     public static final Datasets DATASETS = new Datasets();
-    private static final long serialVersionUID = -173956748;
 
     /**
      * The class holding records for this type
@@ -55,6 +56,7 @@ public class Datasets extends TableImpl<DatasetsRecord> {
     public Class<DatasetsRecord> getRecordType() {
         return DatasetsRecord.class;
     }
+
     /**
      * The column <code>diversify.datasets.id</code>.
      */

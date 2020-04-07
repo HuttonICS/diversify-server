@@ -22,6 +22,7 @@ import jhi.diversify.server.database.tables.ViewSiteoverview;
 import jhi.diversify.server.database.tables.ViewSites;
 import jhi.diversify.server.database.tables.ViewSpeciesdata;
 import jhi.diversify.server.database.tables.ViewSpeciesdataTraits;
+import jhi.diversify.server.database.tables.ViewTraits;
 import jhi.diversify.server.database.tables.ViewVarieties;
 
 
@@ -117,6 +118,11 @@ public class Tables {
      * VIEW
      */
     public static final ViewSpeciesdataTraits VIEW_SPECIESDATA_TRAITS = jhi.diversify.server.database.tables.ViewSpeciesdataTraits.VIEW_SPECIESDATA_TRAITS;
+
+    /**
+     * VIEW
+     */
+    public static final ViewTraits VIEW_TRAITS = jhi.diversify.server.database.tables.ViewTraits.VIEW_TRAITS;
 
     /**
      * VIEW

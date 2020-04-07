@@ -43,11 +43,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Plots extends TableImpl<PlotsRecord> {
 
+    private static final long serialVersionUID = -361146650;
+
     /**
      * The reference instance of <code>diversify.plots</code>
      */
     public static final Plots PLOTS = new Plots();
-    private static final long serialVersionUID = 309217960;
 
     /**
      * The class holding records for this type
@@ -56,6 +57,7 @@ public class Plots extends TableImpl<PlotsRecord> {
     public Class<PlotsRecord> getRecordType() {
         return PlotsRecord.class;
     }
+
     /**
      * The column <code>diversify.plots.id</code>.
      */
@@ -99,12 +101,12 @@ public class Plots extends TableImpl<PlotsRecord> {
     /**
      * The column <code>diversify.plots.row</code>.
      */
-    public final TableField<PlotsRecord, Integer> ROW = createField("row", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<PlotsRecord, Integer> ROW = createField("row", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>diversify.plots.col</code>.
      */
-    public final TableField<PlotsRecord, Integer> COL = createField("col", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<PlotsRecord, Integer> COL = createField("col", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>diversify.plots.rep</code>.

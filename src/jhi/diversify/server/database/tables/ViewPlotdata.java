@@ -36,11 +36,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewPlotdata extends TableImpl<ViewPlotdataRecord> {
 
+    private static final long serialVersionUID = 1123209927;
+
     /**
      * The reference instance of <code>diversify.view_plotdata</code>
      */
     public static final ViewPlotdata VIEW_PLOTDATA = new ViewPlotdata();
-    private static final long serialVersionUID = 1123209927;
 
     /**
      * The class holding records for this type
@@ -49,6 +50,7 @@ public class ViewPlotdata extends TableImpl<ViewPlotdataRecord> {
     public Class<ViewPlotdataRecord> getRecordType() {
         return ViewPlotdataRecord.class;
     }
+
     /**
      * The column <code>diversify.view_plotdata.plotcode</code>.
      */
