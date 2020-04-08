@@ -33,10 +33,10 @@ public class PlantpartnersRecord extends UpdatableRecordImpl<PlantpartnersRecord
     private static final long serialVersionUID = 127794381;
 
     /**
-     * Create a detached PlantpartnersRecord
+     * Setter for <code>diversify.plantpartners.id</code>.
      */
-    public PlantpartnersRecord() {
-        super(Plantpartners.PLANTPARTNERS);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -54,15 +54,10 @@ public class PlantpartnersRecord extends UpdatableRecordImpl<PlantpartnersRecord
     }
 
     /**
-     * Create a detached, initialised PlantpartnersRecord
+     * Getter for <code>diversify.plantpartners.plantpartnername</code>.
      */
-    public PlantpartnersRecord(Integer id, String plantpartnername, Timestamp createdOn, Timestamp updatedOn) {
-        super(Plantpartners.PLANTPARTNERS);
-
-        set(0, id);
-        set(1, plantpartnername);
-        set(2, createdOn);
-        set(3, updatedOn);
+    public String getPlantpartnername() {
+        return (String) get(1);
     }
 
     /**
@@ -73,24 +68,24 @@ public class PlantpartnersRecord extends UpdatableRecordImpl<PlantpartnersRecord
     }
 
     /**
-     * Setter for <code>diversify.plantpartners.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
-     * Getter for <code>diversify.plantpartners.plantpartnername</code>.
-     */
-    public String getPlantpartnername() {
-        return (String) get(1);
-    }
-
-    /**
      * Getter for <code>diversify.plantpartners.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.plantpartners.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(3, value);
+    }
+
+    /**
+     * Getter for <code>diversify.plantpartners.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(3);
     }
 
     // -------------------------------------------------------------------------
@@ -274,16 +269,21 @@ public class PlantpartnersRecord extends UpdatableRecordImpl<PlantpartnersRecord
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.plantpartners.updated_on</code>.
+     * Create a detached PlantpartnersRecord
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(3);
+    public PlantpartnersRecord() {
+        super(Plantpartners.PLANTPARTNERS);
     }
 
     /**
-     * Setter for <code>diversify.plantpartners.updated_on</code>.
+     * Create a detached, initialised PlantpartnersRecord
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(3, value);
+    public PlantpartnersRecord(Integer id, String plantpartnername, Timestamp createdOn, Timestamp updatedOn) {
+        super(Plantpartners.PLANTPARTNERS);
+
+        set(0, id);
+        set(1, plantpartnername);
+        set(2, createdOn);
+        set(3, updatedOn);
     }
 }

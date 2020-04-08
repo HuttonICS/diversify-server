@@ -32,26 +32,10 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
     private static final long serialVersionUID = -1529710962;
 
     /**
-     * Create a detached ViewTraitsRecord
+     * Setter for <code>diversify.view_traits.id</code>.
      */
-    public ViewTraitsRecord() {
-        super(ViewTraits.VIEW_TRAITS);
-    }
-
-    /**
-     * Create a detached, initialised ViewTraitsRecord
-     */
-    public ViewTraitsRecord(Integer id, String traitname, String traitcode, String unit, Timestamp createdOn, Timestamp updatedOn, Long speciesDataPoints, Long plotDataPoints) {
-        super(ViewTraits.VIEW_TRAITS);
-
-        set(0, id);
-        set(1, traitname);
-        set(2, traitcode);
-        set(3, unit);
-        set(4, createdOn);
-        set(5, updatedOn);
-        set(6, speciesDataPoints);
-        set(7, plotDataPoints);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -62,10 +46,10 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.view_traits.id</code>.
+     * Setter for <code>diversify.view_traits.traitname</code>.
      */
-    public void setId(Integer value) {
-        set(0, value);
+    public void setTraitname(String value) {
+        set(1, value);
     }
 
     /**
@@ -76,10 +60,10 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.view_traits.traitname</code>.
+     * Setter for <code>diversify.view_traits.traitcode</code>.
      */
-    public void setTraitname(String value) {
-        set(1, value);
+    public void setTraitcode(String value) {
+        set(2, value);
     }
 
     /**
@@ -90,10 +74,10 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.view_traits.traitcode</code>.
+     * Setter for <code>diversify.view_traits.unit</code>.
      */
-    public void setTraitcode(String value) {
-        set(2, value);
+    public void setUnit(String value) {
+        set(3, value);
     }
 
     /**
@@ -104,10 +88,10 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.view_traits.unit</code>.
+     * Setter for <code>diversify.view_traits.created_on</code>.
      */
-    public void setUnit(String value) {
-        set(3, value);
+    public void setCreatedOn(Timestamp value) {
+        set(4, value);
     }
 
     /**
@@ -118,10 +102,10 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.view_traits.created_on</code>.
+     * Setter for <code>diversify.view_traits.updated_on</code>.
      */
-    public void setCreatedOn(Timestamp value) {
-        set(4, value);
+    public void setUpdatedOn(Timestamp value) {
+        set(5, value);
     }
 
     /**
@@ -132,10 +116,10 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.view_traits.updated_on</code>.
+     * Setter for <code>diversify.view_traits.species_data_points</code>.
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(5, value);
+    public void setSpeciesDataPoints(Long value) {
+        set(6, value);
     }
 
     /**
@@ -146,15 +130,11 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.view_traits.species_data_points</code>.
+     * Setter for <code>diversify.view_traits.plot_data_points</code>.
      */
-    public void setSpeciesDataPoints(Long value) {
-        set(6, value);
+    public void setPlotDataPoints(Long value) {
+        set(7, value);
     }
-
-    // -------------------------------------------------------------------------
-    // Record8 type implementation
-    // -------------------------------------------------------------------------
 
     /**
      * Getter for <code>diversify.view_traits.plot_data_points</code>.
@@ -163,12 +143,9 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>diversify.view_traits.plot_data_points</code>.
-     */
-    public void setPlotDataPoints(Long value) {
-        set(7, value);
-    }
+    // -------------------------------------------------------------------------
+    // Record8 type implementation
+    // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
@@ -441,10 +418,6 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
         return this;
     }
 
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
-
     /**
      * {@inheritDoc}
      */
@@ -468,5 +441,32 @@ public class ViewTraitsRecord extends TableRecordImpl<ViewTraitsRecord> implemen
         value7(value7);
         value8(value8);
         return this;
+    }
+
+    // -------------------------------------------------------------------------
+    // Constructors
+    // -------------------------------------------------------------------------
+
+    /**
+     * Create a detached ViewTraitsRecord
+     */
+    public ViewTraitsRecord() {
+        super(ViewTraits.VIEW_TRAITS);
+    }
+
+    /**
+     * Create a detached, initialised ViewTraitsRecord
+     */
+    public ViewTraitsRecord(Integer id, String traitname, String traitcode, String unit, Timestamp createdOn, Timestamp updatedOn, Long speciesDataPoints, Long plotDataPoints) {
+        super(ViewTraits.VIEW_TRAITS);
+
+        set(0, id);
+        set(1, traitname);
+        set(2, traitcode);
+        set(3, unit);
+        set(4, createdOn);
+        set(5, updatedOn);
+        set(6, speciesDataPoints);
+        set(7, plotDataPoints);
     }
 }

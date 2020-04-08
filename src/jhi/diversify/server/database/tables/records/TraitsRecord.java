@@ -33,10 +33,10 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     private static final long serialVersionUID = -216815571;
 
     /**
-     * Create a detached TraitsRecord
+     * Setter for <code>diversify.traits.id</code>.
      */
-    public TraitsRecord() {
-        super(Traits.TRAITS);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -47,17 +47,10 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Create a detached, initialised TraitsRecord
+     * Setter for <code>diversify.traits.traitname</code>.
      */
-    public TraitsRecord(Integer id, String traitname, String traitcode, String unit, Timestamp createdOn, Timestamp updatedOn) {
-        super(Traits.TRAITS);
-
-        set(0, id);
-        set(1, traitname);
-        set(2, traitcode);
-        set(3, unit);
-        set(4, createdOn);
-        set(5, updatedOn);
+    public void setTraitname(String value) {
+        set(1, value);
     }
 
     /**
@@ -75,27 +68,6 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Setter for <code>diversify.traits.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
-     * Setter for <code>diversify.traits.unit</code>.
-     */
-    public void setUnit(String value) {
-        set(3, value);
-    }
-
-    /**
-     * Setter for <code>diversify.traits.traitname</code>.
-     */
-    public void setTraitname(String value) {
-        set(1, value);
-    }
-
-    /**
      * Getter for <code>diversify.traits.traitcode</code>.
      */
     public String getTraitcode() {
@@ -103,10 +75,10 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     }
 
     /**
-     * Getter for <code>diversify.traits.created_on</code>.
+     * Setter for <code>diversify.traits.unit</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
+    public void setUnit(String value) {
+        set(3, value);
     }
 
     /**
@@ -121,6 +93,27 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
      */
     public void setCreatedOn(Timestamp value) {
         set(4, value);
+    }
+
+    /**
+     * Getter for <code>diversify.traits.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
+    }
+
+    /**
+     * Setter for <code>diversify.traits.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>diversify.traits.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(5);
     }
 
     // -------------------------------------------------------------------------
@@ -372,16 +365,23 @@ public class TraitsRecord extends UpdatableRecordImpl<TraitsRecord> implements R
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.traits.updated_on</code>.
+     * Create a detached TraitsRecord
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(5);
+    public TraitsRecord() {
+        super(Traits.TRAITS);
     }
 
     /**
-     * Setter for <code>diversify.traits.updated_on</code>.
+     * Create a detached, initialised TraitsRecord
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(5, value);
+    public TraitsRecord(Integer id, String traitname, String traitcode, String unit, Timestamp createdOn, Timestamp updatedOn) {
+        super(Traits.TRAITS);
+
+        set(0, id);
+        set(1, traitname);
+        set(2, traitcode);
+        set(3, unit);
+        set(4, createdOn);
+        set(5, updatedOn);
     }
 }

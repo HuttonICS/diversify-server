@@ -33,10 +33,10 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     private static final long serialVersionUID = 61184292;
 
     /**
-     * Create a detached CropsRecord
+     * Setter for <code>diversify.crops.id</code>.
      */
-    public CropsRecord() {
-        super(Crops.CROPS);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -47,17 +47,10 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Create a detached, initialised CropsRecord
+     * Setter for <code>diversify.crops.cropcommonname</code>.
      */
-    public CropsRecord(Integer id, String cropcommonname, String croplatinname, Integer plantpartnerId, Timestamp createdOn, Timestamp updatedOn) {
-        super(Crops.CROPS);
-
-        set(0, id);
-        set(1, cropcommonname);
-        set(2, croplatinname);
-        set(3, plantpartnerId);
-        set(4, createdOn);
-        set(5, updatedOn);
+    public void setCropcommonname(String value) {
+        set(1, value);
     }
 
     /**
@@ -75,27 +68,6 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.crops.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
-     * Setter for <code>diversify.crops.plantpartner_id</code>.
-     */
-    public void setPlantpartnerId(Integer value) {
-        set(3, value);
-    }
-
-    /**
-     * Setter for <code>diversify.crops.cropcommonname</code>.
-     */
-    public void setCropcommonname(String value) {
-        set(1, value);
-    }
-
-    /**
      * Getter for <code>diversify.crops.croplatinname</code>.
      */
     public String getCroplatinname() {
@@ -103,10 +75,10 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.crops.created_on</code>.
+     * Setter for <code>diversify.crops.plantpartner_id</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
+    public void setPlantpartnerId(Integer value) {
+        set(3, value);
     }
 
     /**
@@ -121,6 +93,27 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
      */
     public void setCreatedOn(Timestamp value) {
         set(4, value);
+    }
+
+    /**
+     * Getter for <code>diversify.crops.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
+    }
+
+    /**
+     * Setter for <code>diversify.crops.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>diversify.crops.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(5);
     }
 
     // -------------------------------------------------------------------------
@@ -372,16 +365,23 @@ public class CropsRecord extends UpdatableRecordImpl<CropsRecord> implements Rec
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.crops.updated_on</code>.
+     * Create a detached CropsRecord
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(5);
+    public CropsRecord() {
+        super(Crops.CROPS);
     }
 
     /**
-     * Setter for <code>diversify.crops.updated_on</code>.
+     * Create a detached, initialised CropsRecord
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(5, value);
+    public CropsRecord(Integer id, String cropcommonname, String croplatinname, Integer plantpartnerId, Timestamp createdOn, Timestamp updatedOn) {
+        super(Crops.CROPS);
+
+        set(0, id);
+        set(1, cropcommonname);
+        set(2, croplatinname);
+        set(3, plantpartnerId);
+        set(4, createdOn);
+        set(5, updatedOn);
     }
 }

@@ -37,49 +37,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Create a detached ViewSpeciesdataRecord
-     */
-    public ViewSpeciesdataRecord() {
-        super(ViewSpeciesdata.VIEW_SPECIESDATA);
-    }
-
-    /**
-     * Create a detached, initialised ViewSpeciesdataRecord
-     */
-    public ViewSpeciesdataRecord(Integer traitid, String traitname, String traitcode, Integer siteid, String sitename, Integer rate, String cropname, Integer varietyid, String varietyname, String value) {
-        super(ViewSpeciesdata.VIEW_SPECIESDATA);
-
-        set(0, traitid);
-        set(1, traitname);
-        set(2, traitcode);
-        set(3, siteid);
-        set(4, sitename);
-        set(5, rate);
-        set(6, cropname);
-        set(7, varietyid);
-        set(8, varietyname);
-        set(9, value);
-    }
-
-    /**
-     * Getter for <code>diversify.view_speciesdata.traitname</code>.
-     */
-    public String getTraitname() {
-        return (String) get(1);
-    }
-
-    /**
      * Getter for <code>diversify.view_speciesdata.traitid</code>.
      */
     public Integer getTraitid() {
         return (Integer) get(0);
-    }
-
-    /**
-     * Getter for <code>diversify.view_speciesdata.traitcode</code>.
-     */
-    public String getTraitcode() {
-        return (String) get(2);
     }
 
     /**
@@ -90,10 +51,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Getter for <code>diversify.view_speciesdata.siteid</code>.
+     * Getter for <code>diversify.view_speciesdata.traitname</code>.
      */
-    public Integer getSiteid() {
-        return (Integer) get(3);
+    public String getTraitname() {
+        return (String) get(1);
     }
 
     /**
@@ -104,10 +65,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Getter for <code>diversify.view_speciesdata.sitename</code>.
+     * Getter for <code>diversify.view_speciesdata.traitcode</code>.
      */
-    public String getSitename() {
-        return (String) get(4);
+    public String getTraitcode() {
+        return (String) get(2);
     }
 
     /**
@@ -118,10 +79,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Getter for <code>diversify.view_speciesdata.rate</code>.
+     * Getter for <code>diversify.view_speciesdata.siteid</code>.
      */
-    public Integer getRate() {
-        return (Integer) get(5);
+    public Integer getSiteid() {
+        return (Integer) get(3);
     }
 
     /**
@@ -129,6 +90,34 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
      */
     public void setSitename(String value) {
         set(4, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_speciesdata.sitename</code>.
+     */
+    public String getSitename() {
+        return (String) get(4);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.rate</code>.
+     */
+    public void setRate(Integer value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_speciesdata.rate</code>.
+     */
+    public Integer getRate() {
+        return (Integer) get(5);
+    }
+
+    /**
+     * Setter for <code>diversify.view_speciesdata.cropname</code>.
+     */
+    public void setCropname(String value) {
+        set(6, value);
     }
 
     /**
@@ -146,10 +135,10 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify.view_speciesdata.rate</code>.
+     * Getter for <code>diversify.view_speciesdata.varietyid</code>.
      */
-    public void setRate(Integer value) {
-        set(5, value);
+    public Integer getVarietyid() {
+        return (Integer) get(7);
     }
 
     /**
@@ -160,29 +149,18 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     }
 
     /**
-     * Setter for <code>diversify.view_speciesdata.cropname</code>.
-     */
-    public void setCropname(String value) {
-        set(6, value);
-    }
-
-    /**
-     * Getter for <code>diversify.view_speciesdata.varietyid</code>.
-     */
-    public Integer getVarietyid() {
-        return (Integer) get(7);
-    }
-
-    /**
      * Getter for <code>diversify.view_speciesdata.varietyname</code>.
      */
     public String getVarietyname() {
         return (String) get(8);
     }
 
-    // -------------------------------------------------------------------------
-    // Record10 type implementation
-    // -------------------------------------------------------------------------
+    /**
+     * Setter for <code>diversify.view_speciesdata.value</code>.
+     */
+    public void setValue(String value) {
+        set(9, value);
+    }
 
     /**
      * Getter for <code>diversify.view_speciesdata.value</code>.
@@ -191,11 +169,24 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
         return (String) get(9);
     }
 
+    // -------------------------------------------------------------------------
+    // Record10 type implementation
+    // -------------------------------------------------------------------------
+
     /**
-     * Setter for <code>diversify.view_speciesdata.value</code>.
+     * {@inheritDoc}
      */
-    public void setValue(String value) {
-        set(9, value);
+    @Override
+    public Row10<Integer, String, String, Integer, String, Integer, String, Integer, String, String> fieldsRow() {
+        return (Row10) super.fieldsRow();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Row10<Integer, String, String, Integer, String, Integer, String, Integer, String, String> valuesRow() {
+        return (Row10) super.valuesRow();
     }
 
     /**
@@ -266,16 +257,16 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
      * {@inheritDoc}
      */
     @Override
-    public Row10<Integer, String, String, Integer, String, Integer, String, Integer, String, String> fieldsRow() {
-        return (Row10) super.fieldsRow();
+    public Field<String> field9() {
+        return ViewSpeciesdata.VIEW_SPECIESDATA.VARIETYNAME;
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row10<Integer, String, String, Integer, String, Integer, String, Integer, String, String> valuesRow() {
-        return (Row10) super.valuesRow();
+    public Field<String> field10() {
+        return ViewSpeciesdata.VIEW_SPECIESDATA.VALUE;
     }
 
     /**
@@ -346,16 +337,16 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
      * {@inheritDoc}
      */
     @Override
-    public Field<String> field9() {
-        return ViewSpeciesdata.VIEW_SPECIESDATA.VARIETYNAME;
+    public String component9() {
+        return getVarietyname();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Field<String> field10() {
-        return ViewSpeciesdata.VIEW_SPECIESDATA.VALUE;
+    public String component10() {
+        return getValue();
     }
 
     /**
@@ -426,7 +417,7 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
      * {@inheritDoc}
      */
     @Override
-    public String component9() {
+    public String value9() {
         return getVarietyname();
     }
 
@@ -434,7 +425,7 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
      * {@inheritDoc}
      */
     @Override
-    public String component10() {
+    public String value10() {
         return getValue();
     }
 
@@ -551,18 +542,27 @@ public class ViewSpeciesdataRecord extends TableRecordImpl<ViewSpeciesdataRecord
     // -------------------------------------------------------------------------
 
     /**
-     * {@inheritDoc}
+     * Create a detached ViewSpeciesdataRecord
      */
-    @Override
-    public String value9() {
-        return getVarietyname();
+    public ViewSpeciesdataRecord() {
+        super(ViewSpeciesdata.VIEW_SPECIESDATA);
     }
 
     /**
-     * {@inheritDoc}
+     * Create a detached, initialised ViewSpeciesdataRecord
      */
-    @Override
-    public String value10() {
-        return getValue();
+    public ViewSpeciesdataRecord(Integer traitid, String traitname, String traitcode, Integer siteid, String sitename, Integer rate, String cropname, Integer varietyid, String varietyname, String value) {
+        super(ViewSpeciesdata.VIEW_SPECIESDATA);
+
+        set(0, traitid);
+        set(1, traitname);
+        set(2, traitcode);
+        set(3, siteid);
+        set(4, sitename);
+        set(5, rate);
+        set(6, cropname);
+        set(7, varietyid);
+        set(8, varietyname);
+        set(9, value);
     }
 }

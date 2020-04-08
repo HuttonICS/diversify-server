@@ -78,6 +78,8 @@ public class Diversify extends Application
 		attachToRouter(router, "/site/{siteId}/data/{traitId}", SiteDataResource.class);
 		attachToRouter(router, "/variety/data", VarietyDataResource.class);
 		attachToRouter(router, "/trait", TraitResource.class);
+		attachToRouter(router, "/trait/{traitIds}/plot", TraitPlotDataResource.class);
+		attachToRouter(router, "/trait/{traitIds}/species", TraitSpeciesDataResource.class);
 		attachToRouter(router, "/variety/data/trait", VarietyDataTraitResource.class);
 
 		// CORS first, then encoder

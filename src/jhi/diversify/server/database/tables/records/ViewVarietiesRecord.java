@@ -30,10 +30,10 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     private static final long serialVersionUID = -338447489;
 
     /**
-     * Create a detached ViewVarietiesRecord
+     * Setter for <code>diversify.view_varieties.id</code>.
      */
-    public ViewVarietiesRecord() {
-        super(ViewVarieties.VIEW_VARIETIES);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -44,18 +44,10 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
-     * Create a detached, initialised ViewVarietiesRecord
+     * Setter for <code>diversify.view_varieties.varietyname</code>.
      */
-    public ViewVarietiesRecord(Integer id, String varietyname, String cropcommonname, String croplatinname, String plantpartnername, Long plots, Long datapoints) {
-        super(ViewVarieties.VIEW_VARIETIES);
-
-        set(0, id);
-        set(1, varietyname);
-        set(2, cropcommonname);
-        set(3, croplatinname);
-        set(4, plantpartnername);
-        set(5, plots);
-        set(6, datapoints);
+    public void setVarietyname(String value) {
+        set(1, value);
     }
 
     /**
@@ -73,10 +65,10 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
-     * Setter for <code>diversify.view_varieties.id</code>.
+     * Getter for <code>diversify.view_varieties.cropcommonname</code>.
      */
-    public void setId(Integer value) {
-        set(0, value);
+    public String getCropcommonname() {
+        return (String) get(2);
     }
 
     /**
@@ -87,27 +79,6 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
-     * Setter for <code>diversify.view_varieties.varietyname</code>.
-     */
-    public void setVarietyname(String value) {
-        set(1, value);
-    }
-
-    /**
-     * Setter for <code>diversify.view_varieties.plantpartnername</code>.
-     */
-    public void setPlantpartnername(String value) {
-        set(4, value);
-    }
-
-    /**
-     * Getter for <code>diversify.view_varieties.cropcommonname</code>.
-     */
-    public String getCropcommonname() {
-        return (String) get(2);
-    }
-
-    /**
      * Getter for <code>diversify.view_varieties.croplatinname</code>.
      */
     public String getCroplatinname() {
@@ -115,10 +86,10 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     }
 
     /**
-     * Getter for <code>diversify.view_varieties.plots</code>.
+     * Setter for <code>diversify.view_varieties.plantpartnername</code>.
      */
-    public Long getPlots() {
-        return (Long) get(5);
+    public void setPlantpartnername(String value) {
+        set(4, value);
     }
 
     /**
@@ -133,6 +104,27 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
      */
     public void setPlots(Long value) {
         set(5, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_varieties.plots</code>.
+     */
+    public Long getPlots() {
+        return (Long) get(5);
+    }
+
+    /**
+     * Setter for <code>diversify.view_varieties.datapoints</code>.
+     */
+    public void setDatapoints(Long value) {
+        set(6, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_varieties.datapoints</code>.
+     */
+    public Long getDatapoints() {
+        return (Long) get(6);
     }
 
     // -------------------------------------------------------------------------
@@ -406,16 +398,24 @@ public class ViewVarietiesRecord extends TableRecordImpl<ViewVarietiesRecord> im
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.view_varieties.datapoints</code>.
+     * Create a detached ViewVarietiesRecord
      */
-    public Long getDatapoints() {
-        return (Long) get(6);
+    public ViewVarietiesRecord() {
+        super(ViewVarieties.VIEW_VARIETIES);
     }
 
     /**
-     * Setter for <code>diversify.view_varieties.datapoints</code>.
+     * Create a detached, initialised ViewVarietiesRecord
      */
-    public void setDatapoints(Long value) {
-        set(6, value);
+    public ViewVarietiesRecord(Integer id, String varietyname, String cropcommonname, String croplatinname, String plantpartnername, Long plots, Long datapoints) {
+        super(ViewVarieties.VIEW_VARIETIES);
+
+        set(0, id);
+        set(1, varietyname);
+        set(2, cropcommonname);
+        set(3, croplatinname);
+        set(4, plantpartnername);
+        set(5, plots);
+        set(6, datapoints);
     }
 }

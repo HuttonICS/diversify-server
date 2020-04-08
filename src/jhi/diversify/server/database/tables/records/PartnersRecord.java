@@ -33,10 +33,10 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     private static final long serialVersionUID = 1478983997;
 
     /**
-     * Create a detached PartnersRecord
+     * Setter for <code>diversify.partners.id</code>.
      */
-    public PartnersRecord() {
-        super(Partners.PARTNERS);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -54,15 +54,10 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
-     * Create a detached, initialised PartnersRecord
+     * Getter for <code>diversify.partners.partnername</code>.
      */
-    public PartnersRecord(Integer id, String partnername, Timestamp createdOn, Timestamp updatedOn) {
-        super(Partners.PARTNERS);
-
-        set(0, id);
-        set(1, partnername);
-        set(2, createdOn);
-        set(3, updatedOn);
+    public String getPartnername() {
+        return (String) get(1);
     }
 
     /**
@@ -73,24 +68,24 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.partners.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
-     * Getter for <code>diversify.partners.partnername</code>.
-     */
-    public String getPartnername() {
-        return (String) get(1);
-    }
-
-    /**
      * Getter for <code>diversify.partners.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.partners.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(3, value);
+    }
+
+    /**
+     * Getter for <code>diversify.partners.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(3);
     }
 
     // -------------------------------------------------------------------------
@@ -274,16 +269,21 @@ public class PartnersRecord extends UpdatableRecordImpl<PartnersRecord> implemen
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.partners.updated_on</code>.
+     * Create a detached PartnersRecord
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(3);
+    public PartnersRecord() {
+        super(Partners.PARTNERS);
     }
 
     /**
-     * Setter for <code>diversify.partners.updated_on</code>.
+     * Create a detached, initialised PartnersRecord
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(3, value);
+    public PartnersRecord(Integer id, String partnername, Timestamp createdOn, Timestamp updatedOn) {
+        super(Partners.PARTNERS);
+
+        set(0, id);
+        set(1, partnername);
+        set(2, createdOn);
+        set(3, updatedOn);
     }
 }

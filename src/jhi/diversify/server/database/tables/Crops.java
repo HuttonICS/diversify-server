@@ -42,11 +42,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Crops extends TableImpl<CropsRecord> {
 
+    private static final long serialVersionUID = -841865458;
+
     /**
      * The reference instance of <code>diversify.crops</code>
      */
     public static final Crops CROPS = new Crops();
-    private static final long serialVersionUID = -841865458;
 
     /**
      * The class holding records for this type
@@ -55,6 +56,7 @@ public class Crops extends TableImpl<CropsRecord> {
     public Class<CropsRecord> getRecordType() {
         return CropsRecord.class;
     }
+
     /**
      * The column <code>diversify.crops.id</code>.
      */

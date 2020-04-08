@@ -33,10 +33,10 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     private static final long serialVersionUID = 1788202015;
 
     /**
-     * Create a detached DatasetsRecord
+     * Setter for <code>diversify.datasets.id</code>.
      */
-    public DatasetsRecord() {
-        super(Datasets.DATASETS);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -54,15 +54,10 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     }
 
     /**
-     * Create a detached, initialised DatasetsRecord
+     * Getter for <code>diversify.datasets.name</code>.
      */
-    public DatasetsRecord(Integer id, String name, Timestamp createdOn, Timestamp updatedOn) {
-        super(Datasets.DATASETS);
-
-        set(0, id);
-        set(1, name);
-        set(2, createdOn);
-        set(3, updatedOn);
+    public String getName() {
+        return (String) get(1);
     }
 
     /**
@@ -73,24 +68,24 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.datasets.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
-     * Getter for <code>diversify.datasets.name</code>.
-     */
-    public String getName() {
-        return (String) get(1);
-    }
-
-    /**
      * Getter for <code>diversify.datasets.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(2);
+    }
+
+    /**
+     * Setter for <code>diversify.datasets.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(3, value);
+    }
+
+    /**
+     * Getter for <code>diversify.datasets.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(3);
     }
 
     // -------------------------------------------------------------------------
@@ -274,16 +269,21 @@ public class DatasetsRecord extends UpdatableRecordImpl<DatasetsRecord> implemen
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.datasets.updated_on</code>.
+     * Create a detached DatasetsRecord
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(3);
+    public DatasetsRecord() {
+        super(Datasets.DATASETS);
     }
 
     /**
-     * Setter for <code>diversify.datasets.updated_on</code>.
+     * Create a detached, initialised DatasetsRecord
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(3, value);
+    public DatasetsRecord(Integer id, String name, Timestamp createdOn, Timestamp updatedOn) {
+        super(Datasets.DATASETS);
+
+        set(0, id);
+        set(1, name);
+        set(2, createdOn);
+        set(3, updatedOn);
     }
 }

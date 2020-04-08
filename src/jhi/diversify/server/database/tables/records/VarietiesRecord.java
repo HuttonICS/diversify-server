@@ -33,10 +33,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     private static final long serialVersionUID = -98550883;
 
     /**
-     * Create a detached VarietiesRecord
+     * Setter for <code>diversify.varieties.id</code>.
      */
-    public VarietiesRecord() {
-        super(Varieties.VARIETIES);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -47,16 +47,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Create a detached, initialised VarietiesRecord
+     * Setter for <code>diversify.varieties.varietyname</code>.
      */
-    public VarietiesRecord(Integer id, String varietyname, Integer cropId, Timestamp createdOn, Timestamp updatedOn) {
-        super(Varieties.VARIETIES);
-
-        set(0, id);
-        set(1, varietyname);
-        set(2, cropId);
-        set(3, createdOn);
-        set(4, updatedOn);
+    public void setVarietyname(String value) {
+        set(1, value);
     }
 
     /**
@@ -74,10 +68,10 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Setter for <code>diversify.varieties.id</code>.
+     * Getter for <code>diversify.varieties.crop_id</code>.
      */
-    public void setId(Integer value) {
-        set(0, value);
+    public Integer getCropId() {
+        return (Integer) get(2);
     }
 
     /**
@@ -88,24 +82,24 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     }
 
     /**
-     * Setter for <code>diversify.varieties.varietyname</code>.
-     */
-    public void setVarietyname(String value) {
-        set(1, value);
-    }
-
-    /**
-     * Getter for <code>diversify.varieties.crop_id</code>.
-     */
-    public Integer getCropId() {
-        return (Integer) get(2);
-    }
-
-    /**
      * Getter for <code>diversify.varieties.created_on</code>.
      */
     public Timestamp getCreatedOn() {
         return (Timestamp) get(3);
+    }
+
+    /**
+     * Setter for <code>diversify.varieties.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(4, value);
+    }
+
+    /**
+     * Getter for <code>diversify.varieties.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(4);
     }
 
     // -------------------------------------------------------------------------
@@ -323,16 +317,22 @@ public class VarietiesRecord extends UpdatableRecordImpl<VarietiesRecord> implem
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.varieties.updated_on</code>.
+     * Create a detached VarietiesRecord
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(4);
+    public VarietiesRecord() {
+        super(Varieties.VARIETIES);
     }
 
     /**
-     * Setter for <code>diversify.varieties.updated_on</code>.
+     * Create a detached, initialised VarietiesRecord
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(4, value);
+    public VarietiesRecord(Integer id, String varietyname, Integer cropId, Timestamp createdOn, Timestamp updatedOn) {
+        super(Varieties.VARIETIES);
+
+        set(0, id);
+        set(1, varietyname);
+        set(2, cropId);
+        set(3, createdOn);
+        set(4, updatedOn);
     }
 }

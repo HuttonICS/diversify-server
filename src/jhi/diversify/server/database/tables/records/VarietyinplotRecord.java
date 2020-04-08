@@ -33,10 +33,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     private static final long serialVersionUID = 1086193013;
 
     /**
-     * Create a detached VarietyinplotRecord
+     * Setter for <code>diversify.varietyinplot.id</code>.
      */
-    public VarietyinplotRecord() {
-        super(Varietyinplot.VARIETYINPLOT);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -47,17 +47,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Create a detached, initialised VarietyinplotRecord
+     * Setter for <code>diversify.varietyinplot.plot_id</code>.
      */
-    public VarietyinplotRecord(Integer id, Integer plotId, Integer varietyId, Integer rate, Timestamp createdOn, Timestamp updatedOn) {
-        super(Varietyinplot.VARIETYINPLOT);
-
-        set(0, id);
-        set(1, plotId);
-        set(2, varietyId);
-        set(3, rate);
-        set(4, createdOn);
-        set(5, updatedOn);
+    public void setPlotId(Integer value) {
+        set(1, value);
     }
 
     /**
@@ -75,27 +68,6 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Setter for <code>diversify.varietyinplot.id</code>.
-     */
-    public void setId(Integer value) {
-        set(0, value);
-    }
-
-    /**
-     * Setter for <code>diversify.varietyinplot.rate</code>.
-     */
-    public void setRate(Integer value) {
-        set(3, value);
-    }
-
-    /**
-     * Setter for <code>diversify.varietyinplot.plot_id</code>.
-     */
-    public void setPlotId(Integer value) {
-        set(1, value);
-    }
-
-    /**
      * Getter for <code>diversify.varietyinplot.variety_id</code>.
      */
     public Integer getVarietyId() {
@@ -103,10 +75,10 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     }
 
     /**
-     * Getter for <code>diversify.varietyinplot.created_on</code>.
+     * Setter for <code>diversify.varietyinplot.rate</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(4);
+    public void setRate(Integer value) {
+        set(3, value);
     }
 
     /**
@@ -121,6 +93,27 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
      */
     public void setCreatedOn(Timestamp value) {
         set(4, value);
+    }
+
+    /**
+     * Getter for <code>diversify.varietyinplot.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(4);
+    }
+
+    /**
+     * Setter for <code>diversify.varietyinplot.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>diversify.varietyinplot.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(5);
     }
 
     // -------------------------------------------------------------------------
@@ -372,16 +365,23 @@ public class VarietyinplotRecord extends UpdatableRecordImpl<VarietyinplotRecord
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.varietyinplot.updated_on</code>.
+     * Create a detached VarietyinplotRecord
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(5);
+    public VarietyinplotRecord() {
+        super(Varietyinplot.VARIETYINPLOT);
     }
 
     /**
-     * Setter for <code>diversify.varietyinplot.updated_on</code>.
+     * Create a detached, initialised VarietyinplotRecord
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(5, value);
+    public VarietyinplotRecord(Integer id, Integer plotId, Integer varietyId, Integer rate, Timestamp createdOn, Timestamp updatedOn) {
+        super(Varietyinplot.VARIETYINPLOT);
+
+        set(0, id);
+        set(1, plotId);
+        set(2, varietyId);
+        set(3, rate);
+        set(4, createdOn);
+        set(5, updatedOn);
     }
 }

@@ -33,10 +33,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     private static final long serialVersionUID = 650572246;
 
     /**
-     * Create a detached ViewPlotdataRecord
+     * Setter for <code>diversify.view_plotdata.plotcode</code>.
      */
-    public ViewPlotdataRecord() {
-        super(ViewPlotdata.VIEW_PLOTDATA);
+    public void setPlotcode(String value) {
+        set(0, value);
     }
 
     /**
@@ -54,28 +54,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Create a detached, initialised ViewPlotdataRecord
+     * Getter for <code>diversify.view_plotdata.crops</code>.
      */
-    public ViewPlotdataRecord(String plotcode, String crops, Integer siteid, String sitename, Integer id, Integer plotId, Integer traitId, Integer rep, BigDecimal value, Timestamp createdOn, Timestamp updatedOn, Integer datasetid, String datasetname, Integer year, String traitname, String traitcode, String unit) {
-        super(ViewPlotdata.VIEW_PLOTDATA);
-
-        set(0, plotcode);
-        set(1, crops);
-        set(2, siteid);
-        set(3, sitename);
-        set(4, id);
-        set(5, plotId);
-        set(6, traitId);
-        set(7, rep);
-        set(8, value);
-        set(9, createdOn);
-        set(10, updatedOn);
-        set(11, datasetid);
-        set(12, datasetname);
-        set(13, year);
-        set(14, traitname);
-        set(15, traitcode);
-        set(16, unit);
+    public String getCrops() {
+        return (String) get(1);
     }
 
     /**
@@ -86,10 +68,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Setter for <code>diversify.view_plotdata.plotcode</code>.
+     * Getter for <code>diversify.view_plotdata.siteId</code>.
      */
-    public void setPlotcode(String value) {
-        set(0, value);
+    public Integer getSiteid() {
+        return (Integer) get(2);
     }
 
     /**
@@ -100,10 +82,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.crops</code>.
+     * Getter for <code>diversify.view_plotdata.sitename</code>.
      */
-    public String getCrops() {
-        return (String) get(1);
+    public String getSitename() {
+        return (String) get(3);
     }
 
     /**
@@ -114,17 +96,17 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.siteId</code>.
+     * Getter for <code>diversify.view_plotdata.id</code>.
      */
-    public Integer getSiteid() {
-        return (Integer) get(2);
+    public Integer getId() {
+        return (Integer) get(4);
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.sitename</code>.
+     * Setter for <code>diversify.view_plotdata.plot_id</code>.
      */
-    public String getSitename() {
-        return (String) get(3);
+    public void setPlotId(Integer value) {
+        set(5, value);
     }
 
     /**
@@ -135,10 +117,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.id</code>.
+     * Setter for <code>diversify.view_plotdata.trait_id</code>.
      */
-    public Integer getId() {
-        return (Integer) get(4);
+    public void setTraitId(Integer value) {
+        set(6, value);
     }
 
     /**
@@ -149,10 +131,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Setter for <code>diversify.view_plotdata.plot_id</code>.
+     * Setter for <code>diversify.view_plotdata.rep</code>.
      */
-    public void setPlotId(Integer value) {
-        set(5, value);
+    public void setRep(Integer value) {
+        set(7, value);
     }
 
     /**
@@ -170,10 +152,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Setter for <code>diversify.view_plotdata.trait_id</code>.
+     * Getter for <code>diversify.view_plotdata.value</code>.
      */
-    public void setTraitId(Integer value) {
-        set(6, value);
+    public BigDecimal getValue() {
+        return (BigDecimal) get(8);
     }
 
     /**
@@ -184,10 +166,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Setter for <code>diversify.view_plotdata.rep</code>.
+     * Getter for <code>diversify.view_plotdata.created_on</code>.
      */
-    public void setRep(Integer value) {
-        set(7, value);
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(9);
     }
 
     /**
@@ -198,10 +180,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.value</code>.
+     * Getter for <code>diversify.view_plotdata.updated_on</code>.
      */
-    public BigDecimal getValue() {
-        return (BigDecimal) get(8);
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(10);
     }
 
     /**
@@ -212,38 +194,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(9);
-    }
-
-    /**
-     * Getter for <code>diversify.view_plotdata.updated_on</code>.
-     */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(10);
-    }
-
-    /**
-     * Getter for <code>diversify.view_plotdata.datasetname</code>.
-     */
-    public String getDatasetname() {
-        return (String) get(12);
-    }
-
-    /**
      * Getter for <code>diversify.view_plotdata.datasetid</code>.
      */
     public Integer getDatasetid() {
         return (Integer) get(11);
-    }
-
-    /**
-     * Getter for <code>diversify.view_plotdata.year</code>.
-     */
-    public Integer getYear() {
-        return (Integer) get(13);
     }
 
     /**
@@ -254,10 +208,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.traitname</code>.
+     * Getter for <code>diversify.view_plotdata.datasetname</code>.
      */
-    public String getTraitname() {
-        return (String) get(14);
+    public String getDatasetname() {
+        return (String) get(12);
     }
 
     /**
@@ -268,10 +222,10 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.traitcode</code>.
+     * Getter for <code>diversify.view_plotdata.year</code>.
      */
-    public String getTraitcode() {
-        return (String) get(15);
+    public Integer getYear() {
+        return (Integer) get(13);
     }
 
     /**
@@ -282,10 +236,38 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
+     * Getter for <code>diversify.view_plotdata.traitname</code>.
+     */
+    public String getTraitname() {
+        return (String) get(14);
+    }
+
+    /**
      * Setter for <code>diversify.view_plotdata.traitcode</code>.
      */
     public void setTraitcode(String value) {
         set(15, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_plotdata.traitcode</code>.
+     */
+    public String getTraitcode() {
+        return (String) get(15);
+    }
+
+    /**
+     * Setter for <code>diversify.view_plotdata.unit</code>.
+     */
+    public void setUnit(String value) {
+        set(16, value);
+    }
+
+    /**
+     * Getter for <code>diversify.view_plotdata.unit</code>.
+     */
+    public String getUnit() {
+        return (String) get(16);
     }
 
     // -------------------------------------------------------------------------
@@ -309,10 +291,11 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Getter for <code>diversify.view_plotdata.unit</code>.
+     * {@inheritDoc}
      */
-    public String getUnit() {
-        return (String) get(16);
+    @Override
+    public Field<String> field1() {
+        return ViewPlotdata.VIEW_PLOTDATA.PLOTCODE;
     }
 
     /**
@@ -444,10 +427,11 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     }
 
     /**
-     * Setter for <code>diversify.view_plotdata.unit</code>.
+     * {@inheritDoc}
      */
-    public void setUnit(String value) {
-        set(16, value);
+    @Override
+    public String component1() {
+        return getPlotcode();
     }
 
     /**
@@ -582,8 +566,8 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
      * {@inheritDoc}
      */
     @Override
-    public Field<String> field1() {
-        return ViewPlotdata.VIEW_PLOTDATA.PLOTCODE;
+    public String value1() {
+        return getPlotcode();
     }
 
     /**
@@ -718,8 +702,9 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
      * {@inheritDoc}
      */
     @Override
-    public String component1() {
-        return getPlotcode();
+    public ViewPlotdataRecord value1(String value) {
+        setPlotcode(value);
+        return this;
     }
 
     /**
@@ -896,19 +881,34 @@ public class ViewPlotdataRecord extends TableRecordImpl<ViewPlotdataRecord> impl
     // -------------------------------------------------------------------------
 
     /**
-     * {@inheritDoc}
+     * Create a detached ViewPlotdataRecord
      */
-    @Override
-    public String value1() {
-        return getPlotcode();
+    public ViewPlotdataRecord() {
+        super(ViewPlotdata.VIEW_PLOTDATA);
     }
 
     /**
-     * {@inheritDoc}
+     * Create a detached, initialised ViewPlotdataRecord
      */
-    @Override
-    public ViewPlotdataRecord value1(String value) {
-        setPlotcode(value);
-        return this;
+    public ViewPlotdataRecord(String plotcode, String crops, Integer siteid, String sitename, Integer id, Integer plotId, Integer traitId, Integer rep, BigDecimal value, Timestamp createdOn, Timestamp updatedOn, Integer datasetid, String datasetname, Integer year, String traitname, String traitcode, String unit) {
+        super(ViewPlotdata.VIEW_PLOTDATA);
+
+        set(0, plotcode);
+        set(1, crops);
+        set(2, siteid);
+        set(3, sitename);
+        set(4, id);
+        set(5, plotId);
+        set(6, traitId);
+        set(7, rep);
+        set(8, value);
+        set(9, createdOn);
+        set(10, updatedOn);
+        set(11, datasetid);
+        set(12, datasetname);
+        set(13, year);
+        set(14, traitname);
+        set(15, traitcode);
+        set(16, unit);
     }
 }

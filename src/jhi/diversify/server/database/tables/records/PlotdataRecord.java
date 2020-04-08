@@ -40,10 +40,10 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Create a detached PlotdataRecord
+     * Getter for <code>diversify.plotdata.id</code>.
      */
-    public PlotdataRecord() {
-        super(Plotdata.PLOTDATA);
+    public Integer getId() {
+        return (Integer) get(0);
     }
 
     /**
@@ -54,20 +54,10 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Create a detached, initialised PlotdataRecord
+     * Getter for <code>diversify.plotdata.dataset_id</code>.
      */
-    public PlotdataRecord(Integer id, Integer datasetId, Integer plotId, Integer traitId, Integer rep, String value, Integer dateAccuracy, Timestamp createdOn, Timestamp updatedOn) {
-        super(Plotdata.PLOTDATA);
-
-        set(0, id);
-        set(1, datasetId);
-        set(2, plotId);
-        set(3, traitId);
-        set(4, rep);
-        set(5, value);
-        set(6, dateAccuracy);
-        set(7, createdOn);
-        set(8, updatedOn);
+    public Integer getDatasetId() {
+        return (Integer) get(1);
     }
 
     /**
@@ -78,17 +68,17 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Getter for <code>diversify.plotdata.id</code>.
+     * Getter for <code>diversify.plotdata.plot_id</code>.
      */
-    public Integer getId() {
-        return (Integer) get(0);
+    public Integer getPlotId() {
+        return (Integer) get(2);
     }
 
     /**
-     * Getter for <code>diversify.plotdata.dataset_id</code>.
+     * Setter for <code>diversify.plotdata.trait_id</code>.
      */
-    public Integer getDatasetId() {
-        return (Integer) get(1);
+    public void setTraitId(Integer value) {
+        set(3, value);
     }
 
     /**
@@ -106,10 +96,10 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Getter for <code>diversify.plotdata.plot_id</code>.
+     * Getter for <code>diversify.plotdata.rep</code>.
      */
-    public Integer getPlotId() {
-        return (Integer) get(2);
+    public Integer getRep() {
+        return (Integer) get(4);
     }
 
     /**
@@ -120,38 +110,10 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
-     * Setter for <code>diversify.plotdata.trait_id</code>.
-     */
-    public void setTraitId(Integer value) {
-        set(3, value);
-    }
-
-    /**
-     * Getter for <code>diversify.plotdata.rep</code>.
-     */
-    public Integer getRep() {
-        return (Integer) get(4);
-    }
-
-    /**
-     * Getter for <code>diversify.plotdata.date_accuracy</code>.
-     */
-    public Integer getDateAccuracy() {
-        return (Integer) get(6);
-    }
-
-    /**
      * Getter for <code>diversify.plotdata.value</code>.
      */
     public String getValue() {
         return (String) get(5);
-    }
-
-    /**
-     * Getter for <code>diversify.plotdata.created_on</code>.
-     */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(7);
     }
 
     /**
@@ -162,10 +124,38 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     }
 
     /**
+     * Getter for <code>diversify.plotdata.date_accuracy</code>.
+     */
+    public Integer getDateAccuracy() {
+        return (Integer) get(6);
+    }
+
+    /**
      * Setter for <code>diversify.plotdata.created_on</code>.
      */
     public void setCreatedOn(Timestamp value) {
         set(7, value);
+    }
+
+    /**
+     * Getter for <code>diversify.plotdata.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(7);
+    }
+
+    /**
+     * Setter for <code>diversify.plotdata.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(8, value);
+    }
+
+    /**
+     * Getter for <code>diversify.plotdata.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(8);
     }
 
     // -------------------------------------------------------------------------
@@ -185,17 +175,19 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     // -------------------------------------------------------------------------
 
     /**
-     * Getter for <code>diversify.plotdata.updated_on</code>.
+     * {@inheritDoc}
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(8);
+    @Override
+    public Row9<Integer, Integer, Integer, Integer, Integer, String, Integer, Timestamp, Timestamp> fieldsRow() {
+        return (Row9) super.fieldsRow();
     }
 
     /**
-     * Setter for <code>diversify.plotdata.updated_on</code>.
+     * {@inheritDoc}
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(8, value);
+    @Override
+    public Row9<Integer, Integer, Integer, Integer, Integer, String, Integer, Timestamp, Timestamp> valuesRow() {
+        return (Row9) super.valuesRow();
     }
 
     /**
@@ -250,24 +242,24 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
      * {@inheritDoc}
      */
     @Override
-    public Row9<Integer, Integer, Integer, Integer, Integer, String, Integer, Timestamp, Timestamp> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Row9<Integer, Integer, Integer, Integer, Integer, String, Integer, Timestamp, Timestamp> valuesRow() {
-        return (Row9) super.valuesRow();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public Field<Integer> field7() {
         return Plotdata.PLOTDATA.DATE_ACCURACY;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Timestamp> field8() {
+        return Plotdata.PLOTDATA.CREATED_ON;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Timestamp> field9() {
+        return Plotdata.PLOTDATA.UPDATED_ON;
     }
 
     /**
@@ -322,24 +314,24 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
      * {@inheritDoc}
      */
     @Override
-    public Field<Timestamp> field8() {
-        return Plotdata.PLOTDATA.CREATED_ON;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Field<Timestamp> field9() {
-        return Plotdata.PLOTDATA.UPDATED_ON;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public Integer component7() {
         return getDateAccuracy();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp component8() {
+        return getCreatedOn();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp component9() {
+        return getUpdatedOn();
     }
 
     /**
@@ -394,7 +386,15 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
      * {@inheritDoc}
      */
     @Override
-    public Timestamp component8() {
+    public Integer value7() {
+        return getDateAccuracy();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value8() {
         return getCreatedOn();
     }
 
@@ -402,16 +402,8 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
      * {@inheritDoc}
      */
     @Override
-    public Timestamp component9() {
+    public Timestamp value9() {
         return getUpdatedOn();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Integer value7() {
-        return getDateAccuracy();
     }
 
     /**
@@ -517,18 +509,26 @@ public class PlotdataRecord extends UpdatableRecordImpl<PlotdataRecord> implemen
     // -------------------------------------------------------------------------
 
     /**
-     * {@inheritDoc}
+     * Create a detached PlotdataRecord
      */
-    @Override
-    public Timestamp value8() {
-        return getCreatedOn();
+    public PlotdataRecord() {
+        super(Plotdata.PLOTDATA);
     }
 
     /**
-     * {@inheritDoc}
+     * Create a detached, initialised PlotdataRecord
      */
-    @Override
-    public Timestamp value9() {
-        return getUpdatedOn();
+    public PlotdataRecord(Integer id, Integer datasetId, Integer plotId, Integer traitId, Integer rep, String value, Integer dateAccuracy, Timestamp createdOn, Timestamp updatedOn) {
+        super(Plotdata.PLOTDATA);
+
+        set(0, id);
+        set(1, datasetId);
+        set(2, plotId);
+        set(3, traitId);
+        set(4, rep);
+        set(5, value);
+        set(6, dateAccuracy);
+        set(7, createdOn);
+        set(8, updatedOn);
     }
 }

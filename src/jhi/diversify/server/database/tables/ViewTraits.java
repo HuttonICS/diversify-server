@@ -35,39 +35,56 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewTraits extends TableImpl<ViewTraitsRecord> {
 
+    private static final long serialVersionUID = 1071328521;
+
     /**
      * The reference instance of <code>diversify.view_traits</code>
      */
     public static final ViewTraits VIEW_TRAITS = new ViewTraits();
-    private static final long serialVersionUID = 1071328521;
+
+    /**
+     * The class holding records for this type
+     */
+    @Override
+    public Class<ViewTraitsRecord> getRecordType() {
+        return ViewTraitsRecord.class;
+    }
+
     /**
      * The column <code>diversify.view_traits.id</code>.
      */
     public final TableField<ViewTraitsRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
     /**
      * The column <code>diversify.view_traits.traitname</code>.
      */
     public final TableField<ViewTraitsRecord, String> TRAITNAME = createField("traitname", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify.view_traits.traitcode</code>.
      */
     public final TableField<ViewTraitsRecord, String> TRAITCODE = createField("traitcode", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+
     /**
      * The column <code>diversify.view_traits.unit</code>.
      */
     public final TableField<ViewTraitsRecord, String> UNIT = createField("unit", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
     /**
      * The column <code>diversify.view_traits.created_on</code>.
      */
     public final TableField<ViewTraitsRecord, Timestamp> CREATED_ON = createField("created_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify.view_traits.updated_on</code>.
      */
     public final TableField<ViewTraitsRecord, Timestamp> UPDATED_ON = createField("updated_on", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
     /**
      * The column <code>diversify.view_traits.species_data_points</code>.
      */
     public final TableField<ViewTraitsRecord, Long> SPECIES_DATA_POINTS = createField("species_data_points", org.jooq.impl.SQLDataType.BIGINT, this, "");
+
     /**
      * The column <code>diversify.view_traits.plot_data_points</code>.
      */
@@ -104,14 +121,6 @@ public class ViewTraits extends TableImpl<ViewTraitsRecord> {
 
     public <O extends Record> ViewTraits(Table<O> child, ForeignKey<O, ViewTraitsRecord> key) {
         super(child, key, VIEW_TRAITS);
-    }
-
-    /**
-     * The class holding records for this type
-     */
-    @Override
-    public Class<ViewTraitsRecord> getRecordType() {
-        return ViewTraitsRecord.class;
     }
 
     /**

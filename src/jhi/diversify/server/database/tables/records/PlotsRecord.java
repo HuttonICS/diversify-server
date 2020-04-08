@@ -34,10 +34,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     private static final long serialVersionUID = 609830660;
 
     /**
-     * Create a detached PlotsRecord
+     * Setter for <code>diversify.plots.id</code>.
      */
-    public PlotsRecord() {
-        super(Plots.PLOTS);
+    public void setId(Integer value) {
+        set(0, value);
     }
 
     /**
@@ -55,28 +55,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Create a detached, initialised PlotsRecord
+     * Getter for <code>diversify.plots.dataset_id</code>.
      */
-    public PlotsRecord(Integer id, Integer datasetId, String plotcode, String owncode, Integer siteId, Integer block, String plot, Integer subplot, Integer row, Integer col, Integer rep, Integer subrep, String management, BigDecimal latitude, BigDecimal longitude, Timestamp createdOn, Timestamp updatedOn) {
-        super(Plots.PLOTS);
-
-        set(0, id);
-        set(1, datasetId);
-        set(2, plotcode);
-        set(3, owncode);
-        set(4, siteId);
-        set(5, block);
-        set(6, plot);
-        set(7, subplot);
-        set(8, row);
-        set(9, col);
-        set(10, rep);
-        set(11, subrep);
-        set(12, management);
-        set(13, latitude);
-        set(14, longitude);
-        set(15, createdOn);
-        set(16, updatedOn);
+    public Integer getDatasetId() {
+        return (Integer) get(1);
     }
 
     /**
@@ -87,10 +69,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.id</code>.
+     * Getter for <code>diversify.plots.plotcode</code>.
      */
-    public void setId(Integer value) {
-        set(0, value);
+    public String getPlotcode() {
+        return (String) get(2);
     }
 
     /**
@@ -101,10 +83,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.dataset_id</code>.
+     * Getter for <code>diversify.plots.owncode</code>.
      */
-    public Integer getDatasetId() {
-        return (Integer) get(1);
+    public String getOwncode() {
+        return (String) get(3);
     }
 
     /**
@@ -115,17 +97,17 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.plotcode</code>.
+     * Getter for <code>diversify.plots.site_id</code>.
      */
-    public String getPlotcode() {
-        return (String) get(2);
+    public Integer getSiteId() {
+        return (Integer) get(4);
     }
 
     /**
-     * Getter for <code>diversify.plots.owncode</code>.
+     * Setter for <code>diversify.plots.block</code>.
      */
-    public String getOwncode() {
-        return (String) get(3);
+    public void setBlock(Integer value) {
+        set(5, value);
     }
 
     /**
@@ -136,10 +118,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.site_id</code>.
+     * Setter for <code>diversify.plots.plot</code>.
      */
-    public Integer getSiteId() {
-        return (Integer) get(4);
+    public void setPlot(String value) {
+        set(6, value);
     }
 
     /**
@@ -150,10 +132,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.block</code>.
+     * Setter for <code>diversify.plots.subplot</code>.
      */
-    public void setBlock(Integer value) {
-        set(5, value);
+    public void setSubplot(Integer value) {
+        set(7, value);
     }
 
     /**
@@ -171,10 +153,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.plot</code>.
+     * Getter for <code>diversify.plots.row</code>.
      */
-    public void setPlot(String value) {
-        set(6, value);
+    public Integer getRow() {
+        return (Integer) get(8);
     }
 
     /**
@@ -185,10 +167,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.subplot</code>.
+     * Getter for <code>diversify.plots.col</code>.
      */
-    public void setSubplot(Integer value) {
-        set(7, value);
+    public Integer getCol() {
+        return (Integer) get(9);
     }
 
     /**
@@ -199,10 +181,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.row</code>.
+     * Getter for <code>diversify.plots.rep</code>.
      */
-    public Integer getRow() {
-        return (Integer) get(8);
+    public Integer getRep() {
+        return (Integer) get(10);
     }
 
     /**
@@ -213,38 +195,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.col</code>.
-     */
-    public Integer getCol() {
-        return (Integer) get(9);
-    }
-
-    /**
-     * Getter for <code>diversify.plots.rep</code>.
-     */
-    public Integer getRep() {
-        return (Integer) get(10);
-    }
-
-    /**
-     * Getter for <code>diversify.plots.management</code>.
-     */
-    public String getManagement() {
-        return (String) get(12);
-    }
-
-    /**
      * Getter for <code>diversify.plots.subrep</code>.
      */
     public Integer getSubrep() {
         return (Integer) get(11);
-    }
-
-    /**
-     * Getter for <code>diversify.plots.latitude</code>.
-     */
-    public BigDecimal getLatitude() {
-        return (BigDecimal) get(13);
     }
 
     /**
@@ -255,10 +209,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.longitude</code>.
+     * Getter for <code>diversify.plots.management</code>.
      */
-    public BigDecimal getLongitude() {
-        return (BigDecimal) get(14);
+    public String getManagement() {
+        return (String) get(12);
     }
 
     /**
@@ -269,10 +223,10 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.created_on</code>.
+     * Getter for <code>diversify.plots.latitude</code>.
      */
-    public Timestamp getCreatedOn() {
-        return (Timestamp) get(15);
+    public BigDecimal getLatitude() {
+        return (BigDecimal) get(13);
     }
 
     /**
@@ -283,10 +237,38 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
+     * Getter for <code>diversify.plots.longitude</code>.
+     */
+    public BigDecimal getLongitude() {
+        return (BigDecimal) get(14);
+    }
+
+    /**
      * Setter for <code>diversify.plots.created_on</code>.
      */
     public void setCreatedOn(Timestamp value) {
         set(15, value);
+    }
+
+    /**
+     * Getter for <code>diversify.plots.created_on</code>.
+     */
+    public Timestamp getCreatedOn() {
+        return (Timestamp) get(15);
+    }
+
+    /**
+     * Setter for <code>diversify.plots.updated_on</code>.
+     */
+    public void setUpdatedOn(Timestamp value) {
+        set(16, value);
+    }
+
+    /**
+     * Getter for <code>diversify.plots.updated_on</code>.
+     */
+    public Timestamp getUpdatedOn() {
+        return (Timestamp) get(16);
     }
 
     // -------------------------------------------------------------------------
@@ -322,10 +304,11 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Getter for <code>diversify.plots.updated_on</code>.
+     * {@inheritDoc}
      */
-    public Timestamp getUpdatedOn() {
-        return (Timestamp) get(16);
+    @Override
+    public Field<Integer> field1() {
+        return Plots.PLOTS.ID;
     }
 
     /**
@@ -457,10 +440,11 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     }
 
     /**
-     * Setter for <code>diversify.plots.updated_on</code>.
+     * {@inheritDoc}
      */
-    public void setUpdatedOn(Timestamp value) {
-        set(16, value);
+    @Override
+    public Integer component1() {
+        return getId();
     }
 
     /**
@@ -595,8 +579,8 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
      * {@inheritDoc}
      */
     @Override
-    public Field<Integer> field1() {
-        return Plots.PLOTS.ID;
+    public Integer value1() {
+        return getId();
     }
 
     /**
@@ -731,8 +715,9 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
      * {@inheritDoc}
      */
     @Override
-    public Integer component1() {
-        return getId();
+    public PlotsRecord value1(Integer value) {
+        setId(value);
+        return this;
     }
 
     /**
@@ -909,19 +894,34 @@ public class PlotsRecord extends UpdatableRecordImpl<PlotsRecord> implements Rec
     // -------------------------------------------------------------------------
 
     /**
-     * {@inheritDoc}
+     * Create a detached PlotsRecord
      */
-    @Override
-    public Integer value1() {
-        return getId();
+    public PlotsRecord() {
+        super(Plots.PLOTS);
     }
 
     /**
-     * {@inheritDoc}
+     * Create a detached, initialised PlotsRecord
      */
-    @Override
-    public PlotsRecord value1(Integer value) {
-        setId(value);
-        return this;
+    public PlotsRecord(Integer id, Integer datasetId, String plotcode, String owncode, Integer siteId, Integer block, String plot, Integer subplot, Integer row, Integer col, Integer rep, Integer subrep, String management, BigDecimal latitude, BigDecimal longitude, Timestamp createdOn, Timestamp updatedOn) {
+        super(Plots.PLOTS);
+
+        set(0, id);
+        set(1, datasetId);
+        set(2, plotcode);
+        set(3, owncode);
+        set(4, siteId);
+        set(5, block);
+        set(6, plot);
+        set(7, subplot);
+        set(8, row);
+        set(9, col);
+        set(10, rep);
+        set(11, subrep);
+        set(12, management);
+        set(13, latitude);
+        set(14, longitude);
+        set(15, createdOn);
+        set(16, updatedOn);
     }
 }
