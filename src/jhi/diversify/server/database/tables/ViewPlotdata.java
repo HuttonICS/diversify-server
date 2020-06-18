@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewPlotdata extends TableImpl<ViewPlotdataRecord> {
 
-    private static final long serialVersionUID = 1123209927;
+    private static final long serialVersionUID = -1622632371;
 
     /**
      * The reference instance of <code>diversify.view_plotdata</code>
@@ -70,6 +70,11 @@ public class ViewPlotdata extends TableImpl<ViewPlotdataRecord> {
      * The column <code>diversify.view_plotdata.sitename</code>.
      */
     public final TableField<ViewPlotdataRecord, String> SITENAME = createField("sitename", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
+    /**
+     * The column <code>diversify.view_plotdata.partnername</code>.
+     */
+    public final TableField<ViewPlotdataRecord, String> PARTNERNAME = createField("partnername", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>diversify.view_plotdata.id</code>.

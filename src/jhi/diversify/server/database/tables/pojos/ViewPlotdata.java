@@ -24,12 +24,13 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewPlotdata implements Serializable {
 
-    private static final long serialVersionUID = -968184063;
+    private static final long serialVersionUID = -720604474;
 
     private String     plotcode;
     private String     crops;
     private Integer    siteid;
     private String     sitename;
+    private String     partnername;
     private Integer    id;
     private Integer    plotId;
     private Integer    traitId;
@@ -51,6 +52,7 @@ public class ViewPlotdata implements Serializable {
         this.crops = value.crops;
         this.siteid = value.siteid;
         this.sitename = value.sitename;
+        this.partnername = value.partnername;
         this.id = value.id;
         this.plotId = value.plotId;
         this.traitId = value.traitId;
@@ -71,6 +73,7 @@ public class ViewPlotdata implements Serializable {
         String     crops,
         Integer    siteid,
         String     sitename,
+        String     partnername,
         Integer    id,
         Integer    plotId,
         Integer    traitId,
@@ -89,6 +92,7 @@ public class ViewPlotdata implements Serializable {
         this.crops = crops;
         this.siteid = siteid;
         this.sitename = sitename;
+        this.partnername = partnername;
         this.id = id;
         this.plotId = plotId;
         this.traitId = traitId;
@@ -134,6 +138,14 @@ public class ViewPlotdata implements Serializable {
 
     public void setSitename(String sitename) {
         this.sitename = sitename;
+    }
+
+    public String getPartnername() {
+        return this.partnername;
+    }
+
+    public void setPartnername(String partnername) {
+        this.partnername = partnername;
     }
 
     public Integer getId() {
@@ -248,6 +260,7 @@ public class ViewPlotdata implements Serializable {
         sb.append(", ").append(crops);
         sb.append(", ").append(siteid);
         sb.append(", ").append(sitename);
+        sb.append(", ").append(partnername);
         sb.append(", ").append(id);
         sb.append(", ").append(plotId);
         sb.append(", ").append(traitId);

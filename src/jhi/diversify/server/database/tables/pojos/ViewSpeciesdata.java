@@ -22,13 +22,14 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSpeciesdata implements Serializable {
 
-    private static final long serialVersionUID = -1720716688;
+    private static final long serialVersionUID = -945464937;
 
     private Integer traitid;
     private String  traitname;
     private String  traitcode;
     private Integer siteid;
     private String  sitename;
+    private String  partnername;
     private Integer rate;
     private String  cropname;
     private Integer varietyid;
@@ -43,6 +44,7 @@ public class ViewSpeciesdata implements Serializable {
         this.traitcode = value.traitcode;
         this.siteid = value.siteid;
         this.sitename = value.sitename;
+        this.partnername = value.partnername;
         this.rate = value.rate;
         this.cropname = value.cropname;
         this.varietyid = value.varietyid;
@@ -56,6 +58,7 @@ public class ViewSpeciesdata implements Serializable {
         String  traitcode,
         Integer siteid,
         String  sitename,
+        String  partnername,
         Integer rate,
         String  cropname,
         Integer varietyid,
@@ -67,6 +70,7 @@ public class ViewSpeciesdata implements Serializable {
         this.traitcode = traitcode;
         this.siteid = siteid;
         this.sitename = sitename;
+        this.partnername = partnername;
         this.rate = rate;
         this.cropname = cropname;
         this.varietyid = varietyid;
@@ -112,6 +116,14 @@ public class ViewSpeciesdata implements Serializable {
 
     public void setSitename(String sitename) {
         this.sitename = sitename;
+    }
+
+    public String getPartnername() {
+        return this.partnername;
+    }
+
+    public void setPartnername(String partnername) {
+        this.partnername = partnername;
     }
 
     public Integer getRate() {
@@ -163,6 +175,7 @@ public class ViewSpeciesdata implements Serializable {
         sb.append(", ").append(traitcode);
         sb.append(", ").append(siteid);
         sb.append(", ").append(sitename);
+        sb.append(", ").append(partnername);
         sb.append(", ").append(rate);
         sb.append(", ").append(cropname);
         sb.append(", ").append(varietyid);

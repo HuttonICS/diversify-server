@@ -43,7 +43,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Plots extends TableImpl<PlotsRecord> {
 
-    private static final long serialVersionUID = -361146650;
+    private static final long serialVersionUID = 1741992966;
 
     /**
      * The reference instance of <code>diversify.plots</code>
@@ -76,7 +76,7 @@ public class Plots extends TableImpl<PlotsRecord> {
     /**
      * The column <code>diversify.plots.owncode</code>.
      */
-    public final TableField<PlotsRecord, String> OWNCODE = createField("owncode", org.jooq.impl.SQLDataType.VARCHAR(255).nullable(false), this, "");
+    public final TableField<PlotsRecord, String> OWNCODE = createField("owncode", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>diversify.plots.site_id</code>.
@@ -111,7 +111,7 @@ public class Plots extends TableImpl<PlotsRecord> {
     /**
      * The column <code>diversify.plots.rep</code>.
      */
-    public final TableField<PlotsRecord, Integer> REP = createField("rep", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<PlotsRecord, Integer> REP = createField("rep", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>diversify.plots.subrep</code>.

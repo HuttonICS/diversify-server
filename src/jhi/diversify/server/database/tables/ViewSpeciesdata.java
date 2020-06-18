@@ -33,7 +33,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViewSpeciesdata extends TableImpl<ViewSpeciesdataRecord> {
 
-    private static final long serialVersionUID = 39465549;
+    private static final long serialVersionUID = 394687903;
 
     /**
      * The reference instance of <code>diversify.view_speciesdata</code>
@@ -72,6 +72,11 @@ public class ViewSpeciesdata extends TableImpl<ViewSpeciesdataRecord> {
      * The column <code>diversify.view_speciesdata.sitename</code>.
      */
     public final TableField<ViewSpeciesdataRecord, String> SITENAME = createField("sitename", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
+
+    /**
+     * The column <code>diversify.view_speciesdata.partnername</code>.
+     */
+    public final TableField<ViewSpeciesdataRecord, String> PARTNERNAME = createField("partnername", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
      * The column <code>diversify.view_speciesdata.rate</code>.
