@@ -74,6 +74,8 @@
 			<zipfileset dir="." includes="config.properties" prefix="WEB-INF/classes"/>
 			<zipfileset dir="." includes="logging.properties" prefix="WEB-INF/classes"/>
 
+			<zipfileset dir="./client" includes="**" prefix=""/>
+
 			<metainf file="web/context.xml"/>
 		</war>
 	</target>

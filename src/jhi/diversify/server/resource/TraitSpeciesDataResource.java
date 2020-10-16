@@ -10,6 +10,7 @@ import org.restlet.resource.*;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.sql.*;
+import java.util.logging.Logger;
 
 import jhi.diversify.server.Database;
 import jhi.diversify.server.database.routines.*;
@@ -58,6 +59,7 @@ public class TraitSpeciesDataResource extends ServerResource
 		}
 		catch (SQLException | IOException e)
 		{
+			Logger.getLogger("").info(e.getMessage());
 			e.printStackTrace();
 			throw new ResourceException(Status.SERVER_ERROR_INTERNAL);
 		}

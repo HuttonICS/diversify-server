@@ -70,13 +70,14 @@ public class Diversify extends Application
 		// Create new router
 		Router router = new Router(context);
 		// Attach the url handlers
-		attachToRouter(router, "/variety", VarietyResource.class);
 		attachToRouter(router, "/site", SiteResource.class);
 		attachToRouter(router, "/site/summary", SiteSummaryResource.class);
 		attachToRouter(router, "/site/{siteId}/summary", SiteSummaryResource.class);
 		attachToRouter(router, "/site/{siteId}/data", SiteDataResource.class);
 		attachToRouter(router, "/site/{siteId}/data/{traitId}", SiteDataResource.class);
+		attachToRouter(router, "/variety/{varietyId}/traitstats", VarietyTraitStatsResource.class);
 		attachToRouter(router, "/variety/data", VarietyDataResource.class);
+		attachToRouter(router, "/variety", VarietyResource.class);
 		attachToRouter(router, "/trait", TraitResource.class);
 		attachToRouter(router, "/trait/{traitIds}/plot", TraitPlotDataResource.class);
 		attachToRouter(router, "/trait/{traitIds}/species", TraitSpeciesDataResource.class);

@@ -6,6 +6,7 @@ import org.restlet.resource.*;
 
 import java.sql.*;
 import java.util.*;
+import java.util.logging.Logger;
 
 import jhi.diversify.server.*;
 import jhi.diversify.server.database.tables.pojos.*;
@@ -30,6 +31,8 @@ public class TraitResource extends ServerResource
 		}
 		catch (SQLException e)
 		{
+			Logger.getLogger("").info(e.getMessage());
+			e.printStackTrace();
 			throw new ResourceException(Status.SERVER_ERROR_INTERNAL);
 		}
 	}
